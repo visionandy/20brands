@@ -1,0 +1,546 @@
+{
+  "site_id": "site_06",
+  "count": 60,
+  "deals": [
+    {
+      "source_site": "site_06",
+      "title": "Sophia dress with velvet bows in tweed",
+      "current_price": "$109.99",
+      "original_price": "$268",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP175?display=sale&fit=Classic&colorProductCode=CP175&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP175_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(59% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Cable-knit sweater-dress in merino wool",
+      "current_price": "$129.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP167?display=sale&fit=Classic&colorProductCode=CP167&isFromSale=true&colorCode=BL8133",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP167_BL8133?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(48% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Super-stretch ruffle sweater-dress",
+      "current_price": "$77.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP155?display=sale&fit=Classic&colorProductCode=CP155&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP155_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(56% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Linen mini dress",
+      "current_price": "$125.99",
+      "original_price": "$148",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CK837?display=sale&fit=Classic&colorProductCode=CK837&isFromSale=true&colorCode=GR0377",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK837_GR0377?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(15% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Rib-knit mini sweater-dress",
+      "current_price": "$121.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP161?display=sale&fit=Classic&colorProductCode=CP161&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP161_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Veranda dress in floral print",
+      "current_price": "$99.99",
+      "original_price": "$238",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP157?display=sale&fit=Classic&colorProductCode=CP157&isFromSale=true&colorCode=PT9234",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP157_PT9234?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(58% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Parc dress in tweed",
+      "current_price": "$216.99",
+      "original_price": "$268",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP172?display=sale&fit=Classic&colorProductCode=CP172&isFromSale=true&colorCode=WZ7266",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP172_WZ7266?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(19% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Bubble-hem colorblock mixy dress",
+      "current_price": "$49.99",
+      "original_price": "$198",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP173?display=sale&fit=Classic&colorProductCode=CP173&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP173_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(75% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection scoopback mini dress in satin",
+      "current_price": "$99.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP527?display=sale&fit=Classic&colorProductCode=CP527&isFromSale=true&colorCode=RD0136",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP527_RD0136?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(40% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Veranda dress in watercolor floral print",
+      "current_price": "$103.99",
+      "original_price": "$238",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP159?display=sale&fit=Classic&colorProductCode=CP159&isFromSale=true&colorCode=PT8282",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP159_PT8282?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(56% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection cascading ruffle dress in sunset rose block print chiffon",
+      "current_price": "$99.99",
+      "original_price": "$350",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL653?display=sale&fit=Classic&colorProductCode=CL653&isFromSale=true&colorCode=PT7623",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL653_PT7623?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(71% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Pleated shirt-dress in Stewart tartan print",
+      "current_price": "$135.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CQ326?display=sale&fit=Classic&colorProductCode=CQ326&isFromSale=true&colorCode=YD8952",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CQ326_YD8952?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(19% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Smocked maxi dress in cotton voile",
+      "current_price": "$111.99",
+      "original_price": "$148",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI259?display=sale&fit=Classic&colorProductCode=CI259&isFromSale=true&colorCode=RD0156",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CI259_RD0156?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(24% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection chiffon ruffle dress in space floral print",
+      "current_price": "$99.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME689?display=sale&fit=Classic&colorProductCode=CO423&isFromSale=true&colorCode=PT7952",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO423_PT7952?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Milano dress in cotton voile",
+      "current_price": "$113.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL104?display=sale&fit=Classic&colorProductCode=CL104&isFromSale=true&colorCode=WZ6953",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL104_WZ6953?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(36% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Lady jacket mixy dress",
+      "current_price": "$149.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP179?display=sale&fit=Classic&colorProductCode=CP179&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP179_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(50% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tall Elena shirt-dress in cotton poplin",
+      "current_price": "$129.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/MP056?display=sale&fit=Tall&colorProductCode=BY832&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/BY832_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Ruffle-hem slip dress in dot print",
+      "current_price": "$200.99",
+      "original_price": "$248",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP196?display=sale&fit=Classic&colorProductCode=CP196&isFromSale=true&colorCode=PT9044",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP196_PT9044?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(19% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Bell-sleeve mini sweater-dress in merino wool",
+      "current_price": "$116.99",
+      "original_price": "$268",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CO093?display=sale&fit=Classic&colorProductCode=CO093&isFromSale=true&colorCode=GY6397",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO093_GY6397?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Mini sheath dress in faux leather",
+      "current_price": "$129.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CS633?display=sale&fit=Classic&colorProductCode=CS633&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CS633_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(56% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Short-sleeve slip dress in indigo daisy print",
+      "current_price": "$114.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP158?display=sale&fit=Classic&colorProductCode=CP158&isFromSale=true&colorCode=PT8217",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP158_PT8217?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(50% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Sheath mini dress with buckle detail",
+      "current_price": "$165.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CQ229?display=sale&fit=Classic&colorProductCode=CQ229&isFromSale=true&colorCode=WZ7295",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CQ229_WZ7295?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Cerise shirt-dress in striped cotton poplin",
+      "current_price": "$159.99",
+      "original_price": "$188",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME471?display=sale&fit=Classic&colorProductCode=CP989&isFromSale=true&colorCode=YD9399",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP989_YD9399?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(15% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Parc dress in stretch corduroy",
+      "current_price": "$165.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP170?display=sale&fit=Classic&colorProductCode=CP170&isFromSale=true&colorCode=NA0280",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP170_NA0280?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection pleated evening dress in taffeta",
+      "current_price": "$299.99",
+      "original_price": "$378",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CO015?display=sale&fit=Classic&colorProductCode=CO015&isFromSale=true&colorCode=WZ6803",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO015_WZ6803?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(21% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Ribbed turtleneck mini sweater-dress in vintage wool",
+      "current_price": "$99.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP189?display=sale&fit=Classic&colorProductCode=CP189&isFromSale=true&colorCode=GY6469",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP189_GY6469?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(56% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Seamed shift dress in glen plaid Italian gauzy wool blend",
+      "current_price": "$184.99",
+      "original_price": "$348",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CO021?display=sale&fit=Classic&colorProductCode=CO021&isFromSale=true&colorCode=WZ5657",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO021_WZ5657?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(47% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Halter mixy dress",
+      "current_price": "$49.99",
+      "original_price": "$148",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL648?display=sale&fit=Classic&colorProductCode=CL648&isFromSale=true&colorCode=WT0002",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL648_WT0002?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(66% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection embellished Fair Isle sweater-dress in vintage wool blend",
+      "current_price": "$149.99",
+      "original_price": "$248",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP194?display=sale&fit=Classic&colorProductCode=CP194&isFromSale=true&colorCode=SR9152",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP194_SR9152?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(40% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "New Amelia shirt-dress in foulard print",
+      "current_price": "$109.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME615?display=sale&fit=Classic&colorProductCode=CN627&isFromSale=true&colorCode=PT8123",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN627_PT8123?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection chiffon ruffle dress in blurry floral print",
+      "current_price": "$99.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME689?display=sale&fit=Classic&colorProductCode=CO422&isFromSale=true&colorCode=PT7918",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO422_PT7918?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tie-waist shirt-dress in foulard print",
+      "current_price": "$210.99",
+      "original_price": "$248",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN920?display=sale&fit=Classic&colorProductCode=CN920&isFromSale=true&colorCode=PT8565",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN920_PT8565?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(15% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection embellished ruffle-trim slip dress",
+      "current_price": "$159.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN844?display=sale&fit=Classic&colorProductCode=CN844&isFromSale=true&colorCode=PT8488",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN844_PT8488?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(46% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Off-the-shoulder mini dress in textured nylon",
+      "current_price": "$107.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN693?display=sale&fit=Classic&colorProductCode=CN693&isFromSale=true&colorCode=BL7067",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN693_BL7067?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(64% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection sequin scoopback mini dress",
+      "current_price": "$99.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME772?display=sale&fit=Classic&colorProductCode=CP191&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP191_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Amelia long-sleeve shirt-dress in striped cotton poplin",
+      "current_price": "$112.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP992?display=sale&fit=Classic&colorProductCode=CP992&isFromSale=true&colorCode=YD4038",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP992_YD4038?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(33% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection smocked chiffon dress",
+      "current_price": "$69.99",
+      "original_price": "$368",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI877?display=sale&fit=Classic&colorProductCode=CI877&isFromSale=true&colorCode=BL8133",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CI877_BL8133?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(81% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection strapless mini dress in memory satin",
+      "current_price": "$99.99",
+      "original_price": "$298",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CO424?display=sale&fit=Classic&colorProductCode=CO424&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO424_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(66% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Strapless mixy dress",
+      "current_price": "$129.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL174?display=sale&fit=Classic&colorProductCode=CL174&isFromSale=true&colorCode=NA0281",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL174_NA0281?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tall Ravenna dress in ramie",
+      "current_price": "$59.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CK835?display=sale&fit=Tall&colorProductCode=CK835&isFromSale=true&colorCode=WT0002",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK835_WT0002?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(66% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection lace and ruffle midi dress in chiffon",
+      "current_price": "$289.99",
+      "original_price": "$328",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CO425?display=sale&fit=Classic&colorProductCode=CO425&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO425_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(12% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Zip-up shirt-dress in cotton poplin",
+      "current_price": "$129.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI906?display=sale&fit=Classic&colorProductCode=CI906&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CI906_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(15% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "SZ Blockprints™ X J.Crew tiered dress",
+      "current_price": "$159.99",
+      "original_price": "$218",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME493?display=sale&fit=Classic&colorProductCode=CK701&isFromSale=true&colorCode=EE8369",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK701_EE8369?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Devoré velvet slip dress",
+      "current_price": "$189.99",
+      "original_price": "$378",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP165?display=sale&fit=Classic&colorProductCode=CP165&isFromSale=true&colorCode=BK0001",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP165_BK0001?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(50% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection cashmere twisted cable-knit sweater-dress",
+      "current_price": "$494.99",
+      "original_price": "$550",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP195?display=sale&fit=Classic&colorProductCode=CP195&isFromSale=true&colorCode=SU8696",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP195_SU8696?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(10% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Cerise shirt-dress in blurry floral crepe de chine",
+      "current_price": "$94.99",
+      "original_price": "$188",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CQ107?display=sale&fit=Classic&colorProductCode=CQ107&isFromSale=true&colorCode=PT7947",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CQ107_PT7947?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(49% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "SZ Blockprints™ X J.Crew tiered dress",
+      "current_price": "$159.99",
+      "original_price": "$218",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME493?display=sale&fit=Classic&colorProductCode=CK513&isFromSale=true&colorCode=EB5777",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK513_EB5777?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Airy gauze babydoll dress",
+      "current_price": "$78.99",
+      "original_price": "$98",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI270?display=sale&fit=Classic&colorProductCode=CI270&isFromSale=true&colorCode=NA6434",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CI270_NA6434?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(19% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Palermo dress in viscose-blend crinkle",
+      "current_price": "$49.99",
+      "original_price": "$158",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CK800?display=sale&fit=Classic&colorProductCode=CK800&isFromSale=true&colorCode=BL7713",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK800_BL7713?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(68% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tiered midi dress in cotton poplin",
+      "current_price": "$92.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN604?display=sale&fit=Classic&colorProductCode=CN604&isFromSale=true&colorCode=PK0278",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN604_PK0278?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(45% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Crinkled ruffle-trim dress",
+      "current_price": "$97.99",
+      "original_price": "$178",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL649?display=sale&fit=Classic&colorProductCode=CL649&isFromSale=true&colorCode=RD0134",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL649_RD0134?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(45% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Jules tuxedo shirt-dress",
+      "current_price": "$121.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP185?display=sale&fit=Classic&colorProductCode=CP185&isFromSale=true&colorCode=WT0002",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP185_WT0002?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(27% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tiered tie-waist dress in dusty periwinkle block print",
+      "current_price": "$112.99",
+      "original_price": "$198",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL871?display=sale&fit=Classic&colorProductCode=CL871&isFromSale=true&colorCode=PT8207",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CL871_PT8207?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(43% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection flutter-sleeve maxi dress in luster georgette",
+      "current_price": "$99.99",
+      "original_price": "$168",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CK994?display=sale&fit=Classic&colorProductCode=CK994&isFromSale=true&colorCode=RD0156",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CK994_RD0156?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(40% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Collection ruffle-trim midi dress in crinkle cupro",
+      "current_price": "$59.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI562?display=sale&fit=Classic&colorProductCode=CI562&isFromSale=true&colorCode=OR5481",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CI562_OR5481?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(74% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Parc dress in leopard print",
+      "current_price": "$108.99",
+      "original_price": "$188",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN635?display=sale&fit=Classic&colorProductCode=CN635&isFromSale=true&colorCode=PT7355",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN635_PT7355?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(42% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Ruched bubble-hem dress in Stewart tartan taffeta",
+      "current_price": "$282.99",
+      "original_price": "$350",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP160?display=sale&fit=Classic&colorProductCode=CP160&isFromSale=true&colorCode=YD8958",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CP160_YD8958?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(19% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "New Amelia shirt-dress in cheetah print",
+      "current_price": "$109.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME615?display=sale&fit=Classic&colorProductCode=CO058&isFromSale=true&colorCode=PT7820",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CO058_PT7820?hei=1280&crop=0,0,1024,0",
+      "deal_percent": ""
+    },
+    {
+      "source_site": "site_06",
+      "title": "Squareneck slip dress in spot print",
+      "current_price": "$65.99",
+      "original_price": "$228",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN842?display=sale&fit=Classic&colorProductCode=CN842&isFromSale=true&colorCode=PT7820",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN842_PT7820?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(71% Off)"
+    },
+    {
+      "source_site": "site_06",
+      "title": "Tie-waist shirt-dress in ditsy floral print",
+      "current_price": "$222.99",
+      "original_price": "$248",
+      "deal_url": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CN921?display=sale&fit=Classic&colorProductCode=CN921&isFromSale=true&colorCode=PT7809",
+      "image_url": "https://www.jcrew.com/s7-img-facade/CN921_PT7809?hei=1280&crop=0,0,1024,0",
+      "deal_percent": "(10% Off)"
+    }
+  ]
+}

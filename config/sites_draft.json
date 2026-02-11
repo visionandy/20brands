@@ -1,0 +1,256 @@
+{
+  "version": "1.0",
+  "description": "20 个 deal 站点配置草稿。每个站点需填写 deal 列表页 URL，以及该站点的解析规则（选择器或解析方式）。",
+  "global": {
+    "request_delay_sec": [3, 5],
+    "page_dwell_sec": [8, 18],
+    "timeout_sec": 45,
+    "use_selenium": true,
+    "output_dir": "output",
+    "fetch_detail": false
+  },
+  "deal_fields": [
+    "title",
+    "current_price",
+    "original_price",
+    "deal_url",
+    "image_url",
+    "source_site",
+    "posted_at",
+    "expires_at"
+  ],
+  "sites": [
+    {
+      "id": "site_01",
+      "name": "michaelkors",
+      "list_url": "https://www.michaelkors.global/my/en/sale/",
+      "notes": "官方网站michaelkors.global",
+      "selectors": {
+        "container": "article.product-tile-container",
+        "title": "h2.pdp-link a",
+        "current_price": ".price .sales .value",
+        "original_price": ".price .list .value",
+        "deal_url": "h2.pdp-link a",
+        "image_url": ".image-container img.tile-image"
+      },
+      "fetch_detail": false,
+      "detail_selectors": {}
+    },
+    {
+      "id": "site_02",
+      "name": "calvinklein",
+      "list_url": "https://www.calvinklein.com.my/en/sale/women/denim-jeans/",
+      "notes": "官方网站calvinklein.com.my",
+      "selectors": {
+        "container": "div.product",
+        "title": ".product-name-link a.name-link",
+        "current_price": ".price .sales .value",
+        "original_price": ".price .strike-through.list .value",
+        "deal_url": ".product-name-link a.name-link",
+        "image_url": ".image-container img.tile-image",
+        "deal_percent": ".price .sales .percent-value",
+        "deals_detail": "p.callout-msg"
+      },
+      "fetch_detail": false,
+      "detail_selectors": {}
+    },
+    {
+      "id": "site_03",
+      "name": "coach",
+      "list_url": "https://malaysia.coachoutlet.com/bestsellers.html",
+      "notes": "官方网站coachoutlet.com",
+      "selectors": {
+        "container": "li.product-item",
+        "title": ".product-item-name a.product-item-link",
+        "current_price": ".price-box span[data-price-type='finalPrice'] .price",
+        "original_price": ".price-box span[data-price-type='oldPrice2'] .price",
+        "deal_url": ".product-item-name a.product-item-link",
+        "image_url": ".product-image-section img.product-image-photo"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "style_color": ".product.attribute.coach_style_color .value",
+        "payment": ".atome-product-installment-price",
+        "stock": ".product-info-stock-sku .stock.available"
+      }
+    },
+    {
+      "id": "site_04",
+      "name": "Lululemon Athletica",
+      "list_url": "https://www.lululemon.com.hk/en-my/c/sale/specials/bestsellers?pmid=markdownPromotion&prefn1=gender&prefv1=Women",
+      "notes": "官方网站lululemon.com.hk",
+      "selectors": {
+        "container": "div.product",
+        "title": ".pdp-link a.search-results-product-name",
+        "current_price": ".price .sales .value",
+        "original_price": ".price .strike-through.list .value",
+        "deal_url": ".pdp-link a.search-results-product-name",
+        "image_url": ".image-container img.tile-image"
+      },
+      "fetch_detail": false,
+      "detail_selectors": {}
+    },
+    {
+      "id": "site_05",
+      "name": "Alo Yoga",
+      "list_url": "https://www.aloyoga.com/en-my/collections/womens-sale-all",
+      "notes": "官方网站aloyoga.com",
+      "selectors": {
+        "container": "div.PlpTile",
+        "title": ".product-name p.body.semibold",
+        "current_price": ".card-price .product-price.red",
+        "original_price": ".card-price .regular__price",
+        "deal_url": ".product-name a",
+        "image_url": "img"
+      },
+      "fetch_detail": false,
+      "detail_selectors": {}
+    },
+    {
+      "id": "site_06",
+      "name": "J.Crew",
+      "list_url": "https://www.jcrew.com/sale/women?sub-categories=Dresses%20%26%20Jumpsuits",
+      "notes": "官方网站jcrew.com",
+      "selectors": {
+        "container": "li[data-testid='product-tile']",
+        "title": "h2[data-qaid*='ProductDescription']",
+        "current_price": "[data-testid='nowPrice'] .is-price, [data-testid='selectColorPrice'] .is-price",
+        "original_price": "[data-testid='wasPrice'] [data-testid='strikethrough']",
+        "deal_url": "a.product-tile__details",
+        "image_url": ".product-tile__image-wrapper img",
+        "deal_percent": "[data-testid='discountPrice'] span"
+      }
+    },
+    {
+      "id": "site_07",
+      "name": "Tommy Hilfiger",
+      "list_url": "https://my.tommy.com/en/women/sale/clothing/?fcgid=women-sale-clothing&prefn1=gender&prefv1=women",
+      "notes": "官方网站tommy.com",
+      "selectors": {
+        "container": "div.product",
+        "title": ".product-name-link a",
+        "current_price": ".price .sales .value",
+        "original_price": ".price .strike-through.list .value",
+        "deal_url": ".product-name-link a",
+        "image_url": ".image-container img.tile-image",
+        "deal_percent": ".price .sales .percent-value",
+        "deals_detail": "p.callout-msg"
+      }
+    },
+    {
+      "id": "site_08",
+      "name": "Nike",
+      "list_url": "https://www.nike.com/my/w/womens-sale-jackets-gilets-3yaepz50r7yz5e1x6",
+      "notes": "官方网站nike.com",
+      "selectors": {
+        "container": "div[data-testid='product-card']",
+        "title": ".product-card__titles",
+        "current_price": "[data-testid='product-price-reduced']",
+        "original_price": "[data-testid='product-price']",
+        "deal_url": "a.product-card__link-overlay",
+        "image_url": "img.product-card__hero-image",
+        "deals_detail": ".promo__message"
+      }
+    },
+    {
+      "id": "site_09",
+      "name": "Adidas",
+      "list_url": "https://www.adidas.com.my/en/season_sale",
+      "notes": "官方网站adidas.com.my",
+      "selectors": {
+        "container": "article[data-testid='plp-product-card']",
+        "title": "[data-testid='product-card-title']",
+        "current_price": "[data-testid='main-price']",
+        "original_price": "[data-testid='original-price']",
+        "deal_url": "a[data-testid='product-card-description-link']",
+        "image_url": "[data-testid='product-card-primary-image']",
+        "deal_percent": "[data-testid='discount-text']"
+      }
+    },
+    {
+      "id": "site_10",
+      "name": "Levi's",
+      "list_url": "https://levi.com.my/collections/sale?srsltid=AfmBOopkWugrGNuWZl9rdlM8ESRa668uitJ_vC2v37MM7JI0uXuiXdzV&filter.gender=Women",
+      "notes": "官方网站levi.com.my",
+      "selectors": {
+        "container": "li.grid__item",
+        "title": ".card__heading a",
+        "current_price": ".price-item--sale",
+        "original_price": ".price-item--regular",
+        "deal_url": ".card__heading a",
+        "image_url": ".card__media img",
+        "deal_percent": ".promo-badge"
+      }
+    },
+    {
+      "id": "site_11",
+      "name": "Old Navy",
+      "list_url": "https://oldnavy.gap.com/browse/todays-deals/today-only-deal?cid=3041263",
+      "notes": "官方网站oldnavy.gap.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_12",
+      "name": "H&M",
+      "list_url": "https://www2.hm.com/en_my/ladies/sale/view-all.html",
+      "notes": "官方网站hm.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_13",
+      "name": "Target",
+      "list_url": "https://www.target.com/pl/8675-1047197418870284?marketing_id=8675-1047197418870284",
+      "notes": "官方网站target.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_14",
+      "name": "Columbia",
+      "list_url": "https://www.columbia.com/c/sale/?refine=c_genderFilter%3DWomen%27s&refine=c_productType%3DJackets&srsltid=AfmBOoqaSyeuYy5R7jdxrdw6QKTvX1LmjfyDBTEMydBVB19lhOcvTWkE",
+      "notes": "官方网站columbia.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_15",
+      "name": "Athleta",
+      "list_url": "https://athleta.gap.com/browse/sale/last-chance-best-price?cid=1065352",
+      "notes": "官方网站athleta.gap.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_16",
+      "name": "Guess",
+      "list_url": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses?subcategory=Guess-Women-LastChance-Dresses%23763d912d-a3b1-413f-b86a-b81029e50722&page=2",
+      "notes": "官方网站guess.eu",
+      "selectors": {}
+    },
+    {
+      "id": "site_17",
+      "name": "Tory Burch",
+      "list_url": "https://mayfeyr.com/collections/tory-burch?gad_campaignid=22310276842&gad_source=1&gbraid=0AAAAA-47CsOSS1ioT33EsywO5NKxS5Lls&gclid=Cj0KCQiA7rDMBhCjARIsAGDBuECO-5W9n4rAK_BW8L1sSYz11gU1Y9B7DvCoPRjPvpWXKg6zXM4ecVAaAn3mEALw_wcB",
+      "notes": "非官网站点mayfeyr.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_18",
+      "name": "Tory Sport",
+      "list_url": "https://www.theoutnet.com/en-nz/shop/designers/tory-sport",
+      "notes": "非官网站点theoutnet.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_19",
+      "name": "Theory",
+      "list_url": "https://www.theoutnet.com/en-sg/shop/designers/theory/clothing",
+      "notes": "非官网站点theoutnet.com",
+      "selectors": {}
+    },
+    {
+      "id": "site_20",
+      "name": "COS",
+      "list_url": "https://www.brandalley.co.uk/women/brands/cos.html?ba_brand=COS",
+      "notes": "非官网站点brandalley.co.uk",
+      "selectors": {}
+    }
+  ]
+}

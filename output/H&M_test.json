@@ -1,0 +1,366 @@
+{
+  "site_id": "site_12",
+  "count": 45,
+  "deals": [
+    {
+      "source_site": "site_12",
+      "title": "SUNGLASSES",
+      "current_price": "$ 6.99",
+      "original_price": "$ 14.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1162823011.html",
+      "image_url": "https://image.hm.com/assets/hm/63/01/630111954dd8582765e4b72171c470e54aa9e341.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "T-SHIRT DRESS",
+      "current_price": "$ 7.99",
+      "original_price": "$ 19.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1278156001.html",
+      "image_url": "https://image.hm.com/assets/hm/b1/a7/b1a718405b8c4294949feae88903e8ea87ffaf63.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FINE-KNIT SCARF",
+      "current_price": "$ 5.99",
+      "original_price": "$ 14.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1308919001.html",
+      "image_url": "https://image.hm.com/assets/hm/8f/4a/8f4abaadd3914a3791f953ceb9eedecafc3f17bf.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "LOW RISE FLARED LEG JEANS",
+      "current_price": "$ 17.99",
+      "original_price": "$ 29.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1239854006.html",
+      "image_url": "https://image.hm.com/assets/hm/08/02/0802bc8ac1af4d882254002aae7954b0427e8065.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "WIDE-LEG VELOUR JOGGERS",
+      "current_price": "$ 15.99",
+      "original_price": "$ 24.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1297148001.html",
+      "image_url": "https://image.hm.com/assets/hm/6d/fc/6dfc9ac505897127ae9357bbe6e3a7b61fba8183.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "TOTE BAG",
+      "current_price": "$ 26.99",
+      "original_price": "$ 49.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1306782002.html",
+      "image_url": "https://image.hm.com/assets/hm/cc/12/cc12a293950101b39c94a7cb6d09e7e19e682a0a.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SILK-BLEND T-SHIRT",
+      "current_price": "$ 19.99",
+      "original_price": "$ 44.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.0776746001.html",
+      "image_url": "https://image.hm.com/assets/hm/9b/11/9b11e10394f2275b5de0e664b2487fc68ad6eb40.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "TEDDY FLEECE VEST",
+      "current_price": "$ 11.99",
+      "original_price": "$ 19.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1308702002.html",
+      "image_url": "https://image.hm.com/assets/hm/ee/95/ee955a44624df19f1e33eca61c25cb0e53115b56.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "5-PACK SOCKS",
+      "current_price": "$ 7.99",
+      "original_price": "$ 12.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1067654022.html",
+      "image_url": "https://image.hm.com/assets/hm/98/98/98980b0acae6f7887963902eb1e122bdb4307062.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SEQUINED PANTS",
+      "current_price": "$ 17.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1304126002.html",
+      "image_url": "https://image.hm.com/assets/hm/97/58/9758a8cd42100a07e2850cfa7411d2788277722b.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "CRINKLED PULL-ON PANTS",
+      "current_price": "$ 19.99",
+      "original_price": "$ 29.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1292074004.html",
+      "image_url": "https://image.hm.com/assets/hm/bd/84/bd84c5af943ca446f46590b6764959ce2fc6da0a.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SOFT KAJAL EYE PENCIL",
+      "current_price": "$ 3.99",
+      "original_price": "$ 7.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1143050005.html",
+      "image_url": "https://image.hm.com/assets/hm/d7/cb/d7cb59152d2623f3bc04423bb73346834d6fb111.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FINE-KNIT OFF-THE-SHOULDER DRESS",
+      "current_price": "$ 24.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1315043001.html",
+      "image_url": "https://image.hm.com/assets/hm/1d/62/1d62fe9d5627d07e4998fa7cb87ec6ddf958cfdf.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SEQUINED PANTS",
+      "current_price": "$ 22.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1304126001.html",
+      "image_url": "https://image.hm.com/assets/hm/e4/19/e419d4796ddf6549167126ed077db7bd71ddcd0d.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "BOW-DETAIL KNIT CARDIGAN",
+      "current_price": "$ 27.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1310711002.html",
+      "image_url": "https://image.hm.com/assets/hm/90/2f/902f885312742f26d4737c57ee062387861b1b9c.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SHORT JACKET",
+      "current_price": "$ 24.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1261593002.html",
+      "image_url": "https://image.hm.com/assets/hm/03/4b/034b04b5fd618767a7ce53bc3440db8dd97f832a.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FLUFFY EARMUFFS",
+      "current_price": "$ 12.49",
+      "original_price": "$ 17.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1309277002.html",
+      "image_url": "https://image.hm.com/assets/hm/84/da/84da0f97f2f6b438d0d52d8bc9a80f8deaba4dfd.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "KNIT MINI SKIRT",
+      "current_price": "$ 17.99",
+      "original_price": "$ 29.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1311224001.html",
+      "image_url": "https://image.hm.com/assets/hm/50/db/50db953bd7c380fea337dea77144d2e144aa9d0f.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "RIB-KNIT OFF-THE-SHOULDER TOP",
+      "current_price": "$ 14.99",
+      "original_price": "$ 24.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1289511007.html",
+      "image_url": "https://image.hm.com/assets/hm/e9/f6/e9f62b0cbe461e487451a1a40d0bbb4496859639.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "KNIT CARDIGAN",
+      "current_price": "$ 29.99",
+      "original_price": "$ 49.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1302378004.html",
+      "image_url": "https://image.hm.com/assets/hm/cc/68/cc68aee6baf5200884f341f716da39a9bc49f70b.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "ASYMMETRIC COLLAR",
+      "current_price": "$ 23.99",
+      "original_price": "$ 44.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1312313001.html",
+      "image_url": "https://image.hm.com/assets/hm/fa/67/fa677796409a1a709ffdeec5f290034fd4213b1d.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FLUFFY HEADBAND",
+      "current_price": "$ 10.99",
+      "original_price": "$ 17.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1310646002.html",
+      "image_url": "https://image.hm.com/assets/hm/27/15/2715aad423905f3f41d70c449e116cf1d6e78a26.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "BEAD-EMBELLISHED TANK TOP",
+      "current_price": "$ 22.99",
+      "original_price": "$ 49.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1322836001.html",
+      "image_url": "https://image.hm.com/assets/hm/15/97/1597b64126018b2aa26b043cc5cd5987f57b19d3.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SCARF",
+      "current_price": "$ 10.49",
+      "original_price": "$ 17.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1309853001.html",
+      "image_url": "https://image.hm.com/assets/hm/05/e7/05e7701dcf9a1f54b82dd0d4c0d6208d0f6b1350.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FINE-KNIT OFF-THE-SHOULDER DRESS",
+      "current_price": "$ 24.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1315043002.html",
+      "image_url": "https://image.hm.com/assets/hm/8a/b6/8ab687f3b003ec2e80b23216d8a07fb365ca1ea2.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "FINE-KNIT OFF-THE-SHOULDER DRESS",
+      "current_price": "$ 24.99",
+      "original_price": "$ 39.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1315043007.html",
+      "image_url": "https://image.hm.com/assets/hm/33/7a/337a94df3fca739d452929f42fb7dd55baa37298.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "KNIT TRIANGLE SCARF",
+      "current_price": "$ 6.49",
+      "original_price": "$ 12.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1309439004.html",
+      "image_url": "https://image.hm.com/assets/hm/a5/c4/a5c47cd907f6b7dac9bdb62fa7074d2966cb5a48.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "3 PAIRS HOOP EARRINGS",
+      "current_price": "$ 12.99",
+      "original_price": "$ 24.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1323484001.html",
+      "image_url": "https://image.hm.com/assets/hm/18/c3/18c339dfac5d6f1c1e7c82f2cd09c7eedf5e0f8c.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "BAG CHARM",
+      "current_price": "$ 11.99",
+      "original_price": "$ 17.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1309669002.html",
+      "image_url": "https://image.hm.com/assets/hm/c9/30/c930a07527eaa51f9d1c57d72c10b204a6f2565a.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "PUFF-SLEEVED SATIN DRESS",
+      "current_price": "$ 38.99",
+      "original_price": "$ 59.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1321937001.html",
+      "image_url": "https://image.hm.com/assets/hm/38/b2/38b22c699e4b4cf5a9d99af3f712f5f8ac8c4107.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "BEAD-TRIMMED MOHAIR-BLEND DRESS",
+      "current_price": "$ 58.99",
+      "original_price": "$ 119.00",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1308336001.html",
+      "image_url": "https://image.hm.com/assets/hm/f9/6a/f96aa1e92fc206a00292d2e1d432ba87d0830c1d.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "SUEDE JACKET",
+      "current_price": "$ 149.00",
+      "original_price": "$ 299.00",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1310361001.html",
+      "image_url": "https://image.hm.com/assets/hm/3f/74/3f748d7d07200d6979141e49bc5dd29e0bcef54c.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "MAMA 2-PIECE KNIT SET",
+      "current_price": "$ 47.99",
+      "original_price": "$ 79.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1292524001.html",
+      "image_url": "https://image.hm.com/assets/hm/8c/b3/8cb3a5eed12d00d0d3cf3b15155c802dba231496.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "BIG BAD BROW EYEBROW MASCARA",
+      "current_price": "$ 3.49",
+      "original_price": "$ 9.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1143051002.html",
+      "image_url": "https://image.hm.com/assets/hm/f1/4d/f14def030e879b14a9f568658197125ac1d51fa1.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "RIB-KNIT BEANIE",
+      "current_price": "$ 11.99",
+      "original_price": "$ 19.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1309884002.html",
+      "image_url": "https://image.hm.com/assets/hm/d3/74/d374bd2cc153519e616ffae55947b224e41556f7.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "2-PACK ANKLE SOCKS",
+      "current_price": "$ 8.99",
+      "original_price": "$ 12.99",
+      "deal_url": "https://www2.hm.com/en_us/productpage.1245092006.html",
+      "image_url": "https://image.hm.com/assets/hm/f1/70/f1705e288c8241dbde62f87f7028d5361f3f6a9c.jpg?imwidth=1536"
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    },
+    {
+      "source_site": "site_12",
+      "title": "",
+      "current_price": "",
+      "original_price": "",
+      "deal_url": "",
+      "image_url": ""
+    }
+  ]
+}

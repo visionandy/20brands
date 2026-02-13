@@ -7,7 +7,13 @@
     "timeout_sec": 45,
     "use_selenium": true,
     "output_dir": "output",
-    "fetch_detail": false
+    "fetch_detail": false,
+    "original_price_fallback_selectors": ["span.h-text-line-through", "del", "s"],
+    "title_clean": {
+      "remove_whole_line_labels": ["sale", "new", "clearance", "hot"],
+      "remove_line_if_contains": ["current price", "original price"],
+      "price_only_line_pattern": "^\\s*[$€£]?\\s*[\\d,]+\\.?\\d*\\s*$"
+    }
   },
   "deal_fields": [
     "title",
@@ -21,23 +27,30 @@
   ],
   "sites": [
     {
-      "id": "site_01",
+      "id": "michaelkors",
       "name": "michaelkors",
-      "list_url": "https://www.michaelkors.global/my/en/sale/",
-      "notes": "官方网站michaelkors.global",
+      "list_url": "https://www.michaelkors.com/sale/handbags/",
+      "notes": "官方网站 michaelkors.com。非美国 IP 会重定向到 michaelkors.global，需配置 proxy（US 代理）才能爬 .com",
+      "force_us_locale": true,
+      "proxy": "",
       "selectors": {
         "container": "article.product-tile-container",
-        "title": "h2.pdp-link a",
+        "title": "h2.pdp-link a, .pdp-link a",
         "current_price": ".price .sales .value",
-        "original_price": ".price .list .value",
-        "deal_url": "h2.pdp-link a",
-        "image_url": ".image-container img.tile-image"
+        "original_price": ".price .list, .price .list .value",
+        "deal_url": "a.product-tile-image-link, a[href*='.html']:not([href*='Wishlist'])",
+        "image_url": "img.tile-image[src*='michaelkors.scene7.com'], img[src*='michaelkors.scene7.com']"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article.product-tile-container, a.product-tile-image-link",
+        "scroll_before_save": true,
+        "dismiss_consent": true
       },
       "fetch_detail": false,
       "detail_selectors": {}
     },
-    {
-      "id": "site_02",
+    { 
+      "id": "calvinklein",
       "name": "calvinklein",
       "list_url": "https://www.calvinklein.com.my/en/sale/women/denim-jeans/",
       "notes": "官方网站calvinklein.com.my",
@@ -55,7 +68,7 @@
       "detail_selectors": {}
     },
     {
-      "id": "site_03",
+      "id": "coach",
       "name": "coach",
       "list_url": "https://malaysia.coachoutlet.com/bestsellers.html",
       "notes": "官方网站coachoutlet.com",
@@ -75,7 +88,7 @@
       }
     },
     {
-      "id": "site_04",
+      "id": "lululemon_athletica",
       "name": "Lululemon Athletica",
       "list_url": "https://www.lululemon.com.hk/en-my/c/sale/specials/bestsellers?pmid=markdownPromotion&prefn1=gender&prefv1=Women",
       "notes": "官方网站lululemon.com.hk",
@@ -91,7 +104,7 @@
       "detail_selectors": {}
     },
     {
-      "id": "site_05",
+      "id": "alo_yoga",
       "name": "Alo Yoga",
       "list_url": "https://www.aloyoga.com/en-my/collections/womens-sale-all",
       "notes": "官方网站aloyoga.com",
@@ -107,7 +120,7 @@
       "detail_selectors": {}
     },
     {
-      "id": "site_06",
+      "id": "j_crew",
       "name": "J.Crew",
       "list_url": "https://www.jcrew.com/sale/women?sub-categories=Dresses%20%26%20Jumpsuits",
       "notes": "官方网站jcrew.com",
@@ -122,7 +135,7 @@
       }
     },
     {
-      "id": "site_07",
+      "id": "tommy_hilfiger",
       "name": "Tommy Hilfiger",
       "list_url": "https://my.tommy.com/en/women/sale/clothing/?fcgid=women-sale-clothing&prefn1=gender&prefv1=women",
       "notes": "官方网站tommy.com",
@@ -138,7 +151,7 @@
       }
     },
     {
-      "id": "site_08",
+      "id": "nike",
       "name": "Nike",
       "list_url": "https://www.nike.com/my/w/womens-sale-jackets-gilets-3yaepz50r7yz5e1x6",
       "notes": "官方网站nike.com",
@@ -153,7 +166,7 @@
       }
     },
     {
-      "id": "site_09",
+      "id": "adidas",
       "name": "Adidas",
       "list_url": "https://www.adidas.com.my/en/season_sale",
       "notes": "官方网站adidas.com.my",
@@ -168,10 +181,11 @@
       }
     },
     {
-      "id": "site_10",
+      "id": "levis",
       "name": "Levi's",
-      "list_url": "https://levi.com.my/collections/sale?srsltid=AfmBOopkWugrGNuWZl9rdlM8ESRa668uitJ_vC2v37MM7JI0uXuiXdzV&filter.gender=Women",
-      "notes": "官方网站levi.com.my",
+      "list_url": "https://www.levi.com/US/en_US/sale/c/levi_clothing_sale_us/facets/feature-gender/women/feature-fit/straight",
+      "notes": "官方网站 levi.com US，非美国 IP 可能 Access Denied",
+      "force_us_locale": true,
       "selectors": {
         "container": "li.grid__item",
         "title": ".card__heading a",
@@ -183,74 +197,183 @@
       }
     },
     {
-      "id": "site_11",
+      "id": "old_navy",
       "name": "Old Navy",
       "list_url": "https://oldnavy.gap.com/browse/todays-deals/today-only-deal?cid=3041263",
       "notes": "官方网站oldnavy.gap.com",
       "selectors": {}
     },
     {
-      "id": "site_12",
+      "id": "h_m",
       "name": "H&M",
-      "list_url": "https://www2.hm.com/en_my/ladies/sale/view-all.html",
+      "list_url": "https://www2.hm.com/en_us/women/sale/view-all.html",
       "notes": "官方网站hm.com",
-      "selectors": {}
+      "selectors": {
+        "container": "#products-listing-section li",
+        "title": "h2",
+        "current_price": "p span",
+        "original_price": "del",
+        "deal_url": "a[href*='productpage']",
+        "image_url": "img"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article, li[class*='product'], a[href*='product']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_13",
+      "id": "target",
       "name": "Target",
       "list_url": "https://www.target.com/pl/8675-1047197418870284?marketing_id=8675-1047197418870284",
       "notes": "官方网站target.com",
-      "selectors": {}
+      "selectors": {
+        "container": "[data-test*='ProductCardVariantDefault']",
+        "title": "[data-test*='ProductCard/title']",
+        "current_price": "[data-test*='ProductCard/body']",
+        "original_price": "del, s",
+        "deal_url": "a[href*='/p/']",
+        "image_url": "img"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article, [data-test*='product'], a[href*='/p/']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_14",
+      "id": "columbia",
       "name": "Columbia",
       "list_url": "https://www.columbia.com/c/sale/?refine=c_genderFilter%3DWomen%27s&refine=c_productType%3DJackets&srsltid=AfmBOoqaSyeuYy5R7jdxrdw6QKTvX1LmjfyDBTEMydBVB19lhOcvTWkE",
       "notes": "官方网站columbia.com",
-      "selectors": {}
+      "selectors": {
+        "container": ".product-grid > div",
+        "title": "a[href*='/p/']",
+        "current_price": "a[href*='/p/']",
+        "original_price": "s",
+        "deal_url": "a[href*='/p/']",
+        "image_url": "img"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article, .product-tile, a[href*='/p/']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_15",
+      "id": "athleta",
       "name": "Athleta",
       "list_url": "https://athleta.gap.com/browse/sale/last-chance-best-price?cid=1065352",
       "notes": "官方网站athleta.gap.com",
-      "selectors": {}
+      "selectors": {
+        "container": "[data-testid='plp_product-card']",
+        "title": "[data-testid='plp_product-name']",
+        "current_price": "span.fds__core-web-price-percent-off .plp-product-price-small, .plp-product-price-small",
+        "original_price": "span.fds__core-web-original-price",
+        "deal_url": "a[data-testid='plp_product-info']",
+        "image_url": "img.plp_product-card__image"
+      },
+      "fetch_html": {
+        "wait_for_selector": "[data-testid='plp_product-card'], a[data-testid='plp_product-info']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_16",
+      "id": "guess",
       "name": "Guess",
       "list_url": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses?subcategory=Guess-Women-LastChance-Dresses%23763d912d-a3b1-413f-b86a-b81029e50722&page=2",
       "notes": "官方网站guess.eu",
-      "selectors": {}
+      "selectors": {
+        "container": "li.product__tile:not(.js-aa-product-skeleton-prev):not(.js-aa-product-skeleton-next)",
+        "title": "[class*='ItemContentTitle'] a, a[href*='/last-chance/'][href*='.html']",
+        "current_price": ".item-price",
+        "original_price": ".price__strike-through.item-salesPrice .value",
+        "deal_url": "a[href*='/last-chance/'][href*='.html']",
+        "image_url": ".product-grid__image img, img"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article, [class*='product'], a[href*='product']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_17",
+      "id": "tory_burch",
       "name": "Tory Burch",
-      "list_url": "https://mayfeyr.com/collections/tory-burch?gad_campaignid=22310276842&gad_source=1&gbraid=0AAAAA-47CsOSS1ioT33EsywO5NKxS5Lls&gclid=Cj0KCQiA7rDMBhCjARIsAGDBuECO-5W9n4rAK_BW8L1sSYz11gU1Y9B7DvCoPRjPvpWXKg6zXM4ecVAaAn3mEALw_wcB",
+      "list_url": "https://mayfeyr.com/en-us/collections/tory-burch?gad_campaignid=22310276842&gad_source=1&gbraid=0AAAAA-47CsOSS1ioT33EsywO5NKxS5Lls&gclid=Cj0KCQiA7rDMBhCjARIsAGDBuECO-5W9n4rAK_BW8L1sSYz11gU1Y9B7DvCoPRjPvpWXKg6zXM4ecVAaAn3mEALw_wcB",
       "notes": "非官网站点mayfeyr.com",
-      "selectors": {}
+      "selectors": {
+        "container": ".product-card.product-card--card",
+        "title": ".product-card__title",
+        "current_price": ".price__regular",
+        "original_price": ".price__sale",
+        "deal_url": ".product-card__title",
+        "image_url": ".product-card__media img"
+      },
+      "fetch_html": {
+        "wait_for_selector": "article, [class*='product'], a[href*='product']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_18",
+      "id": "tory_sport",
       "name": "Tory Sport",
-      "list_url": "https://www.theoutnet.com/en-nz/shop/designers/tory-sport",
-      "notes": "非官网站点theoutnet.com",
-      "selectors": {}
+      "list_url": "https://www.thredup.com/women/tory-sport?department_tags=women&brand_name_tags=Tory%20Sport",
+      "notes": "非官网站点 thredup.com",
+      "selectors": {
+        "container": "div.grid-item[data-item-number], .grid-item",
+        "title": "a[aria-label*='View Product']",
+        "title_attr": "aria-label",
+        "current_price": "span.body-copy-bold.u-text-burgundy-700",
+        "original_price": "span.body-copy-bold.u-line-through, span.u-line-through",
+        "deal_url": "a[href*='/product/']",
+        "image_url": ".item-card-image img[src*='thredup.com']"
+      },
+      "fetch_html": {
+        "wait_for_selector": ".grid-item, a[href*='/product/']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_19",
+      "id": "theory",
       "name": "Theory",
-      "list_url": "https://www.theoutnet.com/en-sg/shop/designers/theory/clothing",
-      "notes": "非官网站点theoutnet.com",
-      "selectors": {}
+      "list_url": "https://theoryfactorystore.com/",
+      "notes": "outlet store theoryfactorystore.com",
+      "selectors": {
+        "container": "div.collection_item.m-item-expose, .collection_item",
+        "title": "a.item-caption-title",
+        "current_price": "span.general-price",
+        "original_price": "span.general-oldprice",
+        "deal_url": "a.item-caption-title, a.collection-product-item, a[href*='/products/']",
+        "image_url": "img.collection-product-item-image.main-image, img.main-image"
+      },
+      "fetch_html": {
+        "wait_for_selector": ".collection_item, a.item-caption-title, a[href*='/products/']",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     },
     {
-      "id": "site_20",
+      "id": "cos",
       "name": "COS",
       "list_url": "https://www.brandalley.co.uk/women/brands/cos.html?ba_brand=COS",
-      "notes": "非官网站点brandalley.co.uk",
-      "selectors": {}
+      "notes": "非官网站点brandalley.co.uk，图片从 JSON-LD 补全",
+      "selectors": {
+        "container": "li.ais-Hits-item",
+        "title": "a.product-info .text-brand-natural-700 span",
+        "current_price": "span[data-price-type='finalPrice'] .price",
+        "original_price": "span[data-price-type='basePrice'] .price",
+        "deal_url": "a.product-info",
+        "image_url": "img.product-image-photo"
+      },
+      "fetch_html": {
+        "wait_for_selector": "li.ais-Hits-item, .develo-product-item",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      }
     }
   ]
 }

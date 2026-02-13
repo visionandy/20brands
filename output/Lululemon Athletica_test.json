@@ -1,150 +1,62 @@
 {
-  "site_id": "site_04",
-  "count": 18,
+  "site_id": "lululemon_athletica",
+  "count": 7,
   "deals": [
     {
-      "source_site": "site_04",
+      "source_site": "lululemon_athletica",
+      "title": "FlexyFlex Strappy Yoga Bra Light Support, A-C Cups",
+      "current_price": "$340",
+      "original_price": "$480",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/flexyflex-strappy-yoga-bra-light-support%2C-a-c-cups/prod20002119.html?dwvar_prod20002119_color=070108",
+      "image_url": "https://images.lululemon.com/is/image/lululemon/LW2EG5S_070108_1?size=400,400"
+    },
+    {
+      "source_site": "lululemon_athletica",
       "title": "Swift Wide-Leg Mid-Rise Pants Asia Fit",
-      "current_price": "RM 418",
-      "original_price": "RM 598",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/swift-wide-leg-mid-rise-pants-asia-fit/LW5FTPA.html?dwvar_LW5FTPA_color=0001",
+      "current_price": "$850",
+      "original_price": "$1,180",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/swift-wide-leg-mid-rise-pants-asia-fit/LW5FTPA.html?dwvar_LW5FTPA_color=0001",
       "image_url": "https://images.lululemon.com/is/image/lululemon/LW5FTHA_0001_1?size=400,400"
     },
     {
-      "source_site": "site_04",
-      "title": "FlexyFlex Strappy Yoga Bra Light Support, A-C Cups",
-      "current_price": "RM 188",
-      "original_price": "RM 268",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/flexyflex-strappy-yoga-bra-light-support%2C-a-c-cups/prod20002119.html?dwvar_prod20002119_color=049106",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW2EG5S_049106_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Align™ High-Rise Pants 24\" Asia Fit",
-      "current_price": "RM 308",
-      "original_price": "RM 448",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-align%E2%84%A2-high-rise-pants-24%22-asia-fit/LW5CRDA.html?dwvar_LW5CRDA_color=049106",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5CWMA_049106_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
+      "source_site": "lululemon_athletica",
       "title": "Softstreme Pull-On High-Rise Maxi Skirt",
-      "current_price": "RM 308",
-      "original_price": "RM 448",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/softstreme-pull-on-high-rise-maxi-skirt/prod20002507.html?dwvar_prod20002507_color=0554",
+      "current_price": "$620",
+      "original_price": "$880",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/softstreme-pull-on-high-rise-maxi-skirt/prod20002507.html?dwvar_prod20002507_color=0554",
       "image_url": "https://images.lululemon.com/is/image/lululemon/LW8AO7S_0554_1?size=400,400"
     },
     {
-      "source_site": "site_04",
+      "source_site": "lululemon_athletica",
+      "title": "lululemon Align™ High-Rise Pant 24\" Asia Fit",
+      "current_price": "$620",
+      "original_price": "$880",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/lululemon-align%E2%84%A2-high-rise-pant-24%22-asia-fit/LW5CRDA.html?dwvar_LW5CRDA_color=0554",
+      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5IH7A_0554_1?size=400,400"
+    },
+    {
+      "source_site": "lululemon_athletica",
       "title": "lululemon Energy Zip-Front Bra High-Support, B–G Cups",
-      "current_price": "RM 248",
-      "original_price": "",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-energy-zip-front-bra-high-support%2C-b%E2%80%93g-cups/prod11690178.html?dwvar_prod11690178_color=028022",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW2DQ5S_028022_1?size=400,400"
+      "current_price": "$480",
+      "original_price": "$680",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/lululemon-energy-zip-front-bra-high-support%2C-b%E2%80%93g-cups/prod11690178.html?dwvar_prod11690178_color=033068",
+      "image_url": "https://images.lululemon.com/is/image/lululemon/LW2DXHS_033068_1?size=400,400"
     },
     {
-      "source_site": "site_04",
+      "source_site": "lululemon_athletica",
+      "title": "Hold Tight Long-Sleeve Henley",
+      "current_price": "$480",
+      "original_price": "$680",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/hold-tight-long-sleeve-henley/prod11570627.html?dwvar_prod11570627_color=045797",
+      "image_url": "https://images.lululemon.com/is/image/lululemon/LW3HN3S_045797_1?size=400,400"
+    },
+    {
+      "source_site": "lululemon_athletica",
       "title": "Fast and Free High-Rise 5-Pocket Tight 24” Asia Fit",
-      "current_price": "RM 418",
-      "original_price": "RM 598",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/fast-and-free-high-rise-5-pocket-tight-24%E2%80%9D-asia-fit/LW5FKEA.html?dwvar_LW5FKEA_color=045739",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5FKEA_045739_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Swiftly Tech Short-Sleeve Shirt 2.0 Waist Length",
-      "current_price": "RM 218",
-      "original_price": "RM 318",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/swiftly-tech-short-sleeve-shirt-2.0-waist-length/prod9820343.html?dwvar_prod9820343_color=033547",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW3DZBS_033547_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Align™ High-Rise Short 6\"",
-      "current_price": "RM 188",
-      "original_price": "",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-align%E2%84%A2-high-rise-short-6%22/prod8351150.html?dwvar_prod8351150_color=028022",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW7BG3S_028022_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Flow Y Mid-Support Bra Logo B/C Cup",
-      "current_price": "RM 188",
-      "original_price": "RM 268",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/flow-y-mid-support-bra-logo-b%2Fc-cup/prod20002451.html",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW2EFVS_0001_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Align™ High-Rise Skirt",
-      "current_price": "RM 288",
-      "original_price": "RM 358",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-align%E2%84%A2-high-rise-skirt/prod11700296.html?dwvar_prod11700296_color=071148",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW8ALQS_071148_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Glow Up™ Super-High-Rise Tight 24\" Asia Fit",
-      "current_price": "RM 375",
-      "original_price": "RM 548",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-glow-up%E2%84%A2-super-high-rise-tight-24%22-asia-fit/LW5GM7A.html?dwvar_LW5GM7A_color=034697",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5GM7A_034697_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Scuba Mid-Rise Oversized Jogger Asia Fit",
-      "current_price": "RM 375",
-      "original_price": "RM 548",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/scuba-mid-rise-oversized-jogger-asia-fit/LW5GO9A.html?dwvar_LW5GO9A_color=0614",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5GX6A_0614_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Align™ Palazzo Pants Asia Fit",
-      "current_price": "RM 418",
-      "original_price": "RM 598",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-align%E2%84%A2-palazzo-pants-asia-fit/LW5HI7A.html?dwvar_LW5HI7A_color=045797",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5HI9A_045797_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Softstreme Cinch-Waist Full-Zip Jacket",
-      "current_price": "RM 478",
-      "original_price": "RM 698",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/softstreme-cinch-waist-full-zip-jacket/prod11801296.html?dwvar_prod11801296_color=0001",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW3IV5S_0001_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "lululemon Align™ Palazzo Pant Regular",
-      "current_price": "RM 418",
-      "original_price": "RM 598",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/lululemon-align%E2%84%A2-palazzo-pant-regular/prod11871062.html?dwvar_prod11871062_color=0554",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5GRFR_0554_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Swiftly Wool Long-Sleeve Shirt",
-      "current_price": "RM 308",
-      "original_price": "RM 448",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/swiftly-wool-long-sleeve-shirt/prod20004127.html?dwvar_prod20004127_color=074379",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW3JI4S_074379_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "Track That Mid-Rise Lined Short 5\"",
-      "current_price": "RM 188",
-      "original_price": "RM 268",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/track-that-mid-rise-lined-short-5%22/prod9270813.html?dwvar_prod9270813_color=032650",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW7ATBS_032650_1?size=400,400"
-    },
-    {
-      "source_site": "site_04",
-      "title": "SilkAppeal Side-Slit Short-Sleeve Shirt",
-      "current_price": "RM 188",
-      "original_price": "RM 268",
-      "deal_url": "https://www.lululemon.com.hk/en-my/p/silkappeal-side-slit-short-sleeve-shirt/prod20001299.html",
-      "image_url": "https://images.lululemon.com/is/image/lululemon/LW3JDQS_0001_1?size=400,400"
+      "current_price": "$850",
+      "original_price": "$1,180",
+      "deal_url": "https://www.lululemon.com.hk/en-hk/p/fast-and-free-high-rise-5-pocket-tight-24%E2%80%9D-asia-fit/LW5FKEA.html?dwvar_LW5FKEA_color=045797",
+      "image_url": "https://images.lululemon.com/is/image/lululemon/LW5FKEA_045797_1?size=400,400"
     }
   ]
 }

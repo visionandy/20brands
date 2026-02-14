@@ -106,8 +106,9 @@
     {
       "id": "alo_yoga",
       "name": "Alo Yoga",
-      "list_url": "https://www.aloyoga.com/en-my/collections/womens-sale-all",
-      "notes": "官方网站aloyoga.com",
+      "list_url": "https://www.aloyoga.com/collections/hot-deals-limited-time?Percent+Off=20-30%25",
+      "notes": "官方网站 aloyoga.com US",
+      "force_us_locale": true,
       "selectors": {
         "container": "div.PlpTile",
         "title": ".product-name p.body.semibold",
@@ -153,8 +154,9 @@
     {
       "id": "nike",
       "name": "Nike",
-      "list_url": "https://www.nike.com/w/womens-sale-jackets-vests-3yaepz50r7yz5e1x6",
-      "notes": "官方网站nike.com.us",
+      "list_url": "https://www.nike.com/w/womens-sale-3yaepz4s7fvz5e1x6zatw11",
+      "notes": "官方网站 nike.com US",
+      "force_us_locale": true,
       "selectors": {
         "container": "div[data-testid='product-card']",
         "title": ".product-card__titles",

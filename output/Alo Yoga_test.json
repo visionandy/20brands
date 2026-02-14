@@ -1,126 +1,316 @@
 {
-  "site_id": "site_05",
-  "count": 15,
+  "site_id": "alo_yoga",
+  "count": 31,
   "deals": [
     {
-      "source_site": "site_05",
-      "title": "Origin Full-Zip Track Jacket",
-      "current_price": "MYR 725",
-      "original_price": "MYR 910",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w4656r-origin-full-zip-track-jacket-charcoal-green",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4656R_06021_b2_s1_a1_1_m209_96ec40c5-dbef-42d5-b146-13444f7a3f93_640x.jpg?v=1747165680"
+      "source_site": "alo_yoga",
+      "title": "Faux Leather Premier Bomber",
+      "current_price_display": "$238",
+      "current_price": 238.0,
+      "original_price_display": "$298",
+      "original_price": 298.0,
+      "deal_url": "https://www.aloyoga.com/products/u4049r-faux-leather-premier-bomber-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U4049R_06021_b1_s1_a1_1_m231_640x.jpg?v=1736898969"
     },
     {
-      "source_site": "site_05",
-      "title": "Washed Sweet Escape Zip Up Hoodie",
-      "current_price": "MYR 430",
-      "original_price": "MYR 540",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w3771r-washed-sweet-escape-hoodie-grey-sky-wash",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3771R_06024_b2_s1_a1_1_m196_640x.jpg?v=1747165795"
+      "source_site": "alo_yoga",
+      "title": "High-Waist Origin Wide Leg Track Pant",
+      "current_price_display": "$118",
+      "current_price": 118.0,
+      "original_price_display": "$148",
+      "original_price": 148.0,
+      "deal_url": "https://www.aloyoga.com/products/w54204r-high-waist-origin-wide-leg-track-pant-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W54204R_06021_b2_s1_a1_1_m18_640x.jpg?v=1737671789"
     },
     {
-      "source_site": "site_05",
-      "title": "Washed Alosoft Sweet Talker Tank",
-      "current_price": "MYR 235",
-      "original_price": "MYR 295",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w2783r-washed-alosoft-sweet-talker-tank-cool-grey-wash",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W2783R_06081_b1_s1_a5_1_m231_640x.jpg?v=1740501784"
+      "source_site": "alo_yoga",
+      "title": "Marl Sweater 1/4 Zip Pullover",
+      "current_price_display": "$174",
+      "current_price": 174.0,
+      "original_price_display": "$218",
+      "original_price": 218.0,
+      "deal_url": "https://www.aloyoga.com/products/w3901r-marl-sweater-1-4-zip-pullover-mushroom-marl",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3901R_06460_b2_s1_a1_1_m143_ab39b621-43c7-483e-9b61-51ca49170597_640x.jpg?v=1740769030"
     },
     {
-      "source_site": "site_05",
+      "source_site": "alo_yoga",
       "title": "Snuggle Up Sweater High-Waist Wide Leg Pant",
-      "current_price": "MYR 725",
-      "original_price": "MYR 910",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w51431r-snuggle-up-sweater-high-waist-wide-leg-pant-mushroom",
+      "current_price_display": "$158",
+      "current_price": 158.0,
+      "original_price_display": "$198",
+      "original_price": 198.0,
+      "deal_url": "https://www.aloyoga.com/products/w51431r-snuggle-up-sweater-high-waist-wide-leg-pant-mushroom",
       "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W51431R_05498_b1_s1_a1_1_m230_640x.jpg?v=1738615212"
     },
     {
-      "source_site": "site_05",
-      "title": "Wanderlust Wide Leg Trouser",
-      "current_price": "MYR 580",
-      "original_price": "MYR 725",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w54154r-low-rise-wanderlust-wide-leg-trouser-oat-milk",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W54154R_05850_b1_s1_a1_1_m230_640x.jpg?v=1739423472"
-    },
-    {
-      "source_site": "site_05",
-      "title": "7/8 High-Waist Airbrush Legging",
-      "current_price": "MYR 380",
-      "original_price": "MYR 540",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w5604r-7-8-high-waist-airbrush-legging-lettuce",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/products/W5604R_04678_b1_s1_a1_1_m89_640x.jpg?v=1703206950"
-    },
-    {
-      "source_site": "site_05",
-      "title": "Afterglow Wide Leg Track Pant",
-      "current_price": "MYR 470",
-      "original_price": "MYR 590",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w54151r-afterglow-wide-leg-track-pant-steel-grey",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W54151R_05541_b1_s1_a1_1_m230_640x.jpg?v=1734371244"
-    },
-    {
-      "source_site": "site_05",
-      "title": "First-Class Blazer",
-      "current_price": "MYR 795",
-      "original_price": "MYR 1,150",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w4603r-first-class-blazer-toasted-almond",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4603R_05131_b1_s1_a1_1_m205_640x.jpg?v=1739422888"
-    },
-    {
-      "source_site": "site_05",
-      "title": "Rain Or Shine Long Coat",
-      "current_price": "MYR 1,300",
-      "original_price": "MYR 1,600",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w4560r-rain-or-shine-long-coat-charcoal-green",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4560R_06021_b2_s1_a1_1_m174_640x.jpg?v=1747165720"
-    },
-    {
-      "source_site": "site_05",
-      "title": "Prime Trench",
-      "current_price": "MYR 795",
-      "original_price": "MYR 1,150",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w4620r-prime-trench-toasted-almond",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4620R_05131_b1_s1_a1_1_m91_15ecb56b-34c5-437c-9f58-34b962c082eb_640x.jpg?v=1742961403"
-    },
-    {
-      "source_site": "site_05",
-      "title": "High-Waist Voyager Trouser",
-      "current_price": "MYR 615",
-      "original_price": "MYR 770",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w54156r-high-waist-voyager-trouser-mushroom",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W54156R_05498_b1_s1_a1_1_m231_640x.jpg?v=1738614962"
-    },
-    {
-      "source_site": "site_05",
-      "title": "Cropped Afterglow Pullover",
-      "current_price": "MYR 505",
-      "original_price": "MYR 635",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w3874r-cropped-afterglow-pullover-steel-grey",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3874R_05541_b1_s1_a1_1_m54_640x.jpg?v=1767897989"
-    },
-    {
-      "source_site": "site_05",
-      "title": "Show Off Cargo Wide Leg Trouser (Long)",
-      "current_price": "MYR 580",
-      "original_price": "MYR 725",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w51383r-h-w-show-off-cargo-wide-leg-trouser-long-burgundy-truffle",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W51383R_05815_b1_s1_a1_m54_65dfe197-5072-42b7-9d09-38d60e21a566_640x.jpg?v=1732663578"
-    },
-    {
-      "source_site": "site_05",
+      "source_site": "alo_yoga",
       "title": "Snuggle Up Sweater Shawl",
-      "current_price": "MYR 540",
-      "original_price": "MYR 680",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w3865r-snuggle-up-sweater-shawl-mushroom",
+      "current_price_display": "$118",
+      "current_price": 118.0,
+      "original_price_display": "$148",
+      "original_price": 148.0,
+      "deal_url": "https://www.aloyoga.com/products/w3865r-snuggle-up-sweater-shawl-mushroom",
       "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3865R_05498_b1_s1_a1_1_m230_640x.jpg?v=1738615089"
     },
     {
-      "source_site": "site_05",
+      "source_site": "alo_yoga",
       "title": "Cropped Gold Rush Puffer Vest",
-      "current_price": "MYR 540",
-      "original_price": "MYR 770",
-      "deal_url": "https://www.aloyoga.com/en-my/products/w4639r-extreme-cropped-gold-rush-puffer-vest-toasted-almond",
-      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4639R_05131_b1_s1_a1_m228_640x.jpg?v=1731468133"
+      "current_price_display": "$134",
+      "current_price": 134.0,
+      "original_price_display": "$168",
+      "original_price": 168.0,
+      "deal_url": "https://www.aloyoga.com/products/w4639r-extreme-cropped-gold-rush-puffer-vest-mushroom",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4639R_05498_b1_s1_a1_1_m54_640x.jpg?v=1738614681"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Origin Full-Zip Track Jacket",
+      "current_price_display": "$158",
+      "current_price": 158.0,
+      "original_price_display": "$198",
+      "original_price": 198.0,
+      "deal_url": "https://www.aloyoga.com/products/w4656r-origin-full-zip-track-jacket-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4656R_06021_b2_s1_a1_1_m209_96ec40c5-dbef-42d5-b146-13444f7a3f93_640x.jpg?v=1747165680"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Stargazing Puffer",
+      "current_price_display": "$198",
+      "current_price": 198.0,
+      "original_price_display": "$248",
+      "original_price": 248.0,
+      "deal_url": "https://www.aloyoga.com/products/w4634r-stargazing-puffer-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4634R_06021_b2_s1_a1_1_m174_640x.jpg?v=1747165703"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Northstar Cargo Pant",
+      "current_price_display": "$118",
+      "current_price": 118.0,
+      "original_price_display": "$148",
+      "original_price": 148.0,
+      "deal_url": "https://www.aloyoga.com/products/m5173r-northstar-cargo-pant-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M5173R_06021_b1_s1_a1_1_m221_640x.jpg?v=1738174960"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Rain Or Shine Long Coat",
+      "current_price_display": "$278",
+      "current_price": 278.0,
+      "original_price_display": "$348",
+      "original_price": 348.0,
+      "deal_url": "https://www.aloyoga.com/products/w4560r-rain-or-shine-long-coat-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4560R_06021_b2_s1_a1_1_m174_640x.jpg?v=1747165720"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Faux Leather Premier Bomber",
+      "current_price_display": "$238",
+      "current_price": 238.0,
+      "original_price_display": "$298",
+      "original_price": 298.0,
+      "deal_url": "https://www.aloyoga.com/products/u4049r-faux-leather-premier-bomber-charcoal-green-mens",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U4049R_06021_b1_s1_a1_1_m221_640x.jpg?v=1737162640"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Rain Or Shine Long Coat",
+      "current_price_display": "$278",
+      "current_price": 278.0,
+      "original_price_display": "$348",
+      "original_price": 348.0,
+      "deal_url": "https://www.aloyoga.com/products/w4560r-rain-or-shine-long-coat-charcoal-green-mens",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W4560R_06021_b1_s1_a3_1_m214_640x.jpg?v=1737765465"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Edition Sueded Jacket",
+      "current_price_display": "$126",
+      "current_price": 126.0,
+      "original_price_display": "$158",
+      "original_price": 158.0,
+      "deal_url": "https://www.aloyoga.com/products/m4175r-edition-sueded-jacket-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M4175R_06021_b1_s1_a1_1_m214_640x.jpg?v=1738173377"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Elemental Full-Zip Jacket",
+      "current_price_display": "$158",
+      "current_price": 158.0,
+      "original_price_display": "$198",
+      "original_price": 198.0,
+      "deal_url": "https://www.aloyoga.com/products/m4185r-elemental-full-zip-jacket-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M4185R_06021_b1_s1_a1_1_m214_640x.jpg?v=1738174242"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airlift Line Up Bra",
+      "current_price_display": "$78",
+      "current_price": 78.0,
+      "original_price_display": "$98",
+      "original_price": 98.0,
+      "deal_url": "https://www.aloyoga.com/products/w9533r-airlift-line-up-bra-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W9681R_06021_b2_s1_a1_1_m174_640x.jpg?v=1736990549"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Conquer 1/4 Zip Reform Long Sleeve",
+      "current_price_display": "$86",
+      "current_price": 86.0,
+      "original_price_display": "$108",
+      "original_price": 108.0,
+      "deal_url": "https://www.aloyoga.com/products/m3193r-conquer-1-4-zip-reform-long-sleeve-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3193R_06021_b1_s1_a1_1_m221_640x.jpg?v=1738174336"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airlift Rebel Bra",
+      "current_price_display": "$70",
+      "current_price": 70.0,
+      "original_price_display": "$88",
+      "original_price": 88.0,
+      "deal_url": "https://www.aloyoga.com/products/w9831r-airlift-rebel-bra-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W9831R_06021_b2_s1_a1_1_m232_640x.jpg?v=1736990392"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Polar Fleece Wintry Mix Pant",
+      "current_price_display": "$126",
+      "current_price": 126.0,
+      "original_price_display": "$158",
+      "original_price": 158.0,
+      "deal_url": "https://www.aloyoga.com/products/w51374r-polar-fleece-wintry-mix-pant-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W51374R_06021_b2_s1_a1_1_m174_640x.jpg?v=1747165646"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airlift Winter Warm 1/4 Zip Long Sleeve",
+      "current_price_display": "$102",
+      "current_price": 102.0,
+      "original_price_display": "$128",
+      "original_price": 128.0,
+      "deal_url": "https://www.aloyoga.com/products/w3788r-airlift-winter-warm-1-4-zip-long-sleeve-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3788R_06021_b1_s1_a1_1_m54_640x.jpg?v=1736895458"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airlift High-Waist 7/8 Rebel Legging",
+      "current_price_display": "$115",
+      "current_price": 115.0,
+      "original_price_display": "$144",
+      "original_price": 144.0,
+      "deal_url": "https://www.aloyoga.com/products/w54178r-airlift-high-waist-7-8-rebel-legging-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W54178R_06021_b2_s1_a1_1_m232_640x.jpg?v=1736990451"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airlift Intrigue Bra",
+      "current_price_display": "$62",
+      "current_price": 62.0,
+      "original_price_display": "$78",
+      "original_price": 78.0,
+      "deal_url": "https://www.aloyoga.com/products/w9557r-airlift-intrigue-bra-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W9557R_06021_b1_s1_a1_1_m54_640x.jpg?v=1736895094"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Seamless Ribbed Favorite Bra Tank",
+      "current_price_display": "$67",
+      "current_price": 67.0,
+      "original_price_display": "$84",
+      "original_price": 84.0,
+      "deal_url": "https://www.aloyoga.com/products/w9730r-seamless-ribbed-favorite-bra-tank-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W9730R_06021_b1_s1_a1_1_m174_640x.jpg?v=1736894369"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Airbrush High-Waist Bootcut Legging",
+      "current_price_display": "$102",
+      "current_price": 102.0,
+      "original_price_display": "$128",
+      "original_price": 128.0,
+      "deal_url": "https://www.aloyoga.com/products/w51118r-airbrush-high-waist-bootcut-legging-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W51118R_06021_b1_s1_a1_1_m231_640x.jpg?v=1737162849"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Wild Thing Bra",
+      "current_price_display": "$62",
+      "current_price": 62.0,
+      "original_price_display": "$78",
+      "original_price": 78.0,
+      "deal_url": "https://www.aloyoga.com/products/w9609r-wild-thing-bra-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W9609R_06021_b2_s1_a1_1_m209_640x.jpg?v=1747163427"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Triumph Tee",
+      "current_price_display": "$46",
+      "current_price": 46.0,
+      "original_price_display": "$58",
+      "original_price": 58.0,
+      "deal_url": "https://www.aloyoga.com/products/m1257r-triumph-tee-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M1257R_06021_b1_s1_a1_1_m214_640x.jpg?v=1738184242"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "7\" Conquer React Performance Short",
+      "current_price_display": "$54",
+      "current_price": 54.0,
+      "original_price_display": "$68",
+      "original_price": 68.0,
+      "deal_url": "https://www.aloyoga.com/products/m6131r-7-conquer-react-performance-short-charcoal-green-heather",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M6131R_06111_b1_s1_a1_1_m221_640x.jpg?v=1738174109"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Conquer React Performance Pant",
+      "current_price_display": "$102",
+      "current_price": 102.0,
+      "original_price_display": "$128",
+      "original_price": 128.0,
+      "deal_url": "https://www.aloyoga.com/products/m5142r-conquer-react-performance-pant-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M5142R_06021_b1_s1_a1_1_m214_640x.jpg?v=1738174789"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Chill Short",
+      "current_price_display": "$62",
+      "current_price": 62.0,
+      "original_price_display": "$78",
+      "original_price": 78.0,
+      "deal_url": "https://www.aloyoga.com/products/m6122r-chill-short-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M6122R_06021_b1_s1_a1_1_m221_640x.jpg?v=1738174481"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Co-Op Pant (Long)",
+      "current_price_display": "$110",
+      "current_price": 110.0,
+      "original_price_display": "$138",
+      "original_price": 138.0,
+      "deal_url": "https://www.aloyoga.com/products/m5190r-co-op-pant-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M5190R_06021_b1_s1_a1_1_m221_640x.jpg?v=1738174418"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "7\" Repetition Short",
+      "current_price_display": "$62",
+      "current_price": 62.0,
+      "original_price_display": "$78",
+      "original_price": 78.0,
+      "deal_url": "https://www.aloyoga.com/products/m6154r-7-repetition-short-charcoal-green",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M6154R_06021_b1_s1_a1_1_m214_640x.jpg?v=1738174031"
+    },
+    {
+      "source_site": "alo_yoga",
+      "title": "Conquer Muscle Tank",
+      "current_price_display": "$54",
+      "current_price": 54.0,
+      "original_price_display": "$68",
+      "original_price": 68.0,
+      "deal_url": "https://www.aloyoga.com/products/m2066r-conquer-muscle-tank-charcoal-green-heather",
+      "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M2066R_06111_b1_s1_a1_1_m221_640x.jpg?v=1738184003"
     }
   ]
 }

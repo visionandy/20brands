@@ -201,7 +201,15 @@
       "name": "Old Navy",
       "list_url": "https://oldnavy.gap.com/browse/todays-deals/today-only-deal?cid=3041263",
       "notes": "官方网站oldnavy.gap.com",
-      "selectors": {}
+      "selectors": {
+        "container": "[data-testid='plp_product-card']",
+        "title": "[data-testid='plp_product-name']",
+        "current_price": ".plp_product-card-markdown-price .plp-product-price-small, span.fds__core-web-price-percent-off .plp-product-price-small, .plp-product-price-small",
+        "original_price": "span.fds__core-web-original-price",
+        "deal_url": "a[data-testid='plp_product-info']",
+        "image_url": "img.plp_product-card__image",
+        "deal_percent": ".fds__core-web-price-percent-off, .plp_product-card-percent-off"
+      }
     },
     {
       "id": "h_m",

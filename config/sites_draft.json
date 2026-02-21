@@ -16,12 +16,12 @@
     }
   },
   "deal_fields": [
-    "title",
+    "Product_name",
     "current_price",
     "original_price",
-    "deal_url",
+    "Product_link",
     "image_url",
-    "source_site",
+    "Brand",
     "posted_at",
     "expires_at"
   ],
@@ -46,43 +46,51 @@
         "scroll_before_save": true,
         "dismiss_consent": true
       },
-      "fetch_detail": false,
-      "detail_selectors": {}
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='michaelkors.scene7.com']"
+      }
     },
     { 
       "id": "calvinklein",
       "name": "calvinklein",
-      "list_url": "https://www.calvinklein.com.my/en/sale/women/denim-jeans/",
+      "list_url": "https://www.calvinklein.us/en/women/apparel/dresses/",
       "notes": "官方网站calvinklein.com.my",
       "selectors": {
         "container": "div.product",
-        "title": ".product-name-link a.name-link",
-        "current_price": ".price .sales .value",
-        "original_price": ".price .strike-through.list .value",
-        "deal_url": ".product-name-link a.name-link",
-        "image_url": ".image-container img.tile-image",
-        "deal_percent": ".price .sales .percent-value",
+        "title": "a.ds-product-name span, .product-name-link a.name-link",
+        "current_price": ".price .sales .value, .price.ds-product-price .value",
+        "original_price": ".price .strike-through.list .value, .price.ds-product-price .strike-through .value",
+        "deal_url": "a.ds-product-name, .product-name-link a.name-link, a.pdpurl",
+        "image_url": ".image-container img[src*='scene7.com'], .image-container img.tile-image, img.plp-slick-img[src*='scene7.com']",
+        "deal_percent": ".promotions-container",
         "deals_detail": "p.callout-msg"
       },
-      "fetch_detail": false,
-      "detail_selectors": {}
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='calvinklein.scene7.com']"
+      }
     },
     {
       "id": "coach",
       "name": "coach",
-      "list_url": "https://malaysia.coachoutlet.com/bestsellers.html",
-      "notes": "官方网站coachoutlet.com",
+      "list_url": "https://www.coachoutlet.com/shop/clearance/view-all?page=2&filterByDiscount=70%25%20%2B",
+      "notes": "coachoutlet.com 美国站（与 coach.com 同 Chakra DOM）",
       "selectors": {
-        "container": "li.product-item",
-        "title": ".product-item-name a.product-item-link",
-        "current_price": ".price-box span[data-price-type='finalPrice'] .price",
-        "original_price": ".price-box span[data-price-type='oldPrice2'] .price",
-        "deal_url": ".product-item-name a.product-item-link",
-        "image_url": ".product-image-section img.product-image-photo"
+        "container": ".product-tile",
+        "title": "p[data-qa='cm_pdt_link_pt_title'], .product-name p",
+        "current_price": "span.salesPrice, [data-qa='m_plp_txt_pt_price_upper_rl']",
+        "original_price": "[data-qa='cm_txt_pdt_price_strthr'], [data-qa='txt_comparable_value_price']",
+        "deal_url": ".product-name a, a[href*='/products/']",
+        "image_url": "img[src*='scene7.com'], img.chakra-image[src*='scene7']"
       },
       "fetch_detail": true,
       "detail_selectors": {
-        "style_color": ".product.attribute.coach_style_color .value",
+        "image_list": "#splide02 img[src*='scene7.com'], [data-qa='m_pdp_btn_pdt_img'][src*='scene7.com']",
+        "detail_image_denoise": {
+          "exclude_patterns": ["imageRec"]
+        },
+        "style_color": "[data-qa='cm_txt_pdt_label_color'], .product.attribute.coach_style_color .value",
         "payment": ".atome-product-installment-price",
         "stock": ".product-info-stock-sku .stock.available"
       }
@@ -90,18 +98,23 @@
     {
       "id": "lululemon_athletica",
       "name": "Lululemon Athletica",
-      "list_url": "https://www.lululemon.com.hk/en-my/c/sale/specials/bestsellers?pmid=markdownPromotion&prefn1=gender&prefv1=Women",
-      "notes": "官方网站lululemon.com.hk",
+      "list_url": "https://shop.lululemon.com/c/women-we-made-too-much/n16o10z8mhd?icid=cdp-cdp:we-made-too-much;2;cardcarouselitem;cdp:womens-we-made-too-much;campaigns;markdownqt",
+      "notes": "官方网站lululemon.com.us",
       "selectors": {
-        "container": "div.product",
-        "title": ".pdp-link a.search-results-product-name",
-        "current_price": ".price .sales .value",
-        "original_price": ".price .strike-through.list .value",
-        "deal_url": ".pdp-link a.search-results-product-name",
-        "image_url": ".image-container img.tile-image"
+        "container": "[data-testid='product-tile']",
+        "title": "h3.product-tile__product-name a",
+        "current_price": "span.price",
+        "original_price": "span.price__inactive-list-price",
+        "deal_url": "a.product-tile__image-link",
+        "image_url": ".image-container picture img"
       },
-      "fetch_detail": false,
-      "detail_selectors": {}
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='images.lululemon.com']",
+        "detail_image_denoise": {
+          "exclude_patterns": ["$product_tile$"]
+        }
+      }
     },
     {
       "id": "alo_yoga",
@@ -117,8 +130,10 @@
         "deal_url": ".product-name a",
         "image_url": "img"
       },
-      "fetch_detail": false,
-      "detail_selectors": {}
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='cdn.shopify.com/s/files/']"
+      }
     },
     {
       "id": "j_crew",
@@ -133,13 +148,18 @@
         "deal_url": "a.product-tile__details",
         "image_url": ".product-tile__image-wrapper img",
         "deal_percent": "[data-testid='discountPrice'] span"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='s7-img-facade']"
       }
     },
     {
       "id": "tommy_hilfiger",
       "name": "Tommy Hilfiger",
-      "list_url": "https://my.tommy.com/en/women/sale/clothing/?fcgid=women-sale-clothing&prefn1=gender&prefv1=women",
-      "notes": "官方网站tommy.com",
+      "list_url": "https://usa.tommy.com/en/women/sale?prefn1=style&prefv1=Dresses&srule=featured&sz=32&start=0",
+      "notes": "官方网站 usa.tommy.com US",
+      "force_us_locale": true,
       "selectors": {
         "container": "div.product",
         "title": ".product-name-link a",
@@ -149,6 +169,11 @@
         "image_url": ".image-container img.tile-image",
         "deal_percent": ".price .sales .percent-value",
         "deals_detail": "p.callout-msg"
+      },
+      "fetch_html": {
+        "wait_for_selector": "div.product, .product-tile",
+        "scroll_before_save": true,
+        "dismiss_consent": true
       }
     },
     {
@@ -165,6 +190,10 @@
         "deal_url": "a.product-card__link-overlay",
         "image_url": "img.product-card__hero-image",
         "deals_detail": ".promo__message"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='static.nike.com']"
       }
     },
     {
@@ -181,22 +210,43 @@
         "deal_url": "a[data-testid='product-card-description-link']",
         "image_url": "[data-testid='product-card-primary-image']",
         "deal_percent": "[data-testid='discount-text']"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='assets.adidas.com']",
+        "detail_image_denoise": {
+          "exclude_patterns": ["brand.assets", "w_180", "e_trim:", "plp_standard"],
+          "color_thumbnail_patterns": ["w_180", "plp_standard"],
+          "split_color_thumbnails": true
+        }
       }
     },
     {
       "id": "levis",
       "name": "Levi's",
-      "list_url": "https://www.levi.com/US/en_US/sale/c/levi_clothing_sale_us/facets/feature-gender/women/feature-fit/straight",
+      "list_url": "https://www.levi.com/US/en_US/sale/c/levi_clothing_sale_us?srsltid=AfmBOooSppB9Xs7g1pg_FNks4d0y5tCsV-Gwfvi45C3HTMS_LfNBgugC",
       "notes": "官方网站 levi.com US，非美国 IP 可能 Access Denied",
       "force_us_locale": true,
       "selectors": {
-        "container": "li.grid__item",
-        "title": ".card__heading a",
-        "current_price": ".price-item--sale",
-        "original_price": ".price-item--regular",
-        "deal_url": ".card__heading a",
-        "image_url": ".card__media img",
+        "container": "div.product-cell",
+        "title": "h3.product-name",
+        "current_price": "span.hard-sale",
+        "original_price": "div.strikedOut span:not([class*='visually-hidden'])",
+        "deal_url": "a.cell-image-link, a.product-link",
+        "image_url": "picture img.responsive-img",
         "deal_percent": ".promo-badge"
+      },
+      "fetch_html": {
+        "wait_for_selector": "div.product-cell, a.cell-image-link",
+        "scroll_before_save": true,
+        "dismiss_consent": true
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='lscoglobal.scene7.com']",
+        "detail_image_denoise": {
+          "exclude_patterns": ["$swatch$"]
+        }
       }
     },
     {
@@ -222,10 +272,17 @@
       "selectors": {
         "container": "#products-listing-section li",
         "title": "h2",
-        "current_price": "p span",
+        "current_price": "p",
         "original_price": "del",
         "deal_url": "a[href*='productpage']",
         "image_url": "img"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='image.hm.com']",
+        "title": "[data-testid='product-name']",
+        "current_price": "[data-testid='red-price']",
+        "original_price": "[data-testid='line-through-white-price']"
       },
       "fetch_html": {
         "wait_for_selector": "article, li[class*='product'], a[href*='product']",
@@ -269,6 +326,10 @@
         "wait_for_selector": "article, .product-tile, a[href*='/p/']",
         "scroll_before_save": true,
         "dismiss_consent": true
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "[data-component-id='image-gallery'] img[src*='media.columbia.com'], [data-component-id='image-gallery'] img[src*='scene7.com']"
       }
     },
     {
@@ -288,23 +349,34 @@
         "wait_for_selector": "[data-testid='plp_product-card'], a[data-testid='plp_product-info']",
         "scroll_before_save": true,
         "dismiss_consent": true
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "[data-testid='pdp-photo-brick-image'] img"
       }
     },
     {
       "id": "guess",
       "name": "Guess",
-      "list_url": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses?subcategory=Guess-Women-LastChance-Dresses%23763d912d-a3b1-413f-b86a-b81029e50722&page=2",
+      "list_url": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses?subcategory=Guess-Women-LastChance-Dresses%23763d912d-a3b1-413f-b86a-b81029e50722&page=1",
       "notes": "官方网站guess.eu",
       "selectors": {
-        "container": "li.product__tile:not(.js-aa-product-skeleton-prev):not(.js-aa-product-skeleton-next)",
-        "title": "[class*='ItemContentTitle'] a, a[href*='/last-chance/'][href*='.html']",
+        "container": "li.ais-InfiniteHits-item.product__tile, li.product__tile",
+        "title": "h2.aa-ItemContentTitle a, [class*='ItemContentTitle'] a",
         "current_price": ".item-price",
         "original_price": ".price__strike-through.item-salesPrice .value",
-        "deal_url": "a[href*='/last-chance/'][href*='.html']",
-        "image_url": ".product-grid__image img, img"
+        "deal_url": "a.js-aa-pdp-href, a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html']",
+        "image_url": "li.guess-carousel__slide--show img.product-grid__image, .product-grid__image img[src*='img.guess.com']"
+      },
+      "fetch_detail": true,
+      "detail_selectors": {
+        "image_list": "img[src*='img.guess.com']",
+        "detail_image_denoise": {
+          "exclude_patterns": ["filtercolor", "Archive", "OG_image", "favicon"]
+        }
       },
       "fetch_html": {
-        "wait_for_selector": "article, [class*='product'], a[href*='product']",
+        "wait_for_selector": "li.product__tile, .aa-ItemContentTitle",
         "scroll_before_save": true,
         "dismiss_consent": true
       }
@@ -370,18 +442,27 @@
     {
       "id": "cos",
       "name": "COS",
-      "list_url": "https://www.brandalley.co.uk/women/brands/cos.html?ba_brand=COS",
-      "notes": "非官网站点brandalley.co.uk，图片从 JSON-LD 补全",
+      "list_url": "https://www.cos.com/en-us/women/sale",
+      "force_us_locale": true,
+      "notes": "官方网站cos.com，强反爬需 undetected-chromedriver",
+      "anti_detect": {
+        "use_undetected": true,
+        "pre_navigate_url": "",
+        "region_selection_fallback": {
+          "enabled": true,
+          "click_order": ["North America", "United States", "Americas", "Canada"]
+        }
+      },
       "selectors": {
-        "container": "li.ais-Hits-item",
-        "title": "a.product-info .text-brand-natural-700 span",
-        "current_price": "span[data-price-type='finalPrice'] .price",
-        "original_price": "span[data-price-type='basePrice'] .price",
-        "deal_url": "a.product-info",
-        "image_url": "img.product-image-photo"
+        "container": "[data-testid='product-card-wrapper']",
+        "title": "[data-testid='product-card-heading']",
+        "current_price": "[data-testid='product-price']",
+        "original_price": "[data-testid='product-price-discounted']",
+        "deal_url": "a[href*='/product/']",
+        "image_url": "img[data-testid^='default-product-card-slider-image-']"
       },
       "fetch_html": {
-        "wait_for_selector": "li.ais-Hits-item, .develo-product-item",
+        "wait_for_selector": "[data-testid='product-card-wrapper'], a[href*='/product/']",
         "scroll_before_save": true,
         "dismiss_consent": true
       }

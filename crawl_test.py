@@ -27,6 +27,12 @@ try:
 except ImportError:
     HAS_BS4 = False
 
+try:
+    import undetected_chromedriver as uc
+    HAS_UC = True
+except ImportError:
+    HAS_UC = False
+
 # 多币种价格提取：从 "Price reduced from\nMYR 949.00\nto" 等文案中只保留第一处「货币+金额」
 # 优先匹配带货币符号的（避免 "4k+ bought" 中的 "4" 被误匹配）
 _PRICE_CURRENCY = re.compile(r"(?:MYR|RM|USD|SGD|EUR|GBP|\$|€|£)\s*[\d,]+(?:\.\d+)?")
@@ -293,6 +299,13 @@ def parse_deals_from_page(driver, site, base_url, config=None):
                         url = data_src
                     else:
                         url = src or data_src
+                    # srcset 兜底：当 src 为 data: 或空时，从 srcset 取第一张图（如 Lululemon）
+                    if (not url or url.startswith("data:")) and img_el.get_attribute("srcset"):
+                        srcset = (img_el.get_attribute("srcset") or "").strip()
+                        if srcset:
+                            first = srcset.split(",")[0].strip().split()[0]
+                            if first and first.startswith("http"):
+                                url = first
                     # 过滤掉懒加载占位图
                     if url and not url.startswith("data:") and "1x1" not in url and "empty_loading" not in url and "banner_loading" not in url:
                         deal["image_url"] = url
@@ -328,6 +341,36 @@ def _title_from_url_slug(url):
     except Exception:
         pass
     return ""
+
+
+def _parse_guess_deals_from_jsonld(html, base_url, site_id):
+    """
+    guess 专用：当 DOM 解析为 0 时，从 productItemsList JSON-LD 构建 deals。
+    返回 [{"source_site": site_id, "title": str, "deal_url": str, ...}, ...]
+    """
+    try:
+        m = re.search(r'<script\s+id="productItemsList"\s+type="application/ld\+json">(.*?)</script>', html, re.DOTALL)
+        if not m:
+            return []
+        data = json.loads(m.group(1).strip())
+        deals = []
+        for item in data.get("itemListElement", []):
+            name = item.get("name", "").strip()
+            url = (item.get("url", "") or "").strip()
+            if not url:
+                continue
+            full_url = urljoin(base_url, url) if not url.startswith("http") else url
+            deals.append({
+                "source_site": site_id,
+                "title": _clean_title(name or _title_from_url_slug(full_url), None),
+                "deal_url": full_url,
+                "current_price": None,
+                "original_price": None,
+                "image_url": "",
+            })
+        return deals
+    except Exception:
+        return []
 
 
 def _enrich_guess_titles(driver, deals, site):
@@ -372,25 +415,33 @@ def _enrich_guess_titles(driver, deals, site):
 
 def _parse_guess_prices_from_html(html, base_url):
     """
-    guess 专用：从 HTML 解析价格（Algolia 在 Selenium 中可能未完全渲染，用静态 HTML 兜底）。
-    返回 [(deal_url, current_price, original_price), ...]
+    guess 专用：从 HTML 解析价格和图片（Algolia 在 Selenium 中可能未完全渲染，用静态 HTML 兜底）。
+    返回 [(deal_url, current_price, original_price, image_url), ...]
     """
     if not HAS_BS4:
         return []
     try:
         soup = BeautifulSoup(html, "html.parser")
-        containers = soup.select("li.product__tile:not(.js-aa-product-skeleton-prev):not(.js-aa-product-skeleton-next)")
+        containers = soup.select("li.product__tile, li.ais-InfiniteHits-item.product__tile")
         result = []
         for node in containers:
-            link = node.select_one("a[href*='/last-chance/'][href*='.html']")
+            link = node.select_one("a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html'], a.js-aa-pdp-href")
             cp_el = node.select_one(".item-price")
             op_el = node.select_one(".price__strike-through.item-salesPrice .value")
+            slide = node.select_one("li.guess-carousel__slide--show")
+            img_el = node.select_one("img.product-grid__image[src*='img.guess.com']")
+            img_src = ""
+            if slide:
+                img_src = (slide.get("data-img-src", "") or "").strip()
+            if not img_src and img_el:
+                img_src = (img_el.get("src", "") or "").strip()
             href = (link.get("href", "") or "").strip()
             url = urljoin(base_url, href) if href else ""
             cp = (cp_el.get_text(strip=True) if cp_el else "") or ""
             op = (op_el.get_text(strip=True) if op_el else "") or ""
+            img_url = urljoin(base_url, img_src) if img_src and not img_src.startswith("http") else img_src
             if url:
-                result.append((url, _normalize_price_text(cp), _normalize_price_text(op)))
+                result.append((url, _normalize_price_text(cp), _normalize_price_text(op), img_url or ""))
         return result
     except Exception:
         return []
@@ -429,6 +480,46 @@ def _parse_athleta_from_html(html, base_url):
         return result
     except Exception:
         return {}
+
+
+def _enrich_calvinklein_promo(driver, deals, site):
+    """calvinklein 专用：从页面 header / promotions-container 抓取 deal_percent、Use code 补全。"""
+    if site.get("id") != "calvinklein" or not deals:
+        return deals
+    use_code = ""
+    deal_pct = ""
+    try:
+        # 1) 优先从 .promotions-container 元素取 deal_percent（部分商品无此元素，用页面级第一个）
+        try:
+            els = driver.find_elements(By.CSS_SELECTOR, ".promotions-container")
+            for el in els:
+                txt = (el.text or "").strip()
+                if txt and re.search(r"\d+%\s+off", txt, re.I):
+                    deal_pct = txt
+                    break
+        except Exception:
+            pass
+        html = driver.page_source
+        # 2) 若未取到，从 page_source 正则匹配
+        if not deal_pct:
+            m2 = re.search(r"(\d+%\s+off[^<]*?)(?:\s*[|*]|\s*Use\s+code|$)", html, re.I)
+            if m2:
+                deal_pct = m2.group(1).strip().rstrip("*").strip()
+            if not deal_pct:
+                m3 = re.search(r"(\d+%\s+off[^<]+)", html, re.I)
+                if m3:
+                    deal_pct = m3.group(1).strip().rstrip("*").strip()
+        # 3) deals_detail: Use code: GET40
+        m = re.search(r"Use\s+code:\s*([A-Z0-9]+)", html, re.I)
+        use_code = f"Use code: {m.group(1).strip()}" if m else ""
+        for d in deals:
+            if use_code and not (d.get("deals_detail") or "").strip():
+                d["deals_detail"] = use_code
+            if deal_pct and not (d.get("deal_percent") or "").strip():
+                d["deal_percent"] = deal_pct
+    except Exception:
+        pass
+    return deals
 
 
 def _enrich_athleta_from_html(driver, deals, site, base_url):
@@ -487,12 +578,18 @@ def _parse_michaelkors_from_html(html, base_url):
             op_el = node.select_one(".price .list .value") or node.select_one(".price .list")
             cp_display = _normalize_price_text((cp_el.get_text(strip=True) if cp_el else "") or "")
             op_display = _normalize_price_text((op_el.get_text(strip=True) if op_el else "") or "")
+            dp_el = node.select_one(".default-price__discount")
+            promo_el = node.select_one(".promotion-callout")
+            deal_percent = (dp_el.get_text(strip=True) if dp_el else "") or ""
+            deals_detail = (promo_el.get_text(strip=True) if promo_el else "") or ""
             result[url] = {
                 "title": _clean_title(title, None),
                 "current_price": _parse_price_to_float(cp_display) if cp_display else None,
                 "current_price_display": cp_display or "",
                 "original_price": _parse_price_to_float(op_display) if op_display else None,
                 "original_price_display": op_display or "",
+                "deal_percent": deal_percent,
+                "deals_detail": deals_detail,
             }
         return result
     except Exception:
@@ -528,8 +625,61 @@ def _enrich_michaelkors_from_html(driver, deals, site, base_url):
             deal["original_price"] = data.get("original_price")
             deal["original_price_display"] = data.get("original_price_display", "")
             filled += 1
+        if data.get("deal_percent") and not deal.get("deal_percent"):
+            deal["deal_percent"] = data.get("deal_percent", "")
+            filled += 1
+        if data.get("deals_detail") and not deal.get("deals_detail"):
+            deal["deals_detail"] = data.get("deals_detail", "")
+            filled += 1
     if url_to_data:
-        print(f"  [michaelkors] 从 HTML 补全 title/价格")
+        print(f"  [michaelkors] 从 HTML 补全 title/价格/折扣")
+    return deals
+
+
+def _parse_cos_deals_from_jsonld(html, site_id):
+    """
+    cos 专用：当 DOM 解析为 0 时，从 schema.org ItemList JSON-LD 直接生成 deals 列表。
+    返回 [deal, ...]
+    """
+    deals = []
+    try:
+        for m in re.finditer(
+            r'<script\s+type="application/ld\+json">\s*(.*?)\s*</script>',
+            html,
+            re.DOTALL,
+        ):
+            raw = m.group(1).strip()
+            if '"@type":"ItemList"' not in raw and '"@type": "ItemList"' not in raw:
+                continue
+            data = json.loads(raw)
+            for item in data.get("itemListElement", []):
+                prod = item.get("item") or item
+                if prod.get("@type") != "Product":
+                    continue
+                url = (prod.get("url") or "").strip()
+                if not url:
+                    continue
+                name = (prod.get("name") or "").strip()
+                image = (prod.get("image") or "").strip()
+                offers = prod.get("offers") or {}
+                low = offers.get("lowPrice")
+                high = offers.get("highPrice")
+                currency = offers.get("priceCurrency") or "£"
+                cp_display = f"{currency}{low}" if low is not None else ""
+                op_display = f"{currency}{high}" if high is not None else ""
+                deals.append({
+                    "source_site": site_id,
+                    "title": name,
+                    "current_price": _parse_price_to_float(cp_display) if cp_display else None,
+                    "current_price_display": cp_display or "",
+                    "original_price": _parse_price_to_float(op_display) if op_display else None,
+                    "original_price_display": op_display or "",
+                    "deal_url": url,
+                    "image_url": image or "",
+                })
+            break
+    except Exception:
+        pass
     return deals
 
 
@@ -613,20 +763,109 @@ def _filter_invalid_cos_deals(deals):
     return [d for d in deals if not any(b in (d.get("deal_url") or "").lower() for b in bad)]
 
 
+def _inject_cos_stealth(driver):
+    """COS 反检测：CDP 注入，伪造 navigator.webdriver 等。"""
+    stealth_js = """
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
+    Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+    Object.defineProperty(navigator, 'language', { get: () => 'en-US' });
+    """
+    for method in ("execute_cdp_cmd", "execute_cdp_command"):
+        fn = getattr(driver, method, None)
+        if fn:
+            try:
+                fn("Page.addScriptToEvaluateOnNewDocument", {"source": stealth_js})
+                return
+            except Exception:
+                pass
+
+
+def _cos_simulate_human_behavior(driver):
+    """COS 行为模拟：随机滚动、停留。"""
+    _human_like_delay(1.0, 2.0)
+    for _ in range(random.randint(1, 3)):
+        scroll_h = random.randint(100, 400)
+        driver.execute_script(f"window.scrollBy(0, {scroll_h});")
+        _human_like_delay(0.5, 1.2)
+    driver.execute_script("window.scrollTo(0, 0);")
+    _human_like_delay(0.5, 1.0)
+
+
+def _handle_cos_region_selection(driver):
+    """COS 地区选择兜底：检测到选择页则点击北美/US 等选项。"""
+    try:
+        page_src = (driver.page_source or "").lower()
+        if "select your location" not in page_src and "redirecting" not in page_src:
+            return True
+        if "redirecting you to selected" in page_src:
+            print("  [cos] 页面正在重定向，等待 5 秒...")
+            time.sleep(5)
+            try:
+                page_src = (driver.page_source or "").lower()
+                if "select your location" not in page_src and "redirecting" not in page_src:
+                    return True
+            except Exception:
+                return True
+    except Exception:
+        return True
+    print("  [cos] 检测到地区选择页，尝试点击北美/US...")
+    _human_like_delay(0.5, 1.0)
+    xpaths = [
+        "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'North America')]",
+        "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'United States')]",
+        "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'Americas')]",
+        "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'Canada')]",
+        "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'USA')]",
+        "//a[contains(@href,'en-us')]",
+        "//*[contains(@data-market,'us')]",
+    ]
+    for xpath in xpaths:
+        try:
+            els = driver.find_elements(By.XPATH, xpath)
+            for el in els:
+                if el.is_displayed() and el.is_enabled():
+                    try:
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.3, 0.6)
+                        el.click()
+                        print(f"  [cos] 已点击地区选项")
+                        _human_like_delay(2.5, 4.0)
+                        return True
+                    except Exception:
+                        continue
+        except Exception:
+            continue
+    print("  [cos] 未找到可点击的地区选项，尝试通过 cookie 设置...")
+    try:
+        driver.execute_script(
+            "document.cookie = 'ecom_locale=us_en-US; path=/; domain=.cos.com; max-age=86400';"
+        )
+        driver.refresh()
+        _human_like_delay(3.0, 5.0)
+    except Exception:
+        pass
+    return False
+
+
 def _merge_guess_prices(deals, price_list):
-    """将 price_list [(url, cp_display, op_display), ...] 合并到 deals，按 deal_url 匹配。"""
-    url_to_prices = {}
-    for url, cp, op in price_list:
-        url_to_prices[url] = (cp, op)
+    """将 price_list [(url, cp_display, op_display, image_url?), ...] 合并到 deals，按 deal_url 匹配。"""
+    url_to_data = {}
+    for row in price_list:
+        url = row[0]
+        cp = row[1] if len(row) > 1 else ""
+        op = row[2] if len(row) > 2 else ""
+        img = row[3] if len(row) > 3 else ""
+        url_to_data[url] = (cp, op, img)
     filled = 0
     for deal in deals:
         url = deal.get("deal_url", "")
         if not url:
             continue
-        prices = url_to_prices.get(url)
-        if not prices:
+        data = url_to_data.get(url)
+        if not data:
             continue
-        cp_display, op_display = prices
+        cp_display, op_display, img_url = data[0], data[1], data[2] if len(data) > 2 else ""
         if cp_display and deal.get("current_price") is None:
             deal["current_price"] = _parse_price_to_float(cp_display)
             deal["current_price_display"] = cp_display
@@ -634,17 +873,20 @@ def _merge_guess_prices(deals, price_list):
         if op_display and deal.get("original_price") is None:
             deal["original_price"] = _parse_price_to_float(op_display)
             deal["original_price_display"] = op_display
+        if img_url and not deal.get("image_url"):
+            deal["image_url"] = img_url
     return filled
 
 
 def _save_debug_html(driver, site_id):
-    """guess 调试：保存当前页面 HTML 供人工检查 Algolia 价格 DOM"""
-    if site_id != "guess":
+    """保存当前页面 HTML：guess 用 _debug.html，cos、michaelkors、lululemon_athletica、tommy_hilfiger 用 .html（供选择器调试）"""
+    if site_id not in ("guess", "cos", "michaelkors", "lululemon_athletica", "tommy_hilfiger", "adidas", "alo_yoga", "athleta", "calvinklein", "coach", "columbia", "h_m", "j_crew", "levis", "nike"):
         return
     try:
         debug_dir = os.path.join(os.path.dirname(__file__), "config", "html_samples")
         os.makedirs(debug_dir, exist_ok=True)
-        path = os.path.join(debug_dir, f"{site_id}_debug.html")
+        suffix = "_debug.html" if site_id == "guess" else ".html"
+        path = os.path.join(debug_dir, f"{site_id}{suffix}")
         with open(path, "w", encoding="utf-8") as f:
             f.write(driver.page_source)
         print(f"  [调试] 已保存: {path}")
@@ -652,10 +894,11 @@ def _save_debug_html(driver, site_id):
         print(f"  [调试] 保存 HTML 失败: {e}")
 
 
-def parse_detail_page(driver, site, base_url):
+def parse_detail_page(driver, site, base_url, detail_url=None):
     """
     在当前详情页按 site 的 detail_selectors 抓取字段，返回 dict 合并进 deal。
     image_list 取多元素 src 成列表；其余键取单元素文本，输出为 detail_<key>。
+    detail_url 可选，用于 Calvin Klein 等需按商品 ID 过滤推荐图。
     """
     out = {}
     sel = site.get("detail_selectors") or {}
@@ -670,18 +913,137 @@ def parse_detail_page(driver, site, base_url):
             return ""
 
     for key, selector in sel.items():
+        if key == "detail_image_denoise":
+            continue
         if not selector:
             continue
         if key == "image_list":
             try:
                 imgs = driver.find_elements(By.CSS_SELECTOR, selector)
                 urls = []
+                seen = set()  # 去重（同图多尺寸）
                 for el in imgs:
                     src = (el.get_attribute("src") or "").strip()
-                    if src:
-                        urls.append(urljoin(base_url, src))
+                    data_src = (el.get_attribute("data-src") or "").strip()
+                    if src and ("empty_loading" in src or "banner_loading" in src or "1x1" in src):
+                        src = ""
+                    url = src or data_src
+                    if (not url or url.startswith("data:")) and el.get_attribute("srcset"):
+                        srcset = (el.get_attribute("srcset") or "").strip()
+                        if srcset:
+                            first = srcset.split(",")[0].strip().split()[0]
+                            if first and first.startswith("http"):
+                                url = first
+                    if url and not url.startswith("data:") and "1x1" not in url and "empty_loading" not in url and "banner_loading" not in url:
+                        full = urljoin(base_url, url)
+                        # Athleta/Gap: 图片实际在 CDN，替换域名为 www1.assets-gap.com
+                        if "athleta.gap.com" in full and "/webcontent/" in full:
+                            full = full.replace("https://athleta.gap.com", "https://www1.assets-gap.com").replace("http://athleta.gap.com", "https://www1.assets-gap.com")
+                        # 去重：Adidas/Shopify/Scene7 等同图多尺寸，按 base 去重
+                        if "assets.adidas" in full:
+                            base = re.sub(r"/w_\d+,[^/]+/", "/w_1,/", full)
+                        elif "cdn.shopify.com" in full:
+                            base = re.sub(r"_\d+x(?=\.)", "_1x", full).split("?")[0]
+                        elif "scene7.com" in full:
+                            base = full.split("?")[0]
+                        elif "s7-img-facade" in full or "jcrew.com" in full:
+                            base = full.split("?")[0]
+                        elif "images.lululemon.com" in full:
+                            base = full.split("?")[0]
+                        elif "static.nike.com" in full:
+                            base = full.split("?")[0]
+                        else:
+                            base = full
+                        if base not in seen:
+                            seen.add(base)
+                            urls.append(full)
                 if urls:
-                    out["detail_image_list"] = urls
+                    denoise = sel.get("detail_image_denoise")
+                    if denoise and isinstance(denoise, dict):
+                        exclude = denoise.get("exclude_patterns") or []
+                        color_pats = denoise.get("color_thumbnail_patterns") or []
+                        split = denoise.get("split_color_thumbnails", False)
+                        main = [u for u in urls if not any(p in u for p in exclude)]
+                        out["detail_image_list"] = main
+                        if split and color_pats:
+                            color_thumbnails = [u for u in urls if any(p in u for p in color_pats)]
+                            if color_thumbnails:
+                                out["color_thumbnails"] = color_thumbnails
+                    else:
+                        # Calvin Klein / Columbia: 过滤推荐区图片，只保留当前商品图
+                        if site.get("id") == "columbia" and detail_url:
+                            pm = re.search(r"/p/[^/]+-(\d+)\.html", detail_url)
+                            pid = pm.group(1) if pm else ""
+                            if pid:
+                                # /i/columbia/PRODUCTID_ 格式需匹配当前商品；columbiasprtswr 等通用图保留
+                                filtered = []
+                                for u in urls:
+                                    m = re.search(r"/columbia/(\d+)_", u)
+                                    if m:
+                                        if m.group(1) == pid:
+                                            filtered.append(u)
+                                    else:
+                                        filtered.append(u)
+                                urls = filtered
+                        if site.get("id") == "calvinklein" and detail_url:
+                            m = re.search(r"/([A-Z0-9]+)-([A-Z0-9]+)\.html", detail_url, re.I)
+                            pid = f"{m.group(1)}_{m.group(2)}" if m else ""
+                            if pid:
+                                urls = [u for u in urls if pid in u]
+                            # 若 DOM 只抓到主图（懒加载），从 JSON-LD 补全
+                            if pid and len(urls) < 2:
+                                try:
+                                    scripts = driver.find_elements(By.CSS_SELECTOR, 'script[type="application/ld+json"]')
+                                    for s in scripts:
+                                        txt = (s.get_attribute("innerHTML") or "").strip()
+                                        if txt and '"@type":"Product"' in txt and "image" in txt:
+                                            data = json.loads(txt)
+                                            imgs = data.get("image") or []
+                                            if isinstance(imgs, str):
+                                                imgs = [imgs]
+                                            for u in imgs:
+                                                if isinstance(u, str) and pid in u and u not in urls:
+                                                    urls.append(u)
+                                            break
+                                except Exception:
+                                    pass
+                        out["detail_image_list"] = urls
+                # Athleta 兜底：img 可能懒加载，从父 div 的 data-imageurl 取
+                elif not urls and site.get("id") == "athleta" and "athleta.gap.com" in base_url:
+                    try:
+                        bricks = driver.find_elements(By.CSS_SELECTOR, "[data-testid='pdp-photo-brick-image']")
+                        for b in bricks:
+                            u = (b.get_attribute("data-imageurl") or "").strip()
+                            if u and u.startswith("/webcontent/"):
+                                full = urljoin("https://www1.assets-gap.com", u)
+                                if full not in seen:
+                                    seen.add(full)
+                                    urls.append(full)
+                        if urls:
+                            out["detail_image_list"] = urls
+                    except Exception:
+                        pass
+                # Columbia 兜底：从 page_source 正则提取 media.columbia.com 图片（仅保留当前商品 ID）
+                elif not urls and site.get("id") == "columbia" and "columbia.com" in base_url:
+                    try:
+                        html = driver.page_source
+                        pid = ""
+                        if detail_url:
+                            pm = re.search(r"/p/[^/]+-(\d+)\.html", detail_url)
+                            pid = pm.group(1) if pm else ""
+                        for m in re.finditer(r'https?://media\.columbia\.com/[^\s"\'<>]+', html):
+                            full = m.group(0).replace("&amp;", "&").rstrip("&\"'")
+                            if "1x1" not in full and "empty" not in full:
+                                if pid and pid not in full:
+                                    continue
+                                base = full.split("?")[0]
+                                if base not in seen:
+                                    seen.add(base)
+                                    urls.append(base)
+                        if urls:
+                            out["detail_image_list"] = urls[:20]
+                    except Exception:
+                        pass
             except Exception:
                 pass
         else:
@@ -690,15 +1052,38 @@ def parse_detail_page(driver, site, base_url):
     return out
 
 
-def main():
-    if len(sys.argv) < 2:
-        print("用法: python crawl_test.py <site_id>")
-        print("示例: python crawl_test.py guess")
-        sys.exit(1)
-    site_id = sys.argv[1].strip()
+def _parse_args():
+    """解析命令行：支持 <site_id> [--limit N] 或 --all [--exclude id1,id2,...] [--limit N]"""
+    args = [a.strip() for a in sys.argv[1:] if a.strip()]
+    if not args:
+        return None, [], None
+    exclude = []
+    limit = None
+    remaining = []
+    i = 0
+    while i < len(args):
+        if args[i] == "--exclude" and i + 1 < len(args):
+            exclude.extend(s.strip() for s in args[i + 1].split(",") if s.strip())
+            i += 2
+        elif args[i] == "--limit" and i + 1 < len(args):
+            try:
+                limit = int(args[i + 1])
+            except ValueError:
+                pass
+            i += 2
+        else:
+            remaining.append(args[i])
+            i += 1
+    if not remaining:
+        return None, exclude, limit
+    if remaining[0] == "--all":
+        return "--all", exclude, limit
+    return remaining[0], exclude, limit
 
-    config = load_config()
-    site = get_site_by_id(config, site_id)
+
+def _crawl_one_site(driver, site, config, limit=None):
+    """爬取单个站点，写入 output/<brandname>_test.json。limit: 仅爬取前 N 条（用于测试）。"""
+    site_id = site["id"]
     list_url = site["list_url"]
     base_url = get_base_url(list_url)
     timeout = config.get("global", {}).get("timeout_sec", 45)
@@ -706,78 +1091,324 @@ def main():
     brandname = site.get("name", site_id)
     out_path = os.path.join(os.path.dirname(__file__), output_dir, f"{brandname}_test.json")
 
-    options = Options()
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--disable-infobars")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option("useAutomationExtension", False)
-    if site.get("force_us_locale"):
-        options.add_argument("--lang=en-US")
-        options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
-    proxy = (site.get("proxy") or "").strip()
-    if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
-        options.add_argument(f"--proxy-server={proxy}")
-
-    driver = webdriver.Chrome(options=options)
-    try:
-        driver.set_page_load_timeout(timeout)
-        print(f"打开: {list_url}")
+    print(f"打开: {list_url}")
+    if site.get("id") == "cos":
+        anti = site.get("anti_detect") or {}
+        pre_url = (anti.get("pre_navigate_url") or "").strip()
+        if pre_url:
+            print("  [cos] 预热访问建立会话...")
+            driver.get(pre_url)
+            _cos_simulate_human_behavior(driver)
+        driver.get(list_url)
+        _human_like_delay(1.5, 2.5)
+        dismiss_consent_if_any(driver)
+        _human_like_delay(0.6, 1.2)
+        if anti.get("region_selection_fallback", {}).get("enabled", True):
+            _handle_cos_region_selection(driver)
+        try:
+            for sel in ["[data-testid='product-card-wrapper']", "li.ais-Hits-item", "a[href*='/product/']", "[data-product-id]"]:
+                try:
+                    WebDriverWait(driver, 12).until(EC.presence_of_element_located((By.CSS_SELECTOR, sel)))
+                    break
+                except Exception:
+                    continue
+        except Exception:
+            pass
+        _human_like_delay(2.0, 3.0)
+    else:
         driver.get(list_url)
         _human_like_delay(1.2, 2.2)
         dismiss_consent_if_any(driver)
         _human_like_delay(0.6, 1.2)
-        print("分步滚动以触发懒加载...")
-        _scroll_page_to_load_all(driver, base_pause=(0.9, 1.8), max_rounds=50, no_change_stop=4)
-        _human_like_delay(0.6, 1.0)
+        if site.get("id") == "guess":
+            try:
+                WebDriverWait(driver, 15).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "li.product__tile, .aa-ItemContentTitle, script#productItemsList"))
+                )
+                _human_like_delay(1.0, 2.0)
+            except Exception:
+                pass
+        if site.get("id") == "levis":
+            try:
+                WebDriverWait(driver, 12).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "div.product-cell, a.cell-image-link"))
+                )
+                _human_like_delay(1.0, 2.0)
+            except Exception:
+                pass
+        if site.get("id") == "lululemon_athletica":
+            try:
+                WebDriverWait(driver, 25).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='product-tile'], div.product-tile"))
+                )
+                _human_like_delay(2.0, 3.5)
+            except Exception:
+                pass
+    print("分步滚动以触发懒加载...")
+    _scroll_page_to_load_all(driver, base_pause=(0.9, 1.8), max_rounds=50, no_change_stop=4)
+    _human_like_delay(0.6, 1.0)
 
-        deals = parse_deals_from_page(driver, site, base_url, config)
-        print(f"解析到 {len(deals)} 条 deal")
+    deals = parse_deals_from_page(driver, site, base_url, config)
+    if site.get("id") == "cos" and not deals:
+        deals = _parse_cos_deals_from_jsonld(driver.page_source, site["id"])
+        if deals:
+            print(f"  [cos] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
+    if site.get("id") == "guess" and not deals:
+        deals = _parse_guess_deals_from_jsonld(driver.page_source, base_url, site["id"])
+        if deals:
+            print(f"  [guess] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
+    print(f"解析到 {len(deals)} 条 deal")
 
-        deals = _enrich_guess_titles(driver, deals, site)
-        deals = _enrich_athleta_from_html(driver, deals, site, base_url)
-        deals = _enrich_michaelkors_from_html(driver, deals, site, base_url)
-        if site.get("id") == "cos":
-            deals = _filter_invalid_cos_deals(deals)
-            deals = _enrich_cos_from_jsonld(driver, deals, site)
-        if site.get("id") == "guess" and deals:
-            empty_prices = sum(1 for d in deals if not d.get("current_price"))
-            if empty_prices > 0 and HAS_BS4:
-                price_list = _parse_guess_prices_from_html(driver.page_source, base_url)
-                filled = _merge_guess_prices(deals, price_list)
-                if filled:
-                    print(f"  [guess] 从 HTML 补全 {filled} 条价格")
-        _save_debug_html(driver, site["id"])
+    deals = _enrich_guess_titles(driver, deals, site)
+    deals = _enrich_calvinklein_promo(driver, deals, site)
+    deals = _enrich_athleta_from_html(driver, deals, site, base_url)
+    deals = _enrich_michaelkors_from_html(driver, deals, site, base_url)
+    if site.get("id") == "cos":
+        deals = _filter_invalid_cos_deals(deals)
+        deals = _enrich_cos_from_jsonld(driver, deals, site)
+    if site.get("id") == "guess" and deals:
+        empty_prices = sum(1 for d in deals if not d.get("current_price"))
+        if empty_prices > 0 and HAS_BS4:
+            price_list = _parse_guess_prices_from_html(driver.page_source, base_url)
+            filled = _merge_guess_prices(deals, price_list)
+            if filled:
+                print(f"  [guess] 从 HTML 补全 {filled} 条价格")
+    if limit is not None and limit > 0:
+        deals = deals[:limit]
+        print(f"限制为前 {limit} 条")
+    _save_debug_html(driver, site["id"])
 
-        fetch_detail = site.get("fetch_detail")
-        if fetch_detail is None:
-            fetch_detail = config.get("global", {}).get("fetch_detail", False)
-        detail_selectors = site.get("detail_selectors")
-        if fetch_detail and detail_selectors and isinstance(detail_selectors, dict) and len(detail_selectors) > 0:
-            print(f"进入详情页补全 {len([d for d in deals if d.get('deal_url')])} 条...")
-            for i, deal in enumerate(deals):
-                url = deal.get("deal_url")
-                if not url:
-                    continue
-                try:
-                    driver.get(url)
-                    _human_like_delay(1.0, 2.0)
-                    dismiss_consent_if_any(driver)
-                    _human_like_delay(0.4, 0.8)
-                    detail_base = get_base_url(url)
-                    extra = parse_detail_page(driver, site, detail_base)
-                    deal.update(extra)
-                except Exception as e:
-                    print(f"  详情页失败 [{i+1}] {url[:50]}...: {e}")
-                _human_like_delay(0.5, 1.2)
+    fetch_detail = site.get("fetch_detail")
+    if fetch_detail is None:
+        fetch_detail = config.get("global", {}).get("fetch_detail", False)
+    detail_selectors = site.get("detail_selectors")
+    if fetch_detail and detail_selectors and isinstance(detail_selectors, dict) and len(detail_selectors) > 0:
+        print(f"进入详情页补全 {len([d for d in deals if d.get('deal_url')])} 条...")
+        pdp_saved = False
+        for i, deal in enumerate(deals):
+            url = deal.get("deal_url")
+            if not url:
+                continue
+            try:
+                driver.get(url)
+                _human_like_delay(1.0, 2.0)
+                dismiss_consent_if_any(driver)
+                _human_like_delay(0.4, 0.8)
+                if site_id == "athleta":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='pdp-photo-brick-image'] img"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "coach":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "#splide02 img[src*='scene7.com'], [data-qa='m_pdp_btn_pdt_img'][src*='scene7.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "columbia":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='media.columbia.com'], img[src*='scene7.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "guess":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='img.guess.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "h_m":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='image.hm.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "j_crew":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='s7-img-facade']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "michaelkors":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='michaelkors.scene7.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "levis":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='lscoglobal.scene7.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "lululemon_athletica":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='images.lululemon.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id == "nike":
+                    try:
+                        el = WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, "img[src*='static.nike.com']"))
+                        )
+                        driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
+                        _human_like_delay(0.5, 1.0)
+                    except Exception:
+                        pass
+                if site_id in ("adidas", "alo_yoga", "athleta", "calvinklein", "coach", "columbia", "guess", "h_m", "j_crew", "levis", "lululemon_athletica", "michaelkors", "nike") and not pdp_saved:
+                    try:
+                        debug_dir = os.path.join(os.path.dirname(__file__), "config", "html_samples")
+                        os.makedirs(debug_dir, exist_ok=True)
+                        path = os.path.join(debug_dir, f"{site_id}_pdp.html")
+                        with open(path, "w", encoding="utf-8") as f:
+                            f.write(driver.page_source)
+                        print(f"  [调试] 已保存 PDP: {path}")
+                        pdp_saved = True
+                    except Exception:
+                        pass
+                detail_base = get_base_url(url)
+                extra = parse_detail_page(driver, site, detail_base, detail_url=url)
+                deal.update(extra)
+                # 列表页 title/price 为空时，用详情页抓到的 detail_* 回填
+                for main_key, detail_key in [("title", "detail_title"), ("current_price", "detail_current_price"), ("original_price", "detail_original_price")]:
+                    if not deal.get(main_key) and deal.get(detail_key):
+                        deal[main_key] = deal[detail_key]
+            except Exception as e:
+                print(f"  详情页失败 [{i+1}] {url[:50]}...: {e}")
+            _human_like_delay(0.5, 1.2)
 
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump({"site_id": site["id"], "count": len(deals), "deals": deals}, f, ensure_ascii=False, indent=2)
-        print(f"已写入: {out_path}")
-    finally:
-        driver.quit()
+    def _format_deal_for_output(d):
+        """输出格式：source_site->Brand, title->Product_name, deal_url->Product_link，移除 *_display"""
+        out = {}
+        for k, v in d.items():
+            if k == "source_site":
+                out["Brand"] = v
+            elif k == "title":
+                out["Product_name"] = v or d.get("detail_title") or ""
+            elif k == "deal_url":
+                out["Product_link"] = v
+            elif k in ("current_price_display", "original_price_display", "detail_title", "detail_current_price", "detail_original_price"):
+                continue
+            elif k in ("current_price", "original_price"):
+                val = v if v is not None else d.get("detail_" + k)
+                if val is not None:
+                    # 确保价格输出为 float，无法解析时输出 None
+                    if isinstance(val, (int, float)):
+                        out[k] = float(val)
+                    elif isinstance(val, str):
+                        parsed = _parse_price_to_float(val)
+                        out[k] = float(parsed) if parsed is not None else None
+                    else:
+                        out[k] = float(val) if isinstance(val, (int, float)) else None
+            else:
+                out[k] = v
+        return out
+
+    deals_out = [_format_deal_for_output(d) for d in deals]
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump({"site_id": site["id"], "count": len(deals_out), "deals": deals_out}, f, ensure_ascii=False, indent=2)
+    print(f"已写入: {out_path}")
+
+
+def main():
+    site_id, exclude, limit = _parse_args()
+    if not site_id:
+        print("用法: python crawl_test.py <site_id> [--limit N]")
+        print("      python crawl_test.py --all [--exclude id1,id2,...] [--limit N]")
+        print("示例: python crawl_test.py guess")
+        print("      python crawl_test.py adidas --limit 3")
+        print("      python crawl_test.py --all --exclude coach")
+        sys.exit(1)
+
+    config = load_config()
+
+    if site_id == "--all":
+        sites = [s for s in config["sites"] if s.get("list_url")]
+        sites = [s for s in sites if s.get("id") not in exclude]
+        if exclude:
+            print(f"排除站点: {exclude}")
+        if not sites:
+            print("无可用站点")
+            sys.exit(1)
+        print(f"批量爬取 {len(sites)} 个站点")
+    else:
+        site = get_site_by_id(config, site_id)
+        sites = [site]
+
+    timeout = config.get("global", {}).get("timeout_sec", 45)
+
+    for idx, site in enumerate(sites):
+        if len(sites) > 1:
+            print(f"\n===== [{idx + 1}/{len(sites)}] {site.get('name', site['id'])} =====")
+        if limit is not None:
+            print(f"限制爬取前 {limit} 条")
+        anti = site.get("anti_detect") or {}
+        use_uc = anti.get("use_undetected", False) and HAS_UC and site.get("id") == "cos"
+        if use_uc:
+            print("  [cos] 使用 undetected-chromedriver 绕过反爬")
+            options = uc.ChromeOptions()
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--lang=en-US")
+            options.add_argument("--disable-geolocation")
+            proxy = (site.get("proxy") or "").strip()
+            if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
+                options.add_argument(f"--proxy-server={proxy}")
+            driver = uc.Chrome(options=options)
+        else:
+            options = Options()
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_argument("--disable-infobars")
+            options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            options.add_experimental_option("useAutomationExtension", False)
+            if site.get("force_us_locale"):
+                options.add_argument("--lang=en-US")
+                options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
+            proxy = (site.get("proxy") or "").strip()
+            if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
+                options.add_argument(f"--proxy-server={proxy}")
+            driver = webdriver.Chrome(options=options)
+        try:
+            driver.set_page_load_timeout(timeout)
+            _crawl_one_site(driver, site, config, limit=limit)
+        except Exception as e:
+            print(f"  [{site['id']}] 失败: {e}")
+        finally:
+            driver.quit()
+        if len(sites) > 1 and idx < len(sites) - 1:
+            _human_like_delay(2, 4)
 
 
 if __name__ == "__main__":

@@ -47,6 +47,18 @@ python crawl_test.py cos           # COS
 
 输出写入 `output/<品牌名>_test.json`。
 
+批量爬取所有站点（并行、headless、超时跳过）：
+
+```bash
+python crawl_test.py --all --workers 4 --headless
+```
+
+- `--all`：爬取配置中所有站点
+- `--workers N`：并行线程数（默认 4）
+- `--headless`：无头模式
+- `--limit N`：每个站点仅爬前 N 条（测试用）
+- 页面 40 秒未加载完成则自动跳过该站点
+
 ## 数据处理与上传 mysmartshop.net
 
 将抓取结果转为 mysmartshop Product 格式，并用 GPT 做类别分类：

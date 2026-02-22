@@ -24,7 +24,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 
 try:
     from bs4 import BeautifulSoup
@@ -1111,11 +1111,11 @@ def _safe_print(*args, **kwargs):
         _orig_print(*args, **kwargs)
 
 
-def _create_driver(site, config, headless=False):
+def _create_driver(site, config, headless=False, timeout_override=None):
     """创建 Chrome driver，支持 anti_detect、headless 模式。"""
     anti = site.get("anti_detect") or {}
     use_uc = anti.get("use_undetected", False) and HAS_UC
-    timeout = config.get("global", {}).get("timeout_sec", 45)
+    timeout = timeout_override if timeout_override is not None else config.get("global", {}).get("timeout_sec", 40)
     headless = headless or config.get("global", {}).get("headless", False)
     if use_uc:
         options = uc.ChromeOptions()
@@ -1193,20 +1193,24 @@ def _kill_orphan_browsers():
             pass
 
 
-def _crawl_site_worker(site, config, limit=None, headless=False, idx=None, total=None):
+def _crawl_site_worker(site, config, limit=None, headless=False, timeout_override=None, idx=None, total=None):
     """
     单站点爬取 worker：交错启动、创建 driver、爬取、退出。
     每个线程独立浏览器实例，互不干扰；人类化行为保留在 _crawl_one_site 内。
+    超时（默认 40 秒）则跳过该站点。
     """
     site_id = site["id"]
+    timeout = timeout_override if timeout_override is not None else config.get("global", {}).get("timeout_sec", 40)
     # 交错启动：随机延迟 0~3 秒，避免多站点同时发起请求
     stagger = random.uniform(0, 3)
     time.sleep(stagger)
     driver = None
     try:
-        driver = _create_driver(site, config, headless=headless)
+        driver = _create_driver(site, config, headless=headless, timeout_override=timeout_override)
         _crawl_one_site(driver, site, config, limit=limit)
         return (site_id, True, None)
+    except TimeoutException:
+        return (site_id, False, f"超时 {timeout} 秒，跳过")
     except Exception as e:
         return (site_id, False, str(e))
     finally:
@@ -1218,7 +1222,7 @@ def _crawl_one_site(driver, site, config, limit=None):
     site_id = site["id"]
     list_url = site["list_url"]
     base_url = get_base_url(list_url)
-    timeout = config.get("global", {}).get("timeout_sec", 45)
+    timeout = config.get("global", {}).get("timeout_sec", 40)
     output_dir = config.get("global", {}).get("output_dir", "output")
     brandname = site.get("name", site_id)
     out_path = os.path.join(os.path.dirname(__file__), output_dir, f"{brandname}_test.json")
@@ -1497,7 +1501,9 @@ def main():
                 sys.exit(1)
             max_workers = workers or config.get("global", {}).get("max_workers", 4)
             max_workers = min(max_workers, len(sites))
+            timeout_sec = config.get("global", {}).get("timeout_sec", 40)
             _safe_print(f"批量爬取 {len(sites)} 个站点，并行 {max_workers} 线程（每个线程跑一个站点，交错启动）")
+            _safe_print(f"页面加载超时 {timeout_sec} 秒则跳过")
             if headless:
                 _safe_print("headless 模式")
             if limit is not None:
@@ -1505,7 +1511,7 @@ def main():
             failed = []
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
                 futures = {
-                    executor.submit(_crawl_site_worker, site, config, limit, headless, i + 1, len(sites)): site
+                    executor.submit(_crawl_site_worker, site, config, limit, headless, None): site
                     for i, site in enumerate(sites)
                 }
                 for future in as_completed(futures):

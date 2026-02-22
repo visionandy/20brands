@@ -4,7 +4,7 @@
   "global": {
     "request_delay_sec": [3, 5],
     "page_dwell_sec": [8, 18],
-    "timeout_sec": 45,
+    "timeout_sec": 40,
     "max_workers": 4,
     "use_selenium": true,
     "output_dir": "output",

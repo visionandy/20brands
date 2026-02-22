@@ -10,9 +10,12 @@
 │   ├── sites_draft.json    # 站点配置（URL、选择器）
 │   └── html_samples/       # 各站点 HTML 样本
 ├── crawl_test.py           # 主爬虫脚本（Selenium）
+├── process_deals_for_upload.py  # 数据处理：转 mysmartshop 格式 + GPT 分类
 ├── fetch_html_samples.py   # 抓取 HTML 样本
 ├── google_search_product.py
 ├── output/                 # 抓取结果 JSON
+│   └── processed/          # 处理后输出（供 mysmartshop 导入）
+├── requirements.txt
 └── README.md
 ```
 
@@ -25,7 +28,8 @@
 - `beautifulsoup4`（可选，用于 Athleta / Michael Kors / Guess / COS 的 HTML 兜底解析）
 
 ```bash
-pip install selenium beautifulsoup4
+pip install -r requirements.txt
+# 或: pip install selenium beautifulsoup4 openai python-dotenv
 ```
 
 ## 使用方法
@@ -42,6 +46,29 @@ python crawl_test.py cos           # COS
 ```
 
 输出写入 `output/<品牌名>_test.json`。
+
+## 数据处理与上传 mysmartshop.net
+
+将抓取结果转为 mysmartshop Product 格式，并用 GPT 做类别分类：
+
+```bash
+# 处理单个文件
+python process_deals_for_upload.py output/Athleta_test.json
+
+# 处理所有文件 + GPT 分类 + 合并
+python process_deals_for_upload.py output/ --gpt-rewrite --merge all_products.json
+```
+
+需在项目根目录或 `ecom/ecom` 或 `deal_crawler` 下配置 `.env`，内容 `OPENAI_API_KEY=sk-xxx`。
+
+导入到 mysmartshop DB（在 ecom 项目下执行）：
+
+```bash
+cd ../ecom/ecom
+python manage.py import_20brands_products ../../20brands/output/processed/all_products.json
+```
+
+查看：https://mysmartshop.net/admin/store/product/
 
 ## 自动读取 HTML 与解析
 

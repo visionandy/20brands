@@ -2,16 +2,21 @@
 """
 按站点 id 爬取单个站点的 deal 列表页，验证 selectors 是否有效。
 人类化行为对齐 google_search_product.py：分步滚动、随机延时、每卡 scrollIntoView、Stale 跳过。
+支持并行：--all 模式下多线程，每个线程跑一个站点，交错启动避免同时请求。
 用法: python crawl_test.py <site_id>
 示例: python crawl_test.py guess
+      python crawl_test.py --all --workers 4 --limit 2
 结果写入 output/<brandname>_test.json（如 output/Guess_test.json）。
 """
 import json
 import os
 import random
 import re
+import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 from urllib.parse import urljoin, urlparse
 
 from selenium import webdriver
@@ -409,7 +414,7 @@ def _enrich_guess_titles(driver, deals, site):
             filled += 1
 
     if filled:
-        print(f"  [guess] 从 JSON-LD/URL 补全 {filled} 条 title")
+        _safe_print(f"  [guess] 从 JSON-LD/URL 补全 {filled} 条 title")
     return deals
 
 
@@ -425,8 +430,12 @@ def _parse_guess_prices_from_html(html, base_url):
         containers = soup.select("li.product__tile, li.ais-InfiniteHits-item.product__tile")
         result = []
         for node in containers:
-            link = node.select_one("a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html'], a.js-aa-pdp-href")
-            cp_el = node.select_one(".item-price")
+            link = node.select_one(
+                "a.js-aa-pdp-href, a.product-grid__image[href*='.html'], "
+                "a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html'], "
+                "a[href*='guess.com'][href*='.html']"
+            )
+            cp_el = node.select_one(".item-price, .value.item-price")
             op_el = node.select_one(".price__strike-through.item-salesPrice .value")
             slide = node.select_one("li.guess-carousel__slide--show")
             img_el = node.select_one("img.product-grid__image[src*='img.guess.com']")
@@ -547,7 +556,7 @@ def _enrich_athleta_from_html(driver, deals, site, base_url):
             deal["original_price_display"] = data.get("original_price_display", "")
             filled += 1
     if url_to_data:
-        print(f"  [athleta] 从 HTML 补全 title/价格")
+        _safe_print(f"  [athleta] 从 HTML 补全 title/价格")
     return deals
 
 
@@ -632,7 +641,7 @@ def _enrich_michaelkors_from_html(driver, deals, site, base_url):
             deal["deals_detail"] = data.get("deals_detail", "")
             filled += 1
     if url_to_data:
-        print(f"  [michaelkors] 从 HTML 补全 title/价格/折扣")
+        _safe_print(f"  [michaelkors] 从 HTML 补全 title/价格/折扣")
     return deals
 
 
@@ -753,7 +762,7 @@ def _enrich_cos_from_jsonld(driver, deals, site):
             deal["original_price"] = data.get("original_price")
             deal["original_price_display"] = data.get("original_price_display", "")
     if url_to_data:
-        print(f"  [cos] 从 JSON-LD 补全 title/image/价格")
+        _safe_print(f"  [cos] 从 JSON-LD 补全 title/image/价格")
     return deals
 
 
@@ -799,7 +808,7 @@ def _handle_cos_region_selection(driver):
         if "select your location" not in page_src and "redirecting" not in page_src:
             return True
         if "redirecting you to selected" in page_src:
-            print("  [cos] 页面正在重定向，等待 5 秒...")
+            _safe_print("  [cos] 页面正在重定向，等待 5 秒...")
             time.sleep(5)
             try:
                 page_src = (driver.page_source or "").lower()
@@ -809,7 +818,7 @@ def _handle_cos_region_selection(driver):
                 return True
     except Exception:
         return True
-    print("  [cos] 检测到地区选择页，尝试点击北美/US...")
+    _safe_print("  [cos] 检测到地区选择页，尝试点击北美/US...")
     _human_like_delay(0.5, 1.0)
     xpaths = [
         "//*[contains(translate(text(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 'North America')]",
@@ -829,14 +838,14 @@ def _handle_cos_region_selection(driver):
                         driver.execute_script("arguments[0].scrollIntoView({block:'center'});", el)
                         _human_like_delay(0.3, 0.6)
                         el.click()
-                        print(f"  [cos] 已点击地区选项")
+                        _safe_print(f"  [cos] 已点击地区选项")
                         _human_like_delay(2.5, 4.0)
                         return True
                     except Exception:
                         continue
         except Exception:
             continue
-    print("  [cos] 未找到可点击的地区选项，尝试通过 cookie 设置...")
+    _safe_print("  [cos] 未找到可点击的地区选项，尝试通过 cookie 设置...")
     try:
         driver.execute_script(
             "document.cookie = 'ecom_locale=us_en-US; path=/; domain=.cos.com; max-age=86400';"
@@ -889,9 +898,9 @@ def _save_debug_html(driver, site_id):
         path = os.path.join(debug_dir, f"{site_id}{suffix}")
         with open(path, "w", encoding="utf-8") as f:
             f.write(driver.page_source)
-        print(f"  [调试] 已保存: {path}")
+        _safe_print(f"  [调试] 已保存: {path}")
     except Exception as e:
-        print(f"  [调试] 保存 HTML 失败: {e}")
+        _safe_print(f"  [调试] 保存 HTML 失败: {e}")
 
 
 def parse_detail_page(driver, site, base_url, detail_url=None):
@@ -1053,12 +1062,14 @@ def parse_detail_page(driver, site, base_url, detail_url=None):
 
 
 def _parse_args():
-    """解析命令行：支持 <site_id> [--limit N] 或 --all [--exclude id1,id2,...] [--limit N]"""
+    """解析命令行：支持 <site_id> [--limit N] [--headless] 或 --all [--exclude id1,id2,...] [--limit N] [--workers N] [--headless]"""
     args = [a.strip() for a in sys.argv[1:] if a.strip()]
     if not args:
-        return None, [], None
+        return None, [], None, None, False
     exclude = []
     limit = None
+    workers = None
+    headless = False
     remaining = []
     i = 0
     while i < len(args):
@@ -1071,14 +1082,135 @@ def _parse_args():
             except ValueError:
                 pass
             i += 2
+        elif args[i] == "--workers" and i + 1 < len(args):
+            try:
+                workers = int(args[i + 1])
+            except ValueError:
+                pass
+            i += 2
+        elif args[i] == "--headless":
+            headless = True
+            i += 1
         else:
             remaining.append(args[i])
             i += 1
     if not remaining:
-        return None, exclude, limit
+        return None, exclude, limit, workers, headless
     if remaining[0] == "--all":
-        return "--all", exclude, limit
-    return remaining[0], exclude, limit
+        return "--all", exclude, limit, workers, headless
+    return remaining[0], exclude, limit, workers, headless
+
+
+_PRINT_LOCK = Lock()
+_orig_print = print
+
+
+def _safe_print(*args, **kwargs):
+    """线程安全打印，避免并发时输出交错。"""
+    with _PRINT_LOCK:
+        _orig_print(*args, **kwargs)
+
+
+def _create_driver(site, config, headless=False):
+    """创建 Chrome driver，支持 anti_detect、headless 模式。"""
+    anti = site.get("anti_detect") or {}
+    use_uc = anti.get("use_undetected", False) and HAS_UC
+    timeout = config.get("global", {}).get("timeout_sec", 45)
+    headless = headless or config.get("global", {}).get("headless", False)
+    if use_uc:
+        options = uc.ChromeOptions()
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--lang=en-US")
+        options.add_argument("--disable-geolocation")
+        if headless:
+            options.add_argument("--headless=new")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--window-size=1920,1080")
+        if site.get("force_us_locale"):
+            options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
+        proxy = (site.get("proxy") or "").strip()
+        if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
+            options.add_argument(f"--proxy-server={proxy}")
+        driver = uc.Chrome(options=options)
+    else:
+        options = Options()
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("--disable-infobars")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option("useAutomationExtension", False)
+        if headless:
+            options.add_argument("--headless=new")
+            options.add_argument("--disable-gpu")
+            options.add_argument("--window-size=1920,1080")
+        if site.get("force_us_locale"):
+            options.add_argument("--lang=en-US")
+            options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
+        proxy = (site.get("proxy") or "").strip()
+        if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
+            options.add_argument(f"--proxy-server={proxy}")
+        driver = webdriver.Chrome(options=options)
+    driver.set_page_load_timeout(timeout)
+    return driver
+
+
+def _kill_driver(driver):
+    """彻底关闭 driver 并杀死相关进程，确保无残留。"""
+    if not driver:
+        return
+    try:
+        driver.quit()
+    except Exception:
+        pass
+    try:
+        driver.close()
+    except Exception:
+        pass
+    try:
+        if hasattr(driver, "service") and driver.service:
+            proc = getattr(driver.service, "process", None)
+            if proc and proc.poll() is None:
+                proc.kill()
+                proc.wait(timeout=3)
+    except Exception:
+        pass
+
+
+def _kill_orphan_browsers():
+    """跑完后清理可能残留的 chromedriver 进程，确保无残留。"""
+    if sys.platform == "win32":
+        for name in ("chromedriver.exe",):
+            try:
+                subprocess.run(["taskkill", "/F", "/IM", name], capture_output=True, timeout=5)
+            except Exception:
+                pass
+    else:
+        try:
+            subprocess.run(["pkill", "-9", "chromedriver"], capture_output=True, timeout=5)
+        except Exception:
+            pass
+
+
+def _crawl_site_worker(site, config, limit=None, headless=False, idx=None, total=None):
+    """
+    单站点爬取 worker：交错启动、创建 driver、爬取、退出。
+    每个线程独立浏览器实例，互不干扰；人类化行为保留在 _crawl_one_site 内。
+    """
+    site_id = site["id"]
+    # 交错启动：随机延迟 0~3 秒，避免多站点同时发起请求
+    stagger = random.uniform(0, 3)
+    time.sleep(stagger)
+    driver = None
+    try:
+        driver = _create_driver(site, config, headless=headless)
+        _crawl_one_site(driver, site, config, limit=limit)
+        return (site_id, True, None)
+    except Exception as e:
+        return (site_id, False, str(e))
+    finally:
+        _kill_driver(driver)
 
 
 def _crawl_one_site(driver, site, config, limit=None):
@@ -1091,12 +1223,12 @@ def _crawl_one_site(driver, site, config, limit=None):
     brandname = site.get("name", site_id)
     out_path = os.path.join(os.path.dirname(__file__), output_dir, f"{brandname}_test.json")
 
-    print(f"打开: {list_url}")
+    _safe_print(f"打开: {list_url}")
     if site.get("id") == "cos":
         anti = site.get("anti_detect") or {}
         pre_url = (anti.get("pre_navigate_url") or "").strip()
         if pre_url:
-            print("  [cos] 预热访问建立会话...")
+            _safe_print("  [cos] 预热访问建立会话...")
             driver.get(pre_url)
             _cos_simulate_human_behavior(driver)
         driver.get(list_url)
@@ -1144,7 +1276,7 @@ def _crawl_one_site(driver, site, config, limit=None):
                 _human_like_delay(2.0, 3.5)
             except Exception:
                 pass
-    print("分步滚动以触发懒加载...")
+    _safe_print("分步滚动以触发懒加载...")
     _scroll_page_to_load_all(driver, base_pause=(0.9, 1.8), max_rounds=50, no_change_stop=4)
     _human_like_delay(0.6, 1.0)
 
@@ -1152,12 +1284,12 @@ def _crawl_one_site(driver, site, config, limit=None):
     if site.get("id") == "cos" and not deals:
         deals = _parse_cos_deals_from_jsonld(driver.page_source, site["id"])
         if deals:
-            print(f"  [cos] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
+            _safe_print(f"  [cos] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
     if site.get("id") == "guess" and not deals:
         deals = _parse_guess_deals_from_jsonld(driver.page_source, base_url, site["id"])
         if deals:
-            print(f"  [guess] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
-    print(f"解析到 {len(deals)} 条 deal")
+            _safe_print(f"  [guess] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
+    _safe_print(f"解析到 {len(deals)} 条 deal")
 
     deals = _enrich_guess_titles(driver, deals, site)
     deals = _enrich_calvinklein_promo(driver, deals, site)
@@ -1172,10 +1304,10 @@ def _crawl_one_site(driver, site, config, limit=None):
             price_list = _parse_guess_prices_from_html(driver.page_source, base_url)
             filled = _merge_guess_prices(deals, price_list)
             if filled:
-                print(f"  [guess] 从 HTML 补全 {filled} 条价格")
+                _safe_print(f"  [guess] 从 HTML 补全 {filled} 条价格")
     if limit is not None and limit > 0:
         deals = deals[:limit]
-        print(f"限制为前 {limit} 条")
+        _safe_print(f"限制为前 {limit} 条")
     _save_debug_html(driver, site["id"])
 
     fetch_detail = site.get("fetch_detail")
@@ -1183,7 +1315,7 @@ def _crawl_one_site(driver, site, config, limit=None):
         fetch_detail = config.get("global", {}).get("fetch_detail", False)
     detail_selectors = site.get("detail_selectors")
     if fetch_detail and detail_selectors and isinstance(detail_selectors, dict) and len(detail_selectors) > 0:
-        print(f"进入详情页补全 {len([d for d in deals if d.get('deal_url')])} 条...")
+        _safe_print(f"进入详情页补全 {len([d for d in deals if d.get('deal_url')])} 条...")
         pdp_saved = False
         for i, deal in enumerate(deals):
             url = deal.get("deal_url")
@@ -1291,7 +1423,7 @@ def _crawl_one_site(driver, site, config, limit=None):
                         path = os.path.join(debug_dir, f"{site_id}_pdp.html")
                         with open(path, "w", encoding="utf-8") as f:
                             f.write(driver.page_source)
-                        print(f"  [调试] 已保存 PDP: {path}")
+                        _safe_print(f"  [调试] 已保存 PDP: {path}")
                         pdp_saved = True
                     except Exception:
                         pass
@@ -1303,15 +1435,17 @@ def _crawl_one_site(driver, site, config, limit=None):
                     if not deal.get(main_key) and deal.get(detail_key):
                         deal[main_key] = deal[detail_key]
             except Exception as e:
-                print(f"  详情页失败 [{i+1}] {url[:50]}...: {e}")
+                _safe_print(f"  详情页失败 [{i+1}] {url[:50]}...: {e}")
             _human_like_delay(0.5, 1.2)
 
+    brand_display = site.get("name", site_id)
+
     def _format_deal_for_output(d):
-        """输出格式：source_site->Brand, title->Product_name, deal_url->Product_link，移除 *_display"""
+        """输出格式：source_site->Brand(用 site.name), title->Product_name, deal_url->Product_link，移除 *_display"""
         out = {}
         for k, v in d.items():
             if k == "source_site":
-                out["Brand"] = v
+                out["Brand"] = brand_display
             elif k == "title":
                 out["Product_name"] = v or d.get("detail_title") or ""
             elif k == "deal_url":
@@ -1337,78 +1471,73 @@ def _crawl_one_site(driver, site, config, limit=None):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"site_id": site["id"], "count": len(deals_out), "deals": deals_out}, f, ensure_ascii=False, indent=2)
-    print(f"已写入: {out_path}")
+    _safe_print(f"已写入: {out_path}")
 
 
 def main():
-    site_id, exclude, limit = _parse_args()
+    site_id, exclude, limit, workers, headless = _parse_args()
     if not site_id:
-        print("用法: python crawl_test.py <site_id> [--limit N]")
-        print("      python crawl_test.py --all [--exclude id1,id2,...] [--limit N]")
-        print("示例: python crawl_test.py guess")
-        print("      python crawl_test.py adidas --limit 3")
-        print("      python crawl_test.py --all --exclude coach")
+        _safe_print("用法: python crawl_test.py <site_id> [--limit N] [--headless]")
+        _safe_print("      python crawl_test.py --all [--exclude id1,id2,...] [--limit N] [--workers N] [--headless]")
+        _safe_print("示例: python crawl_test.py guess --headless")
+        _safe_print("      python crawl_test.py adidas --limit 3")
+        _safe_print("      python crawl_test.py --all --exclude coach --workers 4 --headless")
         sys.exit(1)
 
     config = load_config()
 
-    if site_id == "--all":
-        sites = [s for s in config["sites"] if s.get("list_url")]
-        sites = [s for s in sites if s.get("id") not in exclude]
-        if exclude:
-            print(f"排除站点: {exclude}")
-        if not sites:
-            print("无可用站点")
-            sys.exit(1)
-        print(f"批量爬取 {len(sites)} 个站点")
-    else:
-        site = get_site_by_id(config, site_id)
-        sites = [site]
-
-    timeout = config.get("global", {}).get("timeout_sec", 45)
-
-    for idx, site in enumerate(sites):
-        if len(sites) > 1:
-            print(f"\n===== [{idx + 1}/{len(sites)}] {site.get('name', site['id'])} =====")
-        if limit is not None:
-            print(f"限制爬取前 {limit} 条")
-        anti = site.get("anti_detect") or {}
-        use_uc = anti.get("use_undetected", False) and HAS_UC and site.get("id") == "cos"
-        if use_uc:
-            print("  [cos] 使用 undetected-chromedriver 绕过反爬")
-            options = uc.ChromeOptions()
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--lang=en-US")
-            options.add_argument("--disable-geolocation")
-            proxy = (site.get("proxy") or "").strip()
-            if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
-                options.add_argument(f"--proxy-server={proxy}")
-            driver = uc.Chrome(options=options)
+    try:
+        if site_id == "--all":
+            sites = [s for s in config["sites"] if s.get("list_url")]
+            sites = [s for s in sites if s.get("id") not in exclude]
+            if exclude:
+                _safe_print(f"排除站点: {exclude}")
+            if not sites:
+                _safe_print("无可用站点")
+                sys.exit(1)
+            max_workers = workers or config.get("global", {}).get("max_workers", 4)
+            max_workers = min(max_workers, len(sites))
+            _safe_print(f"批量爬取 {len(sites)} 个站点，并行 {max_workers} 线程（每个线程跑一个站点，交错启动）")
+            if headless:
+                _safe_print("headless 模式")
+            if limit is not None:
+                _safe_print(f"限制爬取前 {limit} 条")
+            failed = []
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = {
+                    executor.submit(_crawl_site_worker, site, config, limit, headless, i + 1, len(sites)): site
+                    for i, site in enumerate(sites)
+                }
+                for future in as_completed(futures):
+                    site = futures[future]
+                    try:
+                        sid, ok, err = future.result()
+                        if not ok:
+                            failed.append((sid, err))
+                            _safe_print(f"  [{sid}] 失败: {err}")
+                    except Exception as e:
+                        sid = site.get("id", "?")
+                        failed.append((sid, str(e)))
+                        _safe_print(f"  [{sid}] 异常: {e}")
+            if failed:
+                _safe_print(f"\n完成，{len(failed)} 个站点失败: {[f[0] for f in failed]}")
+            else:
+                _safe_print(f"\n全部 {len(sites)} 个站点爬取完成")
         else:
-            options = Options()
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-            options.add_argument("--disable-blink-features=AutomationControlled")
-            options.add_argument("--disable-infobars")
-            options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            options.add_experimental_option("useAutomationExtension", False)
-            if site.get("force_us_locale"):
-                options.add_argument("--lang=en-US")
-                options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
-            proxy = (site.get("proxy") or "").strip()
-            if proxy and (proxy.startswith("http://") or proxy.startswith("https://")):
-                options.add_argument(f"--proxy-server={proxy}")
-            driver = webdriver.Chrome(options=options)
-        try:
-            driver.set_page_load_timeout(timeout)
-            _crawl_one_site(driver, site, config, limit=limit)
-        except Exception as e:
-            print(f"  [{site['id']}] 失败: {e}")
-        finally:
-            driver.quit()
-        if len(sites) > 1 and idx < len(sites) - 1:
-            _human_like_delay(2, 4)
+            site = get_site_by_id(config, site_id)
+            if headless:
+                _safe_print("headless 模式")
+            if limit is not None:
+                _safe_print(f"限制爬取前 {limit} 条")
+            driver = _create_driver(site, config, headless=headless)
+            try:
+                _crawl_one_site(driver, site, config, limit=limit)
+            except Exception as e:
+                _safe_print(f"  [{site['id']}] 失败: {e}")
+            finally:
+                _kill_driver(driver)
+    finally:
+        _kill_orphan_browsers()
 
 
 if __name__ == "__main__":

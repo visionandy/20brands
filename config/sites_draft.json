@@ -5,6 +5,7 @@
     "request_delay_sec": [3, 5],
     "page_dwell_sec": [8, 18],
     "timeout_sec": 45,
+    "max_workers": 4,
     "use_selenium": true,
     "output_dir": "output",
     "fetch_detail": false,
@@ -28,7 +29,7 @@
   "sites": [
     {
       "id": "michaelkors",
-      "name": "michaelkors",
+      "name": "Michael Kors",
       "list_url": "https://www.michaelkors.com/sale/handbags/",
       "notes": "官方网站 michaelkors.com。非美国 IP 会重定向到 michaelkors.global，需配置 proxy（US 代理）才能爬 .com",
       "force_us_locale": true,
@@ -53,7 +54,7 @@
     },
     { 
       "id": "calvinklein",
-      "name": "calvinklein",
+      "name": "Calvin Klein",
       "list_url": "https://www.calvinklein.us/en/women/apparel/dresses/",
       "notes": "官方网站calvinklein.com.my",
       "selectors": {
@@ -73,7 +74,7 @@
     },
     {
       "id": "coach",
-      "name": "coach",
+      "name": "Coach",
       "list_url": "https://www.coachoutlet.com/shop/clearance/view-all?page=2&filterByDiscount=70%25%20%2B",
       "notes": "coachoutlet.com 美国站（与 coach.com 同 Chakra DOM）",
       "selectors": {
@@ -358,15 +359,16 @@
     {
       "id": "guess",
       "name": "Guess",
-      "list_url": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses?subcategory=Guess-Women-LastChance-Dresses%23763d912d-a3b1-413f-b86a-b81029e50722&page=1",
-      "notes": "官方网站guess.eu",
+      "list_url": "https://www.guess.com/en-us/guess/women/sale?subcategory=Guess-Women-Sale%23109164cd-8e2d-47c7-b4e9-9bf8838d0594&page=1",
+      "notes": "官方网站guess.com US",
+      "force_us_locale": true,
       "selectors": {
         "container": "li.ais-InfiniteHits-item.product__tile, li.product__tile",
         "title": "h2.aa-ItemContentTitle a, [class*='ItemContentTitle'] a",
-        "current_price": ".item-price",
+        "current_price": ".item-price, .value.item-price",
         "original_price": ".price__strike-through.item-salesPrice .value",
-        "deal_url": "a.js-aa-pdp-href, a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html']",
-        "image_url": "li.guess-carousel__slide--show img.product-grid__image, .product-grid__image img[src*='img.guess.com']"
+        "deal_url": "a.js-aa-pdp-href, a.product-grid__image[href*='.html'], a[href*='/last-chance/'][href*='.html'], a[href*='/sale/'][href*='.html'], a[href*='guess.com'][href*='.html']",
+        "image_url": "li.guess-carousel__slide--show img.product-grid__image, li.guess-carousel__slide--show[data-img-src], .product-grid__image img[src*='img.guess.com']"
       },
       "fetch_detail": true,
       "detail_selectors": {
@@ -376,7 +378,7 @@
         }
       },
       "fetch_html": {
-        "wait_for_selector": "li.product__tile, .aa-ItemContentTitle",
+        "wait_for_selector": "li.product__tile, .aa-ItemContentTitle, script#productItemsList",
         "scroll_before_save": true,
         "dismiss_consent": true
       }

@@ -1,0 +1,7 @@
+# 爬虫
+selenium
+beautifulsoup4
+
+# 数据处理与上传（process_deals_for_upload.py）
+openai>=1.0
+python-dotenv>=1.0

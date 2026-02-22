@@ -36,8 +36,9 @@ BRAND_AMAZON_MAP = {
     "theory": "Theory",
     "cos": "COS",
     "levis": "Levi's",
-    "site_13": "Target",  # Target_test.json
-    "site_07": "Tommy Hilfiger",  # Tommy Hilfiger_test.json
+    "site_01": "Michael Kors",
+    "site_07": "Tommy Hilfiger",
+    "site_13": "Target",
 }
 
 

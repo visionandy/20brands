@@ -16,8 +16,14 @@ import subprocess
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 from threading import Lock
 from urllib.parse import urljoin, urlparse
+
+
+def _today_date_dir():
+    """今日日期目录名，格式 2026_02_22，对齐 deal_crawler。"""
+    return datetime.now().strftime("%Y_%m_%d").replace("-", "_")
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -1127,6 +1133,10 @@ def _create_driver(site, config, headless=False, timeout_override=None):
             options.add_argument("--headless=new")
             options.add_argument("--disable-gpu")
             options.add_argument("--window-size=1920,1080")
+            options.add_argument("--log-level=3")
+            options.add_argument("--disable-logging")
+            options.add_argument("--disable-background-networking")
+            options.add_argument("--disable-default-apps")
         if site.get("force_us_locale"):
             options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
         proxy = (site.get("proxy") or "").strip()
@@ -1145,6 +1155,10 @@ def _create_driver(site, config, headless=False, timeout_override=None):
             options.add_argument("--headless=new")
             options.add_argument("--disable-gpu")
             options.add_argument("--window-size=1920,1080")
+            options.add_argument("--log-level=3")
+            options.add_argument("--disable-logging")
+            options.add_argument("--disable-background-networking")
+            options.add_argument("--disable-default-apps")
         if site.get("force_us_locale"):
             options.add_argument("--lang=en-US")
             options.add_experimental_option("prefs", {"intl.accept_languages": "en-US,en"})
@@ -1193,7 +1207,7 @@ def _kill_orphan_browsers():
             pass
 
 
-def _crawl_site_worker(site, config, limit=None, headless=False, timeout_override=None, idx=None, total=None):
+def _crawl_site_worker(site, config, limit=None, headless=False, timeout_override=None, date_dir=None, idx=None, total=None):
     """
     单站点爬取 worker：交错启动、创建 driver、爬取、退出。
     每个线程独立浏览器实例，互不干扰；人类化行为保留在 _crawl_one_site 内。
@@ -1207,7 +1221,7 @@ def _crawl_site_worker(site, config, limit=None, headless=False, timeout_overrid
     driver = None
     try:
         driver = _create_driver(site, config, headless=headless, timeout_override=timeout_override)
-        _crawl_one_site(driver, site, config, limit=limit)
+        _crawl_one_site(driver, site, config, limit=limit, date_dir=date_dir)
         return (site_id, True, None)
     except TimeoutException:
         return (site_id, False, f"超时 {timeout} 秒，跳过")
@@ -1217,15 +1231,16 @@ def _crawl_site_worker(site, config, limit=None, headless=False, timeout_overrid
         _kill_driver(driver)
 
 
-def _crawl_one_site(driver, site, config, limit=None):
-    """爬取单个站点，写入 output/<brandname>_test.json。limit: 仅爬取前 N 条（用于测试）。"""
+def _crawl_one_site(driver, site, config, limit=None, date_dir=None):
+    """爬取单个站点，写入 output/<date_dir>/<brandname>_test.json。limit: 仅爬取前 N 条（用于测试）。"""
     site_id = site["id"]
     list_url = site["list_url"]
     base_url = get_base_url(list_url)
     timeout = config.get("global", {}).get("timeout_sec", 40)
     output_dir = config.get("global", {}).get("output_dir", "output")
+    date_dir = date_dir or _today_date_dir()
     brandname = site.get("name", site_id)
-    out_path = os.path.join(os.path.dirname(__file__), output_dir, f"{brandname}_test.json")
+    out_path = os.path.join(os.path.dirname(__file__), output_dir, date_dir, f"{brandname}_test.json")
 
     _safe_print(f"打开: {list_url}")
     if site.get("id") == "cos":
@@ -1489,6 +1504,13 @@ def main():
         sys.exit(1)
 
     config = load_config()
+    date_dir = _today_date_dir()
+    output_dir = config.get("global", {}).get("output_dir", "output")
+    output_base = os.path.join(os.path.dirname(__file__), output_dir)
+    output_path = os.path.join(output_base, date_dir)
+    os.makedirs(output_path, exist_ok=True)
+    os.makedirs(os.path.join(output_path, "processed"), exist_ok=True)
+    _safe_print(f"输出目录: {output_dir}/{date_dir}/")
 
     try:
         if site_id == "--all":
@@ -1537,7 +1559,7 @@ def main():
                 _safe_print(f"限制爬取前 {limit} 条")
             driver = _create_driver(site, config, headless=headless)
             try:
-                _crawl_one_site(driver, site, config, limit=limit)
+                _crawl_one_site(driver, site, config, limit=limit, date_dir=date_dir)
             except Exception as e:
                 _safe_print(f"  [{site['id']}] 失败: {e}")
             finally:

@@ -13,8 +13,10 @@
 ├── process_deals_for_upload.py  # 数据处理：转 mysmartshop 格式 + GPT 分类
 ├── fetch_html_samples.py   # 抓取 HTML 样本
 ├── google_search_product.py
-├── output/                 # 抓取结果 JSON
-│   └── processed/          # 处理后输出（供 mysmartshop 导入）
+├── output/                 # 抓取结果（按日期归档，对齐 deal_crawler）
+│   └── YYYY_MM_DD/         # 如 2026_02_22
+│       ├── *_test.json     # 各站点 deal JSON
+│       └── processed/      # 处理后输出（供 mysmartshop 导入）
 ├── requirements.txt
 └── README.md
 ```
@@ -45,7 +47,7 @@ python crawl_test.py cos           # COS
 # ... 其他站点见下方列表
 ```
 
-输出写入 `output/<品牌名>_test.json`。
+输出写入 `output/<YYYY_MM_DD>/<品牌名>_test.json`（按日期归档，对齐 deal_crawler）。
 
 批量爬取所有站点（并行、headless、超时跳过）：
 
@@ -64,11 +66,14 @@ python crawl_test.py --all --workers 4 --headless
 将抓取结果转为 mysmartshop Product 格式，并用 GPT 做类别分类：
 
 ```bash
-# 处理单个文件
-python process_deals_for_upload.py output/Athleta_test.json
+# 处理当日目录（默认 output/2026_02_22/）
+python process_deals_for_upload.py --gpt-rewrite --merge all_products.json
 
-# 处理所有文件 + GPT 分类 + 合并
-python process_deals_for_upload.py output/ --gpt-rewrite --merge all_products.json
+# 指定日期目录
+python process_deals_for_upload.py --date-dir 2026_02_22 --gpt-rewrite --merge all_products.json
+
+# 处理单个文件
+python process_deals_for_upload.py output/2026_02_22/Athleta_test.json
 ```
 
 需在项目根目录或 `ecom/ecom` 或 `deal_crawler` 下配置 `.env`，内容 `OPENAI_API_KEY=sk-xxx`。

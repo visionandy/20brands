@@ -6,9 +6,9 @@
 - 可输出 JSON 供 import_20brands_products 管理命令导入
 
 用法:
-  python process_deals_for_upload.py output/Guess_test.json
-  python process_deals_for_upload.py output/ --gpt-rewrite --output processed/products.json
-  python process_deals_for_upload.py output/ --gpt-rewrite  # 输出到 output/processed/
+  python process_deals_for_upload.py                           # 处理 output/YYYY_MM_DD/
+  python process_deals_for_upload.py --date-dir 2026_02_22 --gpt-rewrite --merge all_products.json
+  python process_deals_for_upload.py output/2026_02_22/Guess_test.json
 """
 
 import hashlib
@@ -17,8 +17,14 @@ import os
 import re
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+
+def _today_date_dir() -> str:
+    """今日日期目录名，格式 2026_02_22，对齐 deal_crawler。"""
+    return datetime.now().strftime("%Y_%m_%d").replace("-", "_")
 
 # Load .env for OPENAI_API_KEY (check 20brands, ecom, deal_crawler)
 try:
@@ -55,6 +61,12 @@ CATEGORY_TAXONOMY = [
 
 OUTPUT_DIR = Path(__file__).resolve().parent / "output"
 PROCESSED_DIR = Path(__file__).resolve().parent / "output" / "processed"
+
+
+def _resolve_date_dir(date_dir: Optional[str] = None) -> Path:
+    """解析日期目录路径 output/YYYY_MM_DD。"""
+    name = date_dir or _today_date_dir()
+    return OUTPUT_DIR / name
 
 
 def _ensure_product_id(raw: Dict[str, Any]) -> str:
@@ -365,23 +377,31 @@ def process_output_dir(
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Process 20brands deals for mysmartshop upload")
-    parser.add_argument("input", nargs="?", default="output", help="Input file or directory")
+    parser.add_argument("input", nargs="?", default=None, help="Input file or directory (default: output/YYYY_MM_DD)")
+    parser.add_argument("--date-dir", type=str, default=None, metavar="DIR", help="Date dir e.g. 2026_02_22 (default: today)")
     parser.add_argument("--output", "-o", type=str, help="Output JSON path")
     parser.add_argument("--gpt-rewrite", action="store_true", help="Use GPT for category classification")
     parser.add_argument("--merge", type=str, default=None, metavar="NAME", help="Merge all into one file (e.g. all_products.json)")
     args = parser.parse_args()
 
-    input_path = Path(args.input)
+    date_dir_path = _resolve_date_dir(args.date_dir)
+    default_input = date_dir_path
+
+    input_path = Path(args.input) if args.input else default_input
     if not input_path.exists():
         print(f"Error: {input_path} not found")
         sys.exit(1)
 
     if input_path.is_file():
-        output_path = Path(args.output) if args.output else PROCESSED_DIR / (input_path.stem + "_products.json")
+        out_dir = Path(args.output).parent if args.output else (input_path.parent / "processed")
+        output_path = Path(args.output) if args.output else out_dir / (input_path.stem + "_products.json")
+        output_path.parent.mkdir(parents=True, exist_ok=True)
         process_file(input_path, output_path, gpt_rewrite=args.gpt_rewrite)
     else:
+        out_processed = input_path / "processed"
         process_output_dir(
             input_dir=input_path,
+            processed_dir=out_processed,
             gpt_rewrite=args.gpt_rewrite,
             merge_output=args.merge or (args.output.split("/")[-1] if args.output else None),
         )

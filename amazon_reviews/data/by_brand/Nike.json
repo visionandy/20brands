@@ -1,0 +1,92 @@
+{
+  "brand": "Nike",
+  "product_count": 3,
+  "review_count": 7,
+  "products": [
+    {
+      "idx": 170,
+      "brand": "Nike",
+      "product_name": "Nike Pro Women's 3\" Shorts",
+      "product_link": "https://www.nike.com/t/pro-womens-3-shorts-R6Kgdb/AO9977-451",
+      "search_term": "Nike Nike Pro Women's 3 Shorts",
+      "asin": "B087QVMKK3",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "They’re super comfortable, fit great, and stay in place during workouts—no riding up or constant adjusting. The material is breathable, stretchy, and supportive without feeling too tight.\n\nThey’re perfect for training, sports, or even layering under uniforms. Great quality, flattering fit, and they hold up really well after washing. I’ll definitely be buying more—highly recommend! 💪🖤",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Perfect! Very amazing and was definitely made for women. My daughter uses them for tumbling and cheer. True to size",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "My daughter lives in these ! Say they are the best for working out !",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 171,
+      "brand": "Nike",
+      "product_name": "Nike Miler Women's Running Tank",
+      "product_link": "https://www.nike.com/t/miler-womens-running-tank-jJr9Hl/AJ8102-010",
+      "search_term": "Nike Nike Miler Women's Running Tank",
+      "asin": "B07FKCMHWT",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "Nice material.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 1
+    },
+    {
+      "idx": 172,
+      "brand": "Nike",
+      "product_name": "Nike Vapor Speed 3 Football Cleats",
+      "product_link": "https://www.nike.com/t/vapor-speed-3-football-cleats-f9zw10/FB3303-103",
+      "search_term": "Nike Nike Vapor Speed 3 Football Cleats",
+      "asin": "B0F698GZY8",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "It is very narrow and runs small",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "True to size. Good grip.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Works for multiple sports",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    }
+  ]
+}

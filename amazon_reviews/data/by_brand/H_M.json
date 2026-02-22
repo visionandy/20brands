@@ -1,0 +1,723 @@
+{
+  "brand": "H&M",
+  "product_count": 25,
+  "review_count": 60,
+  "products": [
+    {
+      "idx": 110,
+      "brand": "H&M",
+      "product_name": "SANDALS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1270652001.html",
+      "search_term": "H&M SANDALS",
+      "asin": "B0F4NBCWNW",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Love These Sandals! 🌟👡",
+          "body": "I absolutely love these sandals! The quality is amazing, and they feel really well-made 👌🏾. I usually struggle to find shoes that give my size 10 feet enough room, but these fit perfectly with extra space to spare .\n\nSuper comfy, cute, and worth every penny! 💕",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on November 23, 2025",
+          "author": "Dayday"
+        },
+        {
+          "title": "Great quality",
+          "body": "Exactly as described! The shoes are very comfortable right out of the box. They fit true to size and look even better in person. I was expecting decent quality, but what I received feels like it should cost twice as much. Very happy with my purchase!",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on September 7, 2025",
+          "author": "Customer"
+        },
+        {
+          "title": "Great Sandals to Purchase",
+          "body": "Love these sandals! They’re super cute, very comfortable, and come in a great color. They run true to size, feel durable, and have a stylish design that works for everything from casual days to dressier evenings. Overall, an excellent purchase - I highly recommend them.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on August 12, 2025",
+          "author": "Amazon Customer"
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 111,
+      "brand": "H&M",
+      "product_name": "SUNGLASSES",
+      "product_link": "https://www2.hm.com/en_us/productpage.1162823011.html",
+      "search_term": "H&M SUNGLASSES",
+      "asin": "B093SXNKFW",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Stylish & Functional",
+          "body": "The WOWSUN Narrow Small Vintage Polarized Sunglasses are the perfect mix of fashion and function! They have a classic, vintage-inspired design that suits a variety of outfits, while the polarized lenses offer excellent protection against glare, especially when driving or outdoors. The fit is snug but comfortable, and they’re lightweight enough for all-day wear. The lenses provide clear vision without distortion, and the overall quality is surprisingly good for the price. If you're looking for affordable, stylish sunglasses with great UV protection, these are a solid choice!",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on August 14, 2025",
+          "author": "Michelle"
+        },
+        {
+          "title": "Great sunglasses",
+          "body": "Perfect sunglasses! Sturdy, polarized, and such a stylish look. 10/10",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on January 24, 2026",
+          "author": "Nicole"
+        },
+        {
+          "title": "Love these glasses",
+          "body": "I really love these sunglasses. They are sleek and sturdy. My head is a bit on the wider side and the fit is perfect. I've actually lost a pair and bought another because of how much I like them. They don't weigh much and are super easy to clean. I'll say this: my toddler sometimes gets a hold of them and chews/plays with them and they've last through it all. And for the cost? Definitely a good buy.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on December 15, 2025",
+          "author": "Ashley Ghingoor"
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 112,
+      "brand": "H&M",
+      "product_name": "FINE-KNIT SCARF",
+      "product_link": "https://www2.hm.com/en_us/productpage.1308919001.html",
+      "search_term": "H&M FINE-KNIT SCARF",
+      "asin": "B0FNR14FD1",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Woven like a sweater.",
+          "body": "* This scarf is amazingly soft!\n* the weave is very much like a sweater, not thicker like some scarves.\n* there is plenty of length to wrap or drape it.\n* the brown is a light, warm shade. Kind of like a coffee with a medium amount of cream in it. Beautiful!\n* as with all cashmere, this is an investment. But the quality of the scarf is amazing!",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on November 12, 2025",
+          "author": "P.C."
+        }
+      ],
+      "review_count": 1
+    },
+    {
+      "idx": 113,
+      "brand": "H&M",
+      "product_name": "WIDE-LEG VELOUR JOGGERS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1297148001.html",
+      "search_term": "H&M WIDE-LEG VELOUR JOGGERS",
+      "asin": "B0D4VHFPN7",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Really nice pants.",
+          "body": "Fits great. Soft, comfortable, good length. Love the color. Kept me warm without being sweaty. I don't need more, but there are other great colors I would consider buying.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on February 10, 2026",
+          "author": "Red24"
+        },
+        {
+          "title": "Versatile",
+          "body": "Lovely fit and color. I bought them to wear with a velvet top for an elegant evening.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on January 25, 2026",
+          "author": "Leah"
+        },
+        {
+          "title": "Nice. Long legs.",
+          "body": "I ordered these for a Christmas party. I ordered the size recommended by Amazon and it fit perfectly. The pants have pockets which is a nice surprise! The pants were the perfect length for me wearing flats which means they will probably be too long for most people and need to be hemmed. Smooth inside which is comfortable. I wouldn't call them velvet I'd call them more of a velour. They have a bit more shine to them than I think velvet would. They're not very thick either but they weren't expensive pants. I have not washed them yet. Tag says machine wash tumble dry low. I'll probably hang them to dry because they are 95% poly & 5% elastine. I can't see that putting him in a tumble dryer would be good for either one of those and they should hang dry quickly. Pleased for the price. Saw another review where they arrived with a hole in the seam. I checked all of the seams on these carefully and have no holes seems are all very even and well sewn. I removed the tie at the waist because the entire waist is elastic and I didn't want the lump of the bow. Wore a shirt untucked. Very nice dressy wide leg pants for a decent price.",
+          "rating": "4.0 out of 5 stars",
+          "date": "Reviewed in the United States on December 29, 2024",
+          "author": "Detroit Chick"
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 114,
+      "brand": "H&M",
+      "product_name": "SILK-BLEND T-SHIRT",
+      "product_link": "https://www2.hm.com/en_us/productpage.0776746001.html",
+      "search_term": "H&M SILK-BLEND T-SHIRT",
+      "asin": "B0GGR94MPY",
+      "amazon_title": "",
+      "reviews": [],
+      "review_count": 0
+    },
+    {
+      "idx": 115,
+      "brand": "H&M",
+      "product_name": "6-PACK MINI IRON-ON PATCHES",
+      "product_link": "https://www2.hm.com/en_us/productpage.1122303001.html",
+      "search_term": "H&M 6-PACK MINI IRON-ON PATCHES",
+      "asin": "B0CHRQT9H1",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "⭐️⭐️⭐️⭐️⭐️ Gorgeous G Patches — Great Quality and Style!",
+          "body": "I love these G patches! The embroidery is clean, the edges are well-finished, and the letter has a bold, stylish look that really stands out. The colors are vibrant, and the material feels durable — not thin or flimsy like some patches online.\n\nThey were easy to apply and stayed on perfectly after ironing and sewing. I’ve used them on jackets, bags, and even a quilt project, and they add such a personal touch. Perfect for anyone wanting to customize clothing or gifts with a classy initial!\n\nPros:\n✅ Beautiful, vibrant embroidery\n✅ Thick, durable backing\n✅ Easy to iron or sew on\n✅ Great size and shape for personal projects\n\nCons:\n❌ None — they’re exactly what I wanted!\n\nOverall: 5/5 — Stylish, sturdy, and perfectly “G”orgeous! 💖",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on October 13, 2025",
+          "author": "GeeBee"
+        },
+        {
+          "title": "Great patches!",
+          "body": "Click to play video\nBought these for my daughter to decorate various bags and we love them! They stick well (sometimes I use E6000 tho to super stick), the size is perfect, vibrant colors, and durable quality.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on August 5, 2025",
+          "author": "Jeanne Brannon"
+        },
+        {
+          "title": "Vibrant and Cute",
+          "body": "We got these to decorate a memory book and they are so cute. The kids loved how soft the letters were. As parents we appreciated that the gold glitter really made the colors pop without coming off and leaving a mess anywhere. It's been a couple weeks of almost everyday use, and they are still sticking to the binders. Letter quality is great and they feel well made. One parent has even sewn these letters onto her child's backpack adds and added support to the stickiness, and they have been very durable.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on November 13, 2024",
+          "author": "B. Edwards"
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 116,
+      "brand": "H&M",
+      "product_name": "MAMA RIBBED NURSING TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1237212001.html",
+      "search_term": "H&M MAMA RIBBED NURSING TOP",
+      "asin": "B0CTX5QLXV",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Lounge, Errands, Travel",
+          "body": "I got this tank from Kindred Bravely to wear while air traveling with my baby. It was perfect to wear under my wrap style carrier as the neckline covers all of my chest. It was also nice to wear a sleeveless top under the baby carrier, it kept me cooler than other shirt alternatives. Baby rested comfortably against a layer of cloth instead of having his face right on my skin. It was also super easy to breastfeed him wearing this tank on the plane during take-off and landing. I wasn’t revealing too much skin to the strangers around me. It’s super stretchy, super soft. The arm holes aren’t very deep, so the tank lays tighter under the armpit. I’m excited to have this shirt in my armoire for leisure and purpose! I’ll be getting more. :)",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on September 13, 2024",
+          "author": "Emily L"
+        },
+        {
+          "title": "So soft and user friendly",
+          "body": "Sooo soft and user friendly for nursing. I wear a KB bra with it because otherwise I can’t wear breast pads for leaking, but it’s a great design. Pretty pricey, but I appreciate the quality and the change from wearing button downs everyday is nice! Also super comfy to sleep in.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on October 13, 2025",
+          "author": "Katherine"
+        },
+        {
+          "title": "Perfect Nursing top",
+          "body": "I wish I had 10 of these tanks! My baby was born and June and I lived In this tank all summer long. The nursing feature allows you to feed discretely and comfortably. The material is ribbed, stretchy and incredible soft. The higher cut is modest but not restricting. I normally wear a large and did size up to an XL based off other reviews and I’m glad I did. With a little postpartum fluff it’s not too tight. Now that weather is getting cooler this is a perfect layering piece.",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on October 26, 2024",
+          "author": "L"
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 117,
+      "brand": "H&M",
+      "product_name": "JERSEY VEST",
+      "product_link": "https://www2.hm.com/en_us/productpage.1316785001.html",
+      "search_term": "H&M JERSEY VEST",
+      "asin": "B0BQ3CTYBR",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "Nice Costume",
+          "body": "Fit well, decent quality",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in the United States on November 6, 2024",
+          "author": "Dale"
+        },
+        {
+          "title": "Recommend",
+          "body": "Recommend",
+          "rating": "5.0 out of 5 stars",
+          "date": "Reviewed in Canada on October 3, 2025",
+          "author": "Ghenadie"
+        }
+      ],
+      "review_count": 2
+    },
+    {
+      "idx": 118,
+      "brand": "H&M",
+      "product_name": "MAMA BEFORE & AFTER INTEGRAL-BRA UNITARD",
+      "product_link": "https://www2.hm.com/en_us/productpage.1255927001.html",
+      "search_term": "H&M MAMA BEFORE & AFTER INTEGRAL-BRA UNITARD",
+      "asin": "B0D1VWZ7MT",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I love the fit and material of this! i have two of them!!!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I ordered an x-small, and I’d say it fits like a medium (unless you want it to be baggy)! It’s very stretchy! It’s very soft, and I like the color, even though I don't usually like pink all over. It is the kind of fabric that shows everything underneath - like an underwear line or belly band or something, but it really is comfortable, so it makes you want to wear it anyway! It's great for laying around the house and avoiding multiple layers around the belly (with pants and shirts).",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Can we say COMFORTABLE?! I am on baby #7, and this unitard is amazing. If I could wear it every day, I would! The only thing is when you use the restroom, your top half is completely exposed, but, meh, it's still the best. Material is super soft and stretchy. It isn't overly supportive, so good to wear supportive undergarments with this (especially later in pregnancy). I pair it with a button down shirt or jacket, and it's comfy! I came back and purchased the blue one, as well as two more short unitards in the same brand. I highly recommend!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 119,
+      "brand": "H&M",
+      "product_name": "V-NECK STRAPPY DRESS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1316656001.html",
+      "search_term": "H&M V-NECK STRAPPY DRESS",
+      "asin": "B076PYFYQ9",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I purchased the dark green one and really liked the top. The fit is tight and snug but has some stretch to it. I am an A cup size and would have used those little slip in plastic things because you can’t wear a bra with this but I would have loved wearing this out because the top is so stylish. The bottom, however, was long and a lot of extra folds so I thought it was a bit too much fabric for what I usually wear. I thought about having it taken up but that would cost more for alterations and tbh I don’t even need a dress right now so I’m returning it. The Hunter green color was also pretty dull and muted. Overall it’s a nice dress and stylish and I could have easily made this work with some alterations but I bought it even though I don’t have an occasion for it because it was not expensive. The material was very nice and heavy and like I said, the top was fitted and snug and I am smaller up top and would have loved wearing it without a bra. Such a bummer but if you like tea length dresses and are smaller up top - this would be a total hit. Worth a try - they have free returns!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "What a great dress! I've been fighting with my postpartum body for a couple years now and this dress made me feel fabulous. I ordered a medium at 5'2, 135 and 32DDD-E. I probably could have done with the small, but the coverage in the chest probably would've been a little skimpy, though the waist/bodice was a touch loose in the medium.\n\nI tried and did get my Freya Deco strapless bra hidden under this dress, so if you pull the straps tighter you can get some strapless bras under it. But it did stick out a shade on the edges under my arms so instead I hacked up an old bra and sewed the cups right into the seams of the dress too. It wasn't perfect, but it was a very good solution to the support issue (my girls are... Let's say not where they used to be lol).\n\nThe fabric is much nicer than I expected, it's not a cheap cotton/poly sundress, and it was 100% opaque but very light and breezy. It came to mid calf on me cause I'm short, and I like it so much I actually may drop the cash to have it shortened a hair and have the waist taken in, and have someone who's a better seamstress than me sew in the cups.\n\nOverall, this dress is a winner. I wore it to a casual beach wedding and got compliments on it all night. This one's worth taking the chance on and I'll be looking at other offerings from this brand in the future.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Honestly I wasn’t sure what I was going to get out of this because the material and of some products on Amazon vary so much and I never have luck with buying clothes on here. BUT, I love this dress. I’m 5’2 102lb and got an extra small. It fits great and the straps are adjustable, which allows you to have the V in the front as deep as you would like. Some women on here complained that it’s a dress meant for women with boobs. I’m a pretty flat 34b and it’s good for me.\n\nHowever, I definitely want to mention that I bought this dress in the green and navy colors in the same size on the same day to see which color I would like best. I tried on the navy first and I really liked it, but I felt like it wasn’t tight enough in the back like it could go in an inch. Then I tried on the green and it was perfect. So I’m not sure what that was about, but I hope the manufacturer sees this comment and will take note of the inconsistency. Had this not been an issue I would rated it 5 stars I think.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 120,
+      "brand": "H&M",
+      "product_name": "SHORT JACKET",
+      "product_link": "https://www2.hm.com/en_us/productpage.1261593002.html",
+      "search_term": "H&M SHORT JACKET",
+      "asin": "B013LAZ3A2",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I got this coat 2 years ago and I'm absolutely obsessed with it. Its so insanely warm I wear it with a cotton jacket under it all winter and I never need another coat. I had to stand outside grilling tonight, it was 18⁰F. I was never cold. I realized how amazing this coat is after that. Its so comfortable and fits perfect. The only thing is after 2 1/2 years, I've washed it maybe 5 times and the feathers seem like theyre starting to come out at the seams more visibly, but I'm okay with that. I always wash it on gentle with nothing else, not a lot of soap and cold water, hang dry and put it in the dryer on no heat for 5 minutes. This coat seriously goes with me everywhere. It also comes with a stuff sack so if you dont end up needing it and youre out for the day then you can shove it somewhere besides tying it around your waist. The ONLY thing thos coat cant do it heavy downpoor for a long period of time. It absorbs water if its raining hard after about 15, 20 minutes. But it dried quick. Seriously I love this thing. I use it to nap all the time if I'm not home ect. Its so cozy. Its not the cutest thing in the world but its also not ugly at all. Its great for everyday use. I just genuinely love this thing and I hope I get to have it for a long time.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I bought this for the bold blue color and it said it was down which I knew would keep me warm. However when I got it it was so small and thin i thought this isn't going to be good. We have had a horrible cold snap and this came at the tail end of it. Skeptical, I put it one and went outside and it held up to the cold. I was sooo impressed. I had a big bulky coat that I was tired of. This one was an excellent replacement for that. Lightweight but kept me so warm I was sweating in 20 degree weather! Love this coat! Oh and the size was perfect and true to size.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "very good jacket . I like it very much. It is warm, light weight and comfortable.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 121,
+      "brand": "H&M",
+      "product_name": "CRINKLED PULL-ON PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1292074004.html",
+      "search_term": "H&M CRINKLED PULL-ON PANTS",
+      "asin": "B06XRLHQ5V",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "When you find some white pants that fit like they were tailor made, feel spectacular and look even better for less than $30, YOU HAVE YOURSELF A DANG DEAL❣️❣️❣️\n\nThese small pants are a TRUE 2-4 small....WITH 25-26\" WAIST. I LOVED THEM and had my own fashion show trying on different blouses from my closet with it. EVERTHING looked incredible too ❣️\n\nThese pants are NOT sheer. You can dress them up OR dress them down. PERFECT for Spring n Summer too...\n\nI bought a few different colors and will mention that the red pair was an inch smaller compared to white pair. 😣 Ugh.\nThe red had to be a\n0-2...I have two more pair coming so I'm hoping they fit like this white pair. I'm SO TICKLED WITH THEM.\n\nI'll tell you this ...I liked the red SO MUCH that I decided to order another red pair before I send this red pair back because they are just adorable.\n\nI'd HIGHLY RECOMMEND this pant.... EXTREMELY well made and looks like a $90-$125 dollar pair of slacks...CLASSY &COMFY.... What's not to love ♥️....except when the size differs 🫤....worth the trial and error tho....for the steal.\n\nUPDATE: The green and purple were fit like a DREAM❣️ And the 2nd pair of red ones did too! I am SO SET.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Okay so I was really hesitant to buy these. I'm 5'8\" and was really worried about the length. But I took a risk and assumed I could wear them as capris, worst case.\nWell I'm glad I bought them.\nHips are 41\" around and waist is 32\" so it can be hard to find pants that fit my ass that actually stay up around the waist.\nThese pants fit my body great! They're a little snug to pull over the booty but once they're up- they're a dream. They're slightly tighter in the waist than most pants so if you are apple shaped or have a wider tummy than booty, these may not be a good fit for you.\nI do have muscular legs and calves and they are not uncomfortably tight in these pants. In fact, they're appropriately loose even when sitting. No tight pulling and has slight looseness and give when seated.\n\nI ordered a size medium based off reviews and they fit exactly how I expected. Large would have been too baggy and not flattering on my body for my personal taste. They do have quite a bit of stretch so I'm glad I sized-down. I'm sure they'll stretch as I wear them and I don't wash my pants after every wear so a large may have been problematic.\n\nApologies for the crappy angle on pics. I don't have a full length mirror and had to make do with the mirror I have!\nI even reccomended these for my sister who is 5'10\".\n6ft sister MAY be okay in a large if the hem is a bit longer. They'd definitely be more classic ankle pants. At the ankle, no rolling.\n\nThey're seemingly petty wrinkle resistant which is awesome. Tried them on right out of the bag and there are no creases from packaging.\n\nI will likely buy these in other colors. I purchased navy and black. Black is pictured. See no roll, one roll, two rolls. Also tried to get a pic of the waist band and rise of pants.\n\nOrdered a Medium. 5'8\", 170lbs, hourglass. Great fit.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "The fabric is weird and plastic like and the fit is not like the other colors. This is my 3rd pair of these in other colors and same size. It has weird pooching in the front, the seams aren't straight, and the back also has weird pooching. If you want to look like a 5 yo with no experience made these, buy them otherwise 0 out of 5 stars.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 122,
+      "brand": "H&M",
+      "product_name": "5-PACK SOCKS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1067654022.html",
+      "search_term": "H&M 5-PACK SOCKS",
+      "asin": "B0F9T99WN9",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "Soft, warm but not hot, cushiony, breathable, durable, moisture wicking, good quality, comfortable all day wear. These socks are amazing. Bought one set then purchased two more! I would buy these over and over again!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Excellent quality, cute colors, comfy, light weight but thick enough to keep you warm, stretchy, not too tall/long either just enough to scrunch above the boot to look cute- like crew length- I would buy again and I’d highly recommended",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Very comfortable, strong and warm. Washes well.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 123,
+      "brand": "H&M",
+      "product_name": "TEDDY FLEECE COAT",
+      "product_link": "https://www2.hm.com/en_us/productpage.1305749002.html",
+      "search_term": "H&M TEDDY FLEECE COAT",
+      "asin": "B08SWZC659",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I am so impressed by this coat! The dusty rose color is so beautiful. I've received so many compliments on it already. It's the coziest, most comfortable and warm coat. My go to this season. It fits perfectly and is very well made. Looks much more expensive than it's price . Exceptional quality and value.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I love this coat!! Great fit and so well made! I wear a M and this coat fit perfect in length, shoulders and sleeve length. Love the satiny lining and the Sherpa exterior. And pockets, yes! Coat will be perfect for fall and mild winter days. Daily Ritual is my favorite clothing line on Amazon! Price was amazing for such a fashionable coat!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I bought Carmel and dusty rose both in size small. They fit differently so I’m keeping the dusty rose. I’m 5’8” 155 lbs athletic/thinish build.\n\nThe rose was softer, the fit was less awkward. The Carmel got tighter towards the bottom and was less comfortable. It still fit me but didn’t look as good on me. Something to take into consideration when buying. It’s not “perfect” but it was literally on sale for under $20 looks cute and will keep me warm. :)",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 124,
+      "brand": "H&M",
+      "product_name": "OVERSIZED QUILTED JACKET",
+      "product_link": "https://www2.hm.com/en_us/productpage.1294653001.html",
+      "search_term": "H&M OVERSIZED QUILTED JACKET",
+      "asin": "B09NNJ9S5R",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "This oversized puffer jacket truly fits oversized, which I love. The quality is much better than I expected and it honestly looks like a much more expensive brand jacket. It’s lightweight but still very warm, so it’s perfect for cooler days without feeling bulky or heavy.\n\nOne of my favorite things about it is how comfortable it is to layer — I usually wear a hoodie underneath and it still fits great without feeling tight or restrictive. It’s quickly become one of my go-to jackets because it looks stylish while still being practical.\n\nThe only downside is that it doesn’t have a hood, which would have made it even better for rainy or windy days. That said, I still really love this jacket and reach for it often. Overall, I’m very happy with the quality, warmth, and oversized fit.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "This jacket is adorable! The fabric quality is great. Thick, soft and a perfect dupe. The zipper works great, although I like the look of keeping it unzipped. Great for fall, but I find myself throwing it on a lot more than I thought I would this winter. Highly recommend!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I was so happy when I saw this coat and the color. My football team is purple and I cannot wait until the fall/winter months so I can sport my new look. It fits larger than normal as I sized down than my normal size. It is very light yet warm and very comfortable. The coat is soft, good quality and looks great as I have had many compliments. I absolutely love it and it was a great price point. I can't speak on the durability as I have only had it several months, but it looks as it will hold up well.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 125,
+      "brand": "H&M",
+      "product_name": "SCARF-DETAIL TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304260003.html",
+      "search_term": "H&M SCARF-DETAIL TOP",
+      "asin": "B0GFW7ZSBZ",
+      "amazon_title": "",
+      "reviews": [],
+      "review_count": 0
+    },
+    {
+      "idx": 126,
+      "brand": "H&M",
+      "product_name": "LARGE ROUND BRUSH",
+      "product_link": "https://www2.hm.com/en_us/productpage.1256925001.html",
+      "search_term": "H&M LARGE ROUND BRUSH",
+      "asin": "B06Y51KHKW",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I love how this brush leaves my hair.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "I like that I can brush my thick curly hair w/it.I always wanted to try a boar's head bristle brush..I really like it.Nice feel to the scalp.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "My hair, which is fine & shoulder length, gets tangled in this brush which can be very frustrating.\nGood quality materials.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 127,
+      "brand": "H&M",
+      "product_name": "JACKET WITH TEDDY FLEECE COLLAR",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304175001.html",
+      "search_term": "H&M JACKET WITH TEDDY FLEECE COLLAR",
+      "asin": "B0FWRKCMW2",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "This was a really cute jacket however I actually did return it because I decided on a different color combo. I ordered a size medium and I’m 57 and 155 pounds. Fit perfectly a little loose and not too tight.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Cute dupe for the free people pull over, and very trendy right now! It’s not super thick, but it’s warm enough. I still love it. I sized up for a baggier layered look and went with a medium. It’s soft- it’s made with all polyester though. 10/10 a good dupe.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "This is so warm. The jacket is comparable to FP styles but only cheaper!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 128,
+      "brand": "H&M",
+      "product_name": "SEQUINED PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304126002.html",
+      "search_term": "H&M SEQUINED PANTS",
+      "asin": "B081VHR1PF",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "LOVE these pants, could have gotten a smaller size but fear they may have been too tight. Comfortable, not warm. Not sheer, fit well, have no smell and the material is very stretchy. Will look great with a longer sweater or if you are comfortable, with a waist length sweater. Festive and look great with boots!!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "These are very nice leggings and fit smoothly. No wrinkles or bagging at the knees (as mentioned in some reviews). They feel good too; just the right amount of compression.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Very comfortable and cute, not as “faux leather” look as I would’ve liked but still cute leggings!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 129,
+      "brand": "H&M",
+      "product_name": "BEAD-EMBELLISHED TANK TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1322836001.html",
+      "search_term": "H&M BEAD-EMBELLISHED TANK TOP",
+      "asin": "B019G408UC",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "I love this tank top! I ordered a size large and it fit perfectly. I usually wear size medium in t shirts and tank tops (36C). I wore it for three days in a row during our three day stay-cation honeymoon in Maui. I got a bunch of compliments and congratulations..I had a huge smile on my face the entire time! This really makes a girl feel special while on honeymoon!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Great quality, but I should’ve ordered a size bigger. Seems to run a little small.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "This came super fast!!! and its really cute I cant wait to give it to my friend at her Bachelorette Party this weekend! The material is really comfortable and fairly stretchy, I bought a large because I didn't want it to be to small but I would have been fine with a medium.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 130,
+      "brand": "H&M",
+      "product_name": "JACQUARD-WEAVE DRESS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1311173001.html",
+      "search_term": "H&M JACQUARD-WEAVE DRESS",
+      "asin": "B0F6CC5WVH",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "Kevin’s wife here- I ordered multiple dresses hoping to find the perfect one to wear for my mother’s funeral next week. This came tonight and it’s the one. It’s elegant and tasteful. I’m a true pear shape with smaller upper body/waist and wide hips. This is just beautiful on and because it’s loose and slowly, I won’t be worried about sucking in my stomach or any feeling of being constricted like other fitted dresses. Exactly what I need to survive this day. Elegant, classic and comfortable.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Good quality fabric with enough space to move your arms under the cape. It’s super light weighted fabric. The color is as it is on the picture. Got a lot of compliments. I definitely recommend it if you are looking for an affordable dress and comfortable.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Great dress. Does not wrinkle and looks amazing on.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 131,
+      "brand": "H&M",
+      "product_name": "SEQUINED PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304126001.html",
+      "search_term": "H&M SEQUINED PANTS",
+      "asin": "B09H3XTBXV",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "This just make me feel girly and ready! I hate getting dressed up but wanted something fun for my birthday on a cruise! I paired this with the sequin it’s my birthday black shirt and everyone praised it all night! They are comfortable but good quality. You don’t have sequins sticking to everything or falling off.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Love this pants, like, obsessed. Fit so perfecr",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "The sequins are caught on the material of the pants causing multiple snags before I even wore them. The pants are so long even pulled up as high as I could. Would not recommend fabric was super cheap as well. The pants seemed more glitter fabric in the pictures and are definitely these little sequins on kids clothes.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 132,
+      "brand": "H&M",
+      "product_name": "SUPERFINE BROWLINER EYEBROW PENCIL",
+      "product_link": "https://www2.hm.com/en_us/productpage.1209849003.html",
+      "search_term": "H&M SUPERFINE BROWLINER EYEBROW PENCIL",
+      "asin": "B0G3KSDZLT",
+      "amazon_title": "",
+      "reviews": [],
+      "review_count": 0
+    },
+    {
+      "idx": 133,
+      "brand": "H&M",
+      "product_name": "KNIT CARDIGAN",
+      "product_link": "https://www2.hm.com/en_us/productpage.1302378004.html",
+      "search_term": "H&M KNIT CARDIGAN",
+      "asin": "B07F2LRY52",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "Amazon Essential cardigan are lightweight, well made and a good value. The fit is nice. The shoulder seams line up which is a nice tailoring feature. The fabric is lightweight so it can be worn in the spring or summer evenings. I purchased the darker green and it didn't disappoint. It was a lovely shade of Forrest Green. The fabric has a nice softness about it so it feels good on your arms. The length hits at mid hip so it doesn't fall below your rear like some longer sweaters do. The style is nice with a deep V in the front.\n\nOverall satisfaction with this brand. I've purchased multiple items and all have a good value and quality.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Love It! This cardigan is soft and comfy. It has plenty of stretch so it's easy to move in. It fits true to size. I got my normal size 3X, and it fits great. I like that it is not to thick and not to thin. The Burgandy color is pretty and would be great for the Fall weather. It is nice quality and great value. My only con is after wearing it I had fuzz from the cardigan all over my tank top I was wearing under it. Overall Nice cardigan. I defiantly will buy again in other colors.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Ordered the black in XL. Have larger bust 38H and a size14-16 >H 5'3 Cardigan buttons up without pulling around chest area. Soft material. Not super long length, which I knew and wanted it not to be too long. Bottom of sweater hits around top of hip area , does not cover bum (length shown on model in ad is correct) Lightweight and soft cardigan, great for summer and spring. Arm length is good. V-neck is slightly deep (same as ad) if wearing buttoned up sweater, probably need a sports bra of cami/sleeveless tank underneath that peeks out unless ok with showing a lil bit of top of cleavage. Size fit just right tts. If I wanted to wear a heavier shirt or bulky blouse under cardigan, you should choose size up. Looks good unbuttoned . After wearing, I ordered 2 more in different colors. The \"bright blue\" is not bright or as shown in ad, it's more of a navy/federal blue bummr, had to Return. The 2nd color is \"red\". It's a nice shade of red, not super loud or dull, kept this one . For $13 sale price, it's a GREAT DEAL!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 134,
+      "brand": "H&M",
+      "product_name": "BOW-DETAIL KNIT CARDIGAN",
+      "product_link": "https://www2.hm.com/en_us/productpage.1310711002.html",
+      "search_term": "H&M BOW-DETAIL KNIT CARDIGAN",
+      "asin": "B0DH34VHJH",
+      "amazon_title": "",
+      "reviews": [],
+      "review_count": 0
+    }
+  ]
+}

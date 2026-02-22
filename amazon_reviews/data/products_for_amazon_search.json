@@ -1,0 +1,2549 @@
+{
+  "total_products": 360,
+  "total_brands": 20,
+  "products_per_brand_limit": 25,
+  "brand_stats": {
+    "Adidas": 25,
+    "Alo Yoga": 25,
+    "Athleta": 25,
+    "COS": 0,
+    "Columbia": 25,
+    "Guess": 10,
+    "H&M": 25,
+    "J.Crew": 15,
+    "Levi's": 0,
+    "Lululemon": 20,
+    "Nike": 3,
+    "Old Navy": 25,
+    "Target": 24,
+    "Theory": 20,
+    "Tommy Hilfiger": 25,
+    "Tory Burch": 25,
+    "Tory Sport": 25,
+    "Calvin Klein": 16,
+    "Coach": 2,
+    "Michael Kors": 25
+  },
+  "products": [
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Campus 00s Shoes",
+      "product_link": "https://www.adidas.com/us/campus-00s-shoes/JP9163.html",
+      "search_term": "Adidas Campus 00s Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Grand Court Shoes",
+      "product_link": "https://www.adidas.com/us/grand-court-shoes/GW9214.html",
+      "search_term": "Adidas Grand Court Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "ULTRABOOST 1.0 SHOES",
+      "product_link": "https://www.adidas.com/us/ultraboost-1.0-shoes/JS1265.html",
+      "search_term": "Adidas ULTRABOOST 1.0 SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Gazelle Indoor Shoes",
+      "product_link": "https://www.adidas.com/us/gazelle-indoor-shoes/HQ5153.html",
+      "search_term": "Adidas Gazelle Indoor Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Gazelle Bold Shoes",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/IE0876.html",
+      "search_term": "Adidas Gazelle Bold Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Grand Court Shoes",
+      "product_link": "https://www.adidas.com/us/grand-court-shoes/GW9215.html",
+      "search_term": "Adidas Grand Court Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Campus 00s Shoes",
+      "product_link": "https://www.adidas.com/us/campus-00s-shoes/JR7287.html",
+      "search_term": "Adidas Campus 00s Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "VL Court Bold Shoes",
+      "product_link": "https://www.adidas.com/us/vl-court-bold-shoes/JI1788.html",
+      "search_term": "Adidas VL Court Bold Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Gazelle Bold Shoes",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/ID7056.html",
+      "search_term": "Adidas Gazelle Bold Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Grand Court Shoes",
+      "product_link": "https://www.adidas.com/us/grand-court-shoes/HP2537.html",
+      "search_term": "Adidas Grand Court Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "GAZELLE INDOOR SHOES",
+      "product_link": "https://www.adidas.com/us/gazelle-indoor-shoes/IH6797.html",
+      "search_term": "Adidas GAZELLE INDOOR SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "VL COURT 3.0 SHOES",
+      "product_link": "https://www.adidas.com/us/vl-court-3.0-shoes/KI3355.html",
+      "search_term": "Adidas VL COURT 3.0 SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Gazelle Bold Shoes",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/IE0420.html",
+      "search_term": "Adidas Gazelle Bold Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Cloudfoam Pure 2.0 Shoes",
+      "product_link": "https://www.adidas.com/us/cloudfoam-pure-2.0--shoes/H04754.html",
+      "search_term": "Adidas Cloudfoam Pure 2.0 Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "GAZELLE BOLD SHOES",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/IH6787.html",
+      "search_term": "Adidas GAZELLE BOLD SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "PREDATOR ELITE Fold-Over Tongue Firm Ground Soccer Cleats",
+      "product_link": "https://www.adidas.com/us/predator-elite-fold-over-tongue-firm-ground-soccer-cleats/JS0380.html",
+      "search_term": "Adidas PREDATOR ELITE Fold-Over Tongue Firm Ground Soccer Cleats"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Campus 00s Shoes",
+      "product_link": "https://www.adidas.com/us/campus-00s-shoes/JP9162.html",
+      "search_term": "Adidas Campus 00s Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Campus 00s Shoes",
+      "product_link": "https://www.adidas.com/us/campus-00s-shoes/GY0042.html",
+      "search_term": "Adidas Campus 00s Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Campus 00s Shoes",
+      "product_link": "https://www.adidas.com/us/campus-00s-shoes/HQ8707.html",
+      "search_term": "Adidas Campus 00s Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "VL Court Bold Shoes",
+      "product_link": "https://www.adidas.com/us/vl-court-bold-shoes/IH3083.html",
+      "search_term": "Adidas VL Court Bold Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "GAZELLE BOLD SHOES",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/IH6786.html",
+      "search_term": "Adidas GAZELLE BOLD SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "VL COURT 3.0 SHOES",
+      "product_link": "https://www.adidas.com/us/vl-court-3.0-shoes/KI3347.html",
+      "search_term": "Adidas VL COURT 3.0 SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Grand Court 2.0 Shoes",
+      "product_link": "https://www.adidas.com/us/grand-court-2.0-shoes/GW9213.html",
+      "search_term": "Adidas Grand Court 2.0 Shoes"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "GAZELLE INDOOR SHOES",
+      "product_link": "https://www.adidas.com/us/gazelle-indoor-shoes/IH6799.html",
+      "search_term": "Adidas GAZELLE INDOOR SHOES"
+    },
+    {
+      "brand": "Adidas",
+      "brand_raw": "adidas",
+      "product_name": "Gazelle Bold Shoes",
+      "product_link": "https://www.adidas.com/us/gazelle-bold-shoes/HQ6912.html",
+      "search_term": "Adidas Gazelle Bold Shoes"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Faux Leather Premier Bomber",
+      "product_link": "https://www.aloyoga.com/products/u4049r-faux-leather-premier-bomber-charcoal-green",
+      "search_term": "Alo Yoga Faux Leather Premier Bomber"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "High-Waist Origin Wide Leg Track Pant",
+      "product_link": "https://www.aloyoga.com/products/w54204r-high-waist-origin-wide-leg-track-pant-charcoal-green",
+      "search_term": "Alo Yoga High-Waist Origin Wide Leg Track Pant"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Marl Sweater 1/4 Zip Pullover",
+      "product_link": "https://www.aloyoga.com/products/w3901r-marl-sweater-1-4-zip-pullover-mushroom-marl",
+      "search_term": "Alo Yoga Marl Sweater 1/4 Zip Pullover"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Snuggle Up Sweater High-Waist Wide Leg Pant",
+      "product_link": "https://www.aloyoga.com/products/w51431r-snuggle-up-sweater-high-waist-wide-leg-pant-mushroom",
+      "search_term": "Alo Yoga Snuggle Up Sweater High-Waist Wide Leg Pant"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Snuggle Up Sweater Shawl",
+      "product_link": "https://www.aloyoga.com/products/w3865r-snuggle-up-sweater-shawl-mushroom",
+      "search_term": "Alo Yoga Snuggle Up Sweater Shawl"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Cropped Gold Rush Puffer Vest",
+      "product_link": "https://www.aloyoga.com/products/w4639r-extreme-cropped-gold-rush-puffer-vest-mushroom",
+      "search_term": "Alo Yoga Cropped Gold Rush Puffer Vest"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Stargazing Puffer",
+      "product_link": "https://www.aloyoga.com/products/w4634r-stargazing-puffer-charcoal-green",
+      "search_term": "Alo Yoga Stargazing Puffer"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Origin Full-Zip Track Jacket",
+      "product_link": "https://www.aloyoga.com/products/w4656r-origin-full-zip-track-jacket-charcoal-green",
+      "search_term": "Alo Yoga Origin Full-Zip Track Jacket"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Elemental Full-Zip Jacket",
+      "product_link": "https://www.aloyoga.com/products/m4185r-elemental-full-zip-jacket-charcoal-green",
+      "search_term": "Alo Yoga Elemental Full-Zip Jacket"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Northstar Cargo Pant",
+      "product_link": "https://www.aloyoga.com/products/m5173r-northstar-cargo-pant-charcoal-green",
+      "search_term": "Alo Yoga Northstar Cargo Pant"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Rain Or Shine Long Coat",
+      "product_link": "https://www.aloyoga.com/products/w4560r-rain-or-shine-long-coat-charcoal-green",
+      "search_term": "Alo Yoga Rain Or Shine Long Coat"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Airlift Line Up Bra",
+      "product_link": "https://www.aloyoga.com/products/w9533r-airlift-line-up-bra-charcoal-green",
+      "search_term": "Alo Yoga Airlift Line Up Bra"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Faux Leather Premier Bomber",
+      "product_link": "https://www.aloyoga.com/products/u4049r-faux-leather-premier-bomber-charcoal-green-mens",
+      "search_term": "Alo Yoga Faux Leather Premier Bomber"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Rain Or Shine Long Coat",
+      "product_link": "https://www.aloyoga.com/products/w4560r-rain-or-shine-long-coat-charcoal-green-mens",
+      "search_term": "Alo Yoga Rain Or Shine Long Coat"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Polar Fleece Wintry Mix Pant",
+      "product_link": "https://www.aloyoga.com/products/w51374r-polar-fleece-wintry-mix-pant-charcoal-green",
+      "search_term": "Alo Yoga Polar Fleece Wintry Mix Pant"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Edition Sueded Jacket",
+      "product_link": "https://www.aloyoga.com/products/m4175r-edition-sueded-jacket-charcoal-green",
+      "search_term": "Alo Yoga Edition Sueded Jacket"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Airlift Rebel Bra",
+      "product_link": "https://www.aloyoga.com/products/w9831r-airlift-rebel-bra-charcoal-green",
+      "search_term": "Alo Yoga Airlift Rebel Bra"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Polar Fleece Cropped Wintry Mix Jacket",
+      "product_link": "https://www.aloyoga.com/products/w4556r-polar-fleece-cropped-wintry-mix-jacket-charcoal-green",
+      "search_term": "Alo Yoga Polar Fleece Cropped Wintry Mix Jacket"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Airlift Intrigue Bra",
+      "product_link": "https://www.aloyoga.com/products/w9557r-airlift-intrigue-bra-charcoal-green",
+      "search_term": "Alo Yoga Airlift Intrigue Bra"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Seamless Ribbed Favorite Bra Tank",
+      "product_link": "https://www.aloyoga.com/products/w9730r-seamless-ribbed-favorite-bra-tank-charcoal-green",
+      "search_term": "Alo Yoga Seamless Ribbed Favorite Bra Tank"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Airlift Winter Warm 1/4 Zip Long Sleeve",
+      "product_link": "https://www.aloyoga.com/products/w3788r-airlift-winter-warm-1-4-zip-long-sleeve-charcoal-green",
+      "search_term": "Alo Yoga Airlift Winter Warm 1/4 Zip Long Sleeve"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Airbrush High-Waist 7/8 Bootcut Legging",
+      "product_link": "https://www.aloyoga.com/products/w51119r-airbrush-high-waist-7-8-bootcut-legging-charcoal-green",
+      "search_term": "Alo Yoga Airbrush High-Waist 7/8 Bootcut Legging"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "5\" Seamless Ribbed Favorite Short",
+      "product_link": "https://www.aloyoga.com/products/w6290r-seamless-ribbed-favorite-short-charcoal-green",
+      "search_term": "Alo Yoga 5 Seamless Ribbed Favorite Short"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Unisex Throwback Sock",
+      "product_link": "https://www.aloyoga.com/products/a0357u-unisex-throwback-sock-charcoal-green-ivory",
+      "search_term": "Alo Yoga Unisex Throwback Sock"
+    },
+    {
+      "brand": "Alo Yoga",
+      "brand_raw": "alo_yoga",
+      "product_name": "Wild Thing Bra",
+      "product_link": "https://www.aloyoga.com/products/w9609r-wild-thing-bra-charcoal-green",
+      "search_term": "Alo Yoga Wild Thing Bra"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "SoftLuxe Bra D-DD",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769603012&vid=96&pcid=1065352&cid=1065352",
+      "search_term": "Athleta SoftLuxe Bra D-DD"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "SoftLuxe Bra A-C",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769606022&vid=95&pcid=1065352&cid=1065352",
+      "search_term": "Athleta SoftLuxe Bra A-C"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "MVP Mid Rise Side Stripe Pant",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=767524042&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta MVP Mid Rise Side Stripe Pant"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Seasoft Rib Crewneck Sweatshirt",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=598393062&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Seasoft Rib Crewneck Sweatshirt"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Square Neck Bra D-DD",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769481192&vid=96&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Square Neck Bra D-DD"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Elation Ultra High Rise SoftLuxe Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769187022&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Elation Ultra High Rise SoftLuxe Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Salutation Stash High Rise 7/8 Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=715749042&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Salutation Stash High Rise 7/8 Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Elation Ultra High Rise SoftLuxe Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769187002&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Elation Ultra High Rise SoftLuxe Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Forever Fleece High Rise Jogger",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=891669312&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Forever Fleece High Rise Jogger"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Crosstrain Zip Tank",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=600326022&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Crosstrain Zip Tank"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Softshell Glove 2.0",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=768184012&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Softshell Glove 2.0"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Interval High Rise Perforated Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769058002&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Interval High Rise Perforated Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Elation Ultra High Rise 7/8 Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=599750582&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Elation Ultra High Rise 7/8 Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "All About Vertical Crossbody Bag",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=471568092&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta All About Vertical Crossbody Bag"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "SoftLuxe Top",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769331042&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta SoftLuxe Top"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Square Neck Bra A-C",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769495252&vid=95&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Square Neck Bra A-C"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Brooklyn Mid Rise Ankle Pant",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=198671482&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Brooklyn Mid Rise Ankle Pant"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Signature Rib Thin Strap Tank",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=659139072&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Signature Rib Thin Strap Tank"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Elation Ultra High Rise Piping Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=683249012&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Elation Ultra High Rise Piping Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Signature Rib Y Back Tank",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=768164052&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Signature Rib Y Back Tank"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Elation Ultra High Rise 7/8 Legging",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=599750632&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Elation Ultra High Rise 7/8 Legging"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Brooklyn Mid Rise Ankle Pant",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=198671492&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Brooklyn Mid Rise Ankle Pant"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Square Neck Bra D-DD",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=769481212&vid=96&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Square Neck Bra D-DD"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Softshell Glove 2.0",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=768184022&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Softshell Glove 2.0"
+    },
+    {
+      "brand": "Athleta",
+      "brand_raw": "athleta",
+      "product_name": "Ace Advantage High Rise Tipped 13.5” Skort",
+      "product_link": "https://athleta.gap.com/browse/product.do?pid=587849022&vid=1&pcid=1065352&cid=1065352",
+      "search_term": "Athleta Ace Advantage High Rise Tipped 13.5” Skort"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Powder Lite™ II Mid Jacket",
+      "product_link": "https://www.columbia.com/p/womens-powder-lite-ii-mid-jacket-2089371.html?color=278",
+      "search_term": "Columbia Women's Powder Lite™ II Mid Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Columbia Lodge™ Sherpa Full Zip Fleece Jacket",
+      "product_link": "https://www.columbia.com/p/womens-columbia-lodge-sherpa-full-zip-fleece-jacket-1907601.html?color=607",
+      "search_term": "Columbia Women's Columbia Lodge™ Sherpa Full Zip Fleece Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Mountain Croo™ III Mid Down Jacket",
+      "product_link": "https://www.columbia.com/p/womens-mountain-croo-iii-mid-down-jacket-2085051.html?color=397",
+      "search_term": "Columbia Women's Mountain Croo™ III Mid Down Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 Women's Winter Warmth™ Printed Full Zip Hoodie",
+      "product_link": "https://www.columbia.com/p/womens-winter-warmth-printed-full-zip-hoodie-2164731.html?color=278",
+      "search_term": "Columbia 1 / 4 Women's Winter Warmth™ Printed Full Zip Hoodie"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Powder Lite™ II Hooded Jacket",
+      "product_link": "https://www.columbia.com/p/womens-powder-lite-ii-hooded-jacket-2089391.html?color=429",
+      "search_term": "Columbia Women's Powder Lite™ II Hooded Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Joy Peak™ II Mid Hooded Jacket",
+      "product_link": "https://www.columbia.com/p/womens-joy-peak-ii-mid-hooded-jacket-2088641.html?color=348",
+      "search_term": "Columbia Women's Joy Peak™ II Mid Hooded Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Suttle Mountain™ Long Insulated Jacket",
+      "product_link": "https://www.columbia.com/p/womens-suttle-mountain-long-insulated-jacket-1799751.html?color=279",
+      "search_term": "Columbia Women's Suttle Mountain™ Long Insulated Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 Women's Little Si™ II Insulated Parka",
+      "product_link": "https://www.columbia.com/p/womens-little-si-ii-insulated-parka-2085761.html?color=224",
+      "search_term": "Columbia 1 / 4 Women's Little Si™ II Insulated Parka"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Winter Warmth™ Full Zip Hoodie",
+      "product_link": "https://www.columbia.com/p/womens-winter-warmth-full-zip-hoodie-2125271.html?color=624",
+      "search_term": "Columbia Women's Winter Warmth™ Full Zip Hoodie"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Joy Peak™ II Hooded Jacket",
+      "product_link": "https://www.columbia.com/p/womens-joy-peak-ii-hooded-jacket-2089041.html?color=607",
+      "search_term": "Columbia Women's Joy Peak™ II Hooded Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Heavenly™ Long Hooded Jacket",
+      "product_link": "https://www.columbia.com/p/womens-heavenly-long-hooded-jacket-1738161.html?color=464",
+      "search_term": "Columbia Women's Heavenly™ Long Hooded Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 New Colors Women's Fire Side™ II Sherpa Full Zip Fleece",
+      "product_link": "https://www.columbia.com/p/womens-fire-side-ii-sherpa-full-zip-fleece-1819791.html?color=659",
+      "search_term": "Columbia 1 / 4 New Colors Women's Fire Side™ II Sherpa Full Zip Fleece"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Heavenly™ Jacket",
+      "product_link": "https://www.columbia.com/p/womens-heavenly-jacket-1788661.html?color=012",
+      "search_term": "Columbia Women's Heavenly™ Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Ava Alpine™ II Insulated Jacket",
+      "product_link": "https://www.columbia.com/p/womens-ava-alpine-ii-insulated-jacket-2085831.html?color=429",
+      "search_term": "Columbia Women's Ava Alpine™ II Insulated Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's PFG Uncharted™ II Insulated Anorak",
+      "product_link": "https://www.columbia.com/p/womens-pfg-uncharted-ii-insulated-anorak-2135081.html?color=278",
+      "search_term": "Columbia Women's PFG Uncharted™ II Insulated Anorak"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 Women's PFG Open Water™ Poncho",
+      "product_link": "https://www.columbia.com/p/womens-pfg-open-water-poncho-2136331.html?color=853",
+      "search_term": "Columbia 1 / 4 Women's PFG Open Water™ Poncho"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "New Colors Women's Benton Springs™ Full Zip Fleece Hoodie - $49.00",
+      "product_link": "https://www.columbia.com/p/womens-benton-springs-full-zip-fleece-hoodie-1955441.html?color=431",
+      "search_term": "Columbia New Colors Women's Benton Springs™ Full Zip Fleece Hoodie - $49.00"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Eastmoreland™ Lined Long Jacket",
+      "product_link": "https://www.columbia.com/p/womens-eastmoreland-lined-long-jacket-2125381.html?color=397",
+      "search_term": "Columbia Women's Eastmoreland™ Lined Long Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Castle Dale™ Full Zip Fleece Jacket",
+      "product_link": "https://www.columbia.com/p/womens-castle-dale-full-zip-fleece-jacket-2001591.html?color=010",
+      "search_term": "Columbia Women's Castle Dale™ Full Zip Fleece Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 Women's Apres Arson™ II Winter Long Down Jacket",
+      "product_link": "https://www.columbia.com/p/womens-apres-arson-ii-winter-long-down-jacket-2125441.html?color=225",
+      "search_term": "Columbia 1 / 4 Women's Apres Arson™ II Winter Long Down Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "New Colors Women's Benton Springs™ II Long Fleece Hoodie - $56.00",
+      "product_link": "https://www.columbia.com/p/womens-benton-springs-ii-long-fleece-hoodie-1556961.html?color=256",
+      "search_term": "Columbia New Colors Women's Benton Springs™ II Long Fleece Hoodie - $56.00"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Snowy Summit™ Insulated Jacket",
+      "product_link": "https://www.columbia.com/p/womens-snowy-summit-insulated-jacket-2085901.html?color=685",
+      "search_term": "Columbia Women's Snowy Summit™ Insulated Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Benton Springs™ Printed Full Zip Fleece Jacket",
+      "product_link": "https://www.columbia.com/p/womens-benton-springs-printed-full-zip-fleece-jacket-2021771.html?color=016",
+      "search_term": "Columbia Women's Benton Springs™ Printed Full Zip Fleece Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "1 / 4 Women's Heavenly™ Hooded Jacket",
+      "product_link": "https://www.columbia.com/p/womens-heavenly-hooded-jacket-1738151.html?color=256",
+      "search_term": "Columbia 1 / 4 Women's Heavenly™ Hooded Jacket"
+    },
+    {
+      "brand": "Columbia",
+      "brand_raw": "columbia",
+      "product_name": "Women's Lillian Ridge™ Insulated Jacket",
+      "product_link": "https://www.columbia.com/p/womens-lillian-ridge-insulated-jacket-2133821.html?color=607",
+      "search_term": "Columbia Women's Lillian Ridge™ Insulated Jacket"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Bouclé tweed mini dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/boucle-tweed-mini-dress-black/W5BK20W2382-JBLK.html",
+      "search_term": "Guess Bouclé tweed mini dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Floral print slip dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/floral-print-slip-dress-multi-color/W5YK35WHEZ2-P1MN.html",
+      "search_term": "Guess Floral print slip dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Satin midi dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/satin-midi-dress-brown/W5GK85WH9C2-G1T7.html",
+      "search_term": "Guess Satin midi dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Chevron bodycon maxi dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/chevron-bodycon-maxi-dress-beige/W5YK0VZ0192-S20Y.html",
+      "search_term": "Guess Chevron bodycon maxi dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Chevron bodycon maxi dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/chevron-bodycon-maxi-dress-black/W5YK0VZ0192-S9H8.html",
+      "search_term": "Guess Chevron bodycon maxi dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Satin halter-neck jumpsuit",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/satin-halter-neck-jumpsuit-green/W5YD0RWGS70-P8HH.html",
+      "search_term": "Guess Satin halter-neck jumpsuit"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Satin slip dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/satin-slip-dress-blue/W3GK85WD8G2-A71W.html",
+      "search_term": "Guess Satin slip dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Flowing flounced dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/flowing-flounced-dress-multi-color/W5BK51WGLA2-P1UG.html",
+      "search_term": "Guess Flowing flounced dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Satin midi dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/satin-midi-dress-black/W5GK85WH9C2-JBLK.html",
+      "search_term": "Guess Satin midi dress"
+    },
+    {
+      "brand": "Guess",
+      "brand_raw": "guess",
+      "product_name": "Bodycon mini dress",
+      "product_link": "https://www.guess.eu/en-sg/guess/women/last-chance/dresses/bodycon-mini-dress-white/W5PK1TW4760-F0CI.html",
+      "search_term": "Guess Bodycon mini dress"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SANDALS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1270652001.html",
+      "search_term": "H&M SANDALS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SUNGLASSES",
+      "product_link": "https://www2.hm.com/en_us/productpage.1162823011.html",
+      "search_term": "H&M SUNGLASSES"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "FINE-KNIT SCARF",
+      "product_link": "https://www2.hm.com/en_us/productpage.1308919001.html",
+      "search_term": "H&M FINE-KNIT SCARF"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "WIDE-LEG VELOUR JOGGERS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1297148001.html",
+      "search_term": "H&M WIDE-LEG VELOUR JOGGERS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SILK-BLEND T-SHIRT",
+      "product_link": "https://www2.hm.com/en_us/productpage.0776746001.html",
+      "search_term": "H&M SILK-BLEND T-SHIRT"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "6-PACK MINI IRON-ON PATCHES",
+      "product_link": "https://www2.hm.com/en_us/productpage.1122303001.html",
+      "search_term": "H&M 6-PACK MINI IRON-ON PATCHES"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "MAMA RIBBED NURSING TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1237212001.html",
+      "search_term": "H&M MAMA RIBBED NURSING TOP"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "JERSEY VEST",
+      "product_link": "https://www2.hm.com/en_us/productpage.1316785001.html",
+      "search_term": "H&M JERSEY VEST"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "MAMA BEFORE & AFTER INTEGRAL-BRA UNITARD",
+      "product_link": "https://www2.hm.com/en_us/productpage.1255927001.html",
+      "search_term": "H&M MAMA BEFORE & AFTER INTEGRAL-BRA UNITARD"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "V-NECK STRAPPY DRESS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1316656001.html",
+      "search_term": "H&M V-NECK STRAPPY DRESS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SHORT JACKET",
+      "product_link": "https://www2.hm.com/en_us/productpage.1261593002.html",
+      "search_term": "H&M SHORT JACKET"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "CRINKLED PULL-ON PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1292074004.html",
+      "search_term": "H&M CRINKLED PULL-ON PANTS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "5-PACK SOCKS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1067654022.html",
+      "search_term": "H&M 5-PACK SOCKS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "TEDDY FLEECE COAT",
+      "product_link": "https://www2.hm.com/en_us/productpage.1305749002.html",
+      "search_term": "H&M TEDDY FLEECE COAT"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "OVERSIZED QUILTED JACKET",
+      "product_link": "https://www2.hm.com/en_us/productpage.1294653001.html",
+      "search_term": "H&M OVERSIZED QUILTED JACKET"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SCARF-DETAIL TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304260003.html",
+      "search_term": "H&M SCARF-DETAIL TOP"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "LARGE ROUND BRUSH",
+      "product_link": "https://www2.hm.com/en_us/productpage.1256925001.html",
+      "search_term": "H&M LARGE ROUND BRUSH"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "JACKET WITH TEDDY FLEECE COLLAR",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304175001.html",
+      "search_term": "H&M JACKET WITH TEDDY FLEECE COLLAR"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SEQUINED PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304126002.html",
+      "search_term": "H&M SEQUINED PANTS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "BEAD-EMBELLISHED TANK TOP",
+      "product_link": "https://www2.hm.com/en_us/productpage.1322836001.html",
+      "search_term": "H&M BEAD-EMBELLISHED TANK TOP"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "JACQUARD-WEAVE DRESS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1311173001.html",
+      "search_term": "H&M JACQUARD-WEAVE DRESS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SEQUINED PANTS",
+      "product_link": "https://www2.hm.com/en_us/productpage.1304126001.html",
+      "search_term": "H&M SEQUINED PANTS"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "SUPERFINE BROWLINER EYEBROW PENCIL",
+      "product_link": "https://www2.hm.com/en_us/productpage.1209849003.html",
+      "search_term": "H&M SUPERFINE BROWLINER EYEBROW PENCIL"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "KNIT CARDIGAN",
+      "product_link": "https://www2.hm.com/en_us/productpage.1302378004.html",
+      "search_term": "H&M KNIT CARDIGAN"
+    },
+    {
+      "brand": "H&M",
+      "brand_raw": "h_m",
+      "product_name": "BOW-DETAIL KNIT CARDIGAN",
+      "product_link": "https://www2.hm.com/en_us/productpage.1310711002.html",
+      "search_term": "H&M BOW-DETAIL KNIT CARDIGAN"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Collection scoopback mini dress in satin",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP527?display=sale&fit=Classic&colorProductCode=CP527&isFromSale=true&colorCode=RD0136",
+      "search_term": "J.Crew Collection scoopback mini dress in satin"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Sophia dress with velvet bows in tweed",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP175?display=sale&fit=Classic&colorProductCode=CP175&isFromSale=true&colorCode=BK0001",
+      "search_term": "J.Crew Sophia dress with velvet bows in tweed"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Wide-rib sweater-dress in merino wool blend",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CS508?display=sale&fit=Classic&colorProductCode=CS508&isFromSale=true&colorCode=SR9426",
+      "search_term": "J.Crew Wide-rib sweater-dress in merino wool blend"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Collection sequin scoopback mini dress",
+      "product_link": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME772?display=sale&fit=Classic&colorProductCode=CP191&isFromSale=true&colorCode=BK0001",
+      "search_term": "J.Crew Collection sequin scoopback mini dress"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Super-stretch ruffle sweater-dress",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP155?display=sale&fit=Classic&colorProductCode=CP155&isFromSale=true&colorCode=BK0001",
+      "search_term": "J.Crew Super-stretch ruffle sweater-dress"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Rib-knit flare midi dress with Lurex® metallic threads",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP162?display=sale&fit=Classic&colorProductCode=CP162&isFromSale=true&colorCode=SR8114",
+      "search_term": "J.Crew Rib-knit flare midi dress with Lurex® metallic threads"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Collection chiffon ruffle dress in space floral print",
+      "product_link": "https://www.jcrew.com/m/womens/categories/clothing/dresses-and-jumpsuits/ME689?display=sale&fit=Classic&colorProductCode=CO423&isFromSale=true&colorCode=PT7952",
+      "search_term": "J.Crew Collection chiffon ruffle dress in space floral print"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Veranda dress in watercolor floral print",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP159?display=sale&fit=Classic&colorProductCode=CP159&isFromSale=true&colorCode=PT8282",
+      "search_term": "J.Crew Veranda dress in watercolor floral print"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Cable-knit sweater-dress in merino wool",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP167?display=sale&fit=Classic&colorProductCode=CP167&isFromSale=true&colorCode=BL8133",
+      "search_term": "J.Crew Cable-knit sweater-dress in merino wool"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Veranda dress in floral print",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP157?display=sale&fit=Classic&colorProductCode=CP157&isFromSale=true&colorCode=PT9234",
+      "search_term": "J.Crew Veranda dress in floral print"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Smocked maxi dress in cotton voile",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CI259?display=sale&fit=Classic&colorProductCode=CI259&isFromSale=true&colorCode=RD0156",
+      "search_term": "J.Crew Smocked maxi dress in cotton voile"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Ruffle-hem slip dress in dot print",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP196?display=sale&fit=Classic&colorProductCode=CP196&isFromSale=true&colorCode=PT9044",
+      "search_term": "J.Crew Ruffle-hem slip dress in dot print"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Collection cascading ruffle dress in sunset rose block print chiffon",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CL653?display=sale&fit=Classic&colorProductCode=CL653&isFromSale=true&colorCode=PT7623",
+      "search_term": "J.Crew Collection cascading ruffle dress in sunset rose block print chiffon"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Mini sheath dress in faux leather",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CS633?display=sale&fit=Classic&colorProductCode=CS633&isFromSale=true&colorCode=BK0001",
+      "search_term": "J.Crew Mini sheath dress in faux leather"
+    },
+    {
+      "brand": "J.Crew",
+      "brand_raw": "j_crew",
+      "product_name": "Bubble-hem colorblock mixy dress",
+      "product_link": "https://www.jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/CP173?display=sale&fit=Classic&colorProductCode=CP173&isFromSale=true&colorCode=BK0001",
+      "search_term": "J.Crew Bubble-hem colorblock mixy dress"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Define Jacket Nulu",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Define-Jacket-Nulu-MD/_/prod11210211?color=30437",
+      "search_term": "Lululemon Define Jacket Nulu"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Waffle-Knit High-Rise Base Layer Tight 28\"",
+      "product_link": "https://shop.lululemon.com/p/womens-leggings/Waffle-Knit-HR-Base-Layer-Tight-28-MD/_/prod20007722?color=32493",
+      "search_term": "Lululemon Waffle-Knit High-Rise Base Layer Tight 28"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Women's Down for It All Vest",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Down-For-It-All-Vest-MD/_/prod11772378?color=0001",
+      "search_term": "Lululemon Women's Down for It All Vest"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Women's Down for It All Jacket",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Down-For-It-All-Hooded-Jacket-MD/_/prod11772582?color=0001",
+      "search_term": "Lululemon Women's Down for It All Jacket"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "BeCalm Wrap-Front Long-Sleeve Shirt",
+      "product_link": "https://shop.lululemon.com/p/tops-long-sleeve/BeCalm-Wrap-Front-Long-Sleeve-Shirt-MD/_/prod20004754?color=32925",
+      "search_term": "Lululemon BeCalm Wrap-Front Long-Sleeve Shirt"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "BeCalm Oversized Mid-Rise Pant",
+      "product_link": "https://shop.lululemon.com/p/womens-joggers/BeCalm-Oversized-Mid-Rise-Pant-MD/_/prod20000710?color=32925",
+      "search_term": "Lululemon BeCalm Oversized Mid-Rise Pant"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Another Mile Jacket",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Another-Mile-Jacket-MD/_/prod11772228?color=72760",
+      "search_term": "Lululemon Another Mile Jacket"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Another Mile Vest",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Another-Mile-Vest-MD/_/prod11772280?color=72760",
+      "search_term": "Lululemon Another Mile Vest"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Jersey Crewneck Base Layer",
+      "product_link": "https://shop.lululemon.com/p/tops-long-sleeve/Jersey-Crewneck-Base-Layer-MD/_/prod20005362?color=41431",
+      "search_term": "Lululemon Jersey Crewneck Base Layer"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Water-Resistant Insulated Hooded Jacket",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Water-Resistant-Insulated-Hooded-Jacket-MD/_/prod11772139?color=30437",
+      "search_term": "Lululemon Water-Resistant Insulated Hooded Jacket"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Wunder Puff 600-Down-Fill Jacket Shine",
+      "product_link": "https://shop.lululemon.com/p/jackets-and-hoodies-jackets/Wunder-Puff-600-Down-Fill-Jacket-Shine-MD/_/prod20005054?color=38426",
+      "search_term": "Lululemon Wunder Puff 600-Down-Fill Jacket Shine"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Softstreme Full-Zip Hoodie Long",
+      "product_link": "https://shop.lululemon.com/p/womens-outerwear/Softstreme-Full-Zip-Hoodie-Long-MD/_/prod20003818?color=41179",
+      "search_term": "Lululemon Softstreme Full-Zip Hoodie Long"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "lululemon Glow Up™ Tank Top Medium Support, B/C Cup",
+      "product_link": "https://shop.lululemon.com/p/women-tanks/Glow-Up-Tank-Top-Medium-Support-BC-Cup-MD/_/prod11800333?color=63787",
+      "search_term": "Lululemon lululemon Glow Up™ Tank Top Medium Support, B/C Cup"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "lululemon Glow Up™ Super-High-Rise Tight 25\"",
+      "product_link": "https://shop.lululemon.com/p/womens-leggings/Glow-Up-Super-High-Rise-Tight-25-MD/_/prod11800853?color=41179",
+      "search_term": "Lululemon lululemon Glow Up™ Super-High-Rise Tight 25"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Scuba Oversized Funnel-Neck Half Zip Long",
+      "product_link": "https://shop.lululemon.com/p/womens-outerwear/Scuba-Oversized-Funnel-Neck-Long-MD/_/prod11690117?color=73472",
+      "search_term": "Lululemon Scuba Oversized Funnel-Neck Half Zip Long"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Scuba Oversized Half-Zip Hoodie",
+      "product_link": "https://shop.lululemon.com/p/womens-outerwear/Scuba-Oversized-12-Zip-Hoodie-MD/_/prod10300103?color=70144",
+      "search_term": "Lululemon Scuba Oversized Half-Zip Hoodie"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Swiftly Tech Long-Sleeve Shirt 2.0 Waist Length",
+      "product_link": "https://shop.lululemon.com/p/tops-long-sleeve/Swiftly-Tech-LS-2-Race-MD/_/prod9820340?color=38542",
+      "search_term": "Lululemon Swiftly Tech Long-Sleeve Shirt 2.0 Waist Length"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Flow Y Bra Nulu Light Support, A–C Cups",
+      "product_link": "https://shop.lululemon.com/p/women-sports-bras/Flow-Y-Bra-Nulu-MD/_/prod11500294?color=75629",
+      "search_term": "Lululemon Flow Y Bra Nulu Light Support, A–C Cups"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "lululemon Align™ High-Rise Crop 21\"",
+      "product_link": "https://shop.lululemon.com/p/women-crops/Align-Crop-21-MD/_/prod8840221?color=47184",
+      "search_term": "Lululemon lululemon Align™ High-Rise Crop 21"
+    },
+    {
+      "brand": "Lululemon",
+      "brand_raw": "lululemon_athletica",
+      "product_name": "Hold Tight Long-Sleeve Shirt",
+      "product_link": "https://shop.lululemon.com/p/tops-long-sleeve/Hold-Tight-Long-Sleeve-MD/_/prod10642045?color=69979",
+      "search_term": "Lululemon Hold Tight Long-Sleeve Shirt"
+    },
+    {
+      "brand": "Nike",
+      "brand_raw": "nike",
+      "product_name": "Nike Pro Women's 3\" Shorts",
+      "product_link": "https://www.nike.com/t/pro-womens-3-shorts-R6Kgdb/AO9977-451",
+      "search_term": "Nike Nike Pro Women's 3 Shorts"
+    },
+    {
+      "brand": "Nike",
+      "brand_raw": "nike",
+      "product_name": "Nike Miler Women's Running Tank",
+      "product_link": "https://www.nike.com/t/miler-womens-running-tank-jJr9Hl/AJ8102-010",
+      "search_term": "Nike Nike Miler Women's Running Tank"
+    },
+    {
+      "brand": "Nike",
+      "brand_raw": "nike",
+      "product_name": "Nike Vapor Speed 3 Football Cleats",
+      "product_link": "https://www.nike.com/t/vapor-speed-3-football-cleats-f9zw10/FB3303-103",
+      "search_term": "Nike Nike Vapor Speed 3 Football Cleats"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted StudioSmooth Jogger",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=833291002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted StudioSmooth Jogger"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Extra High-Waisted CloudComfy Flare Leggings",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=784452002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Extra High-Waisted CloudComfy Flare Leggings"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted PowerSoft Pocket Joggers",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=479566002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted PowerSoft Pocket Joggers"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted SleekTech Joggers",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=846591002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted SleekTech Joggers"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted StudioSmooth Full-Length Leggings",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=766360002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted StudioSmooth Full-Length Leggings"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted PowerChill Fold-Over Bootcut Leggings",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=861722002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted PowerChill Fold-Over Bootcut Leggings"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted StudioSmooth 7/8 Pocket Leggings",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=708991002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted StudioSmooth 7/8 Pocket Leggings"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted Dynamic Fleece Sweatpants",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=784454012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted Dynamic Fleece Sweatpants"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Extra High-Waisted PowerSoft Flare Leggings",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=411440002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Extra High-Waisted PowerSoft Flare Leggings"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "ProTrain Lined Shorts -- 7-inch inseam",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=693116012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy ProTrain Lined Shorts -- 7-inch inseam"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Recharge Knit Pullover Hoodie",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=787941002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Recharge Knit Pullover Hoodie"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Messi™ Lifestyle Jersey T-Shirt for Boys",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=837093002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Messi™ Lifestyle Jersey T-Shirt for Boys"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Kinetic Woven Baggy Jogger Pants",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=873491002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Kinetic Woven Baggy Jogger Pants"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Performance Vent Run Shorts -- 5-inch inseam",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=693435012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Performance Vent Run Shorts -- 5-inch inseam"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Oversized Washed Cropped Hoodie",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=875795002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Oversized Washed Cropped Hoodie"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Oversized Bounce Fleece Cinched Sweatshirt",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=839024012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Oversized Bounce Fleece Cinched Sweatshirt"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Cozy Tech Jogger Run Pants",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=843784012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Cozy Tech Jogger Run Pants"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Dynamic Fleece V-Neck Sweatshirt",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=870990002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Dynamic Fleece V-Neck Sweatshirt"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Essential Woven Lined Workout Shorts -- 7-inch inseam",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=424304012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Essential Woven Lined Workout Shorts -- 7-inch inseam"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Recharge Fleece Quarter-Zip Pullover",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=787931012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Recharge Fleece Quarter-Zip Pullover"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "High-Waisted PowerSoft 7/8-Length Performance Leggings for Girls",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=811825022&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy High-Waisted PowerSoft 7/8-Length Performance Leggings for Girls"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Recharge Fleece Sweatshirt",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=787935012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Recharge Fleece Sweatshirt"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Recharge Knit Waffle Pullover Hoodie",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=841773012&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Recharge Knit Waffle Pullover Hoodie"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "TwillTech Chino Shorts -- 8-inch inseam",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=877172042&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy TwillTech Chino Shorts -- 8-inch inseam"
+    },
+    {
+      "brand": "Old Navy",
+      "brand_raw": "old_navy",
+      "product_name": "Bounce Fleece Oversized Pullover Hoodie",
+      "product_link": "https://oldnavy.gap.com/browse/product.do?pid=801394002&vid=1&pcid=3041263&cid=3041263",
+      "search_term": "Old Navy Bounce Fleece Oversized Pullover Hoodie"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Midi Button-Down Shirtdress - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-midi-button-down-shirtdress-a-new-day/-/A-94882428?preselect=94862031#lnk=sametab",
+      "search_term": "Target Women's Midi Button-Down Shirtdress - A New Day™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Valentine's Heart Printed Skirt - A New Day™ Red",
+      "product_link": "https://www.target.com/p/women-s-valentine-s-heart-printed-skirt-a-new-day-red/-/A-94828858?preselect=94793779#lnk=sametab",
+      "search_term": "Target Women's Valentine's Heart Printed Skirt - A New Day™ Red"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Long Sleeve Ruched Waist Romper - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-long-sleeve-ruched-waist-romper-wild-fable/-/A-94864444?preselect=94850182#lnk=sametab",
+      "search_term": "Target Women's Long Sleeve Ruched Waist Romper - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Woven Maxi Sundress - Universal Thread™",
+      "product_link": "https://www.target.com/p/women-s-woven-maxi-sundress-universal-thread/-/A-94977575?preselect=94970291#lnk=sametab",
+      "search_term": "Target Women's Woven Maxi Sundress - Universal Thread™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Wide Strap Floral Corset Fit & Flare Mini Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-floral-corset-fit-flare-mini-dress-wild-fable/-/A-94886966?preselect=94850220#lnk=sametab",
+      "search_term": "Target Women's Wide Strap Floral Corset Fit & Flare Mini Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Valentine's Mini Dress - A New Day™ Red",
+      "product_link": "https://www.target.com/p/women-s-valentine-s-mini-dress-a-new-day-red/-/A-94854393?preselect=94843525#lnk=sametab",
+      "search_term": "Target Women's Valentine's Mini Dress - A New Day™ Red"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Sleeveless Lace Slip Mini A-Line Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-lace-slip-mini-a-line-dress-wild-fable/-/A-94886969?preselect=94850315#lnk=sametab",
+      "search_term": "Target Women's Sleeveless Lace Slip Mini A-Line Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Mini A-Line Skirt - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-mini-a-line-skirt-wild-fable/-/A-94864047?preselect=94849869#lnk=sametab",
+      "search_term": "Target Women's Mini A-Line Skirt - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Ruffle One Shoulder Midi Bodycon Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-ruffle-one-shoulder-maxi-dress-wild-fable-pink-floral/-/A-94886970?preselect=94850342#lnk=sametab",
+      "search_term": "Target Women's Ruffle One Shoulder Midi Bodycon Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Pull-On Pleated Voile Full Midi Skirt - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-pull-on-pleated-voile-full-midi-skirt-a-new-day/-/A-94979572?preselect=94969012#lnk=sametab",
+      "search_term": "Target Women's Pull-On Pleated Voile Full Midi Skirt - A New Day™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Printed Midi Full Skirt - Universal Thread™",
+      "product_link": "https://www.target.com/p/women-s-printed-midi-full-skirt-universal-thread/-/A-94854853?preselect=94806402#lnk=sametab",
+      "search_term": "Target Women's Printed Midi Full Skirt - Universal Thread™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Puff Short Sleeve Midi Sundress - Universal Thread™",
+      "product_link": "https://www.target.com/p/women-s-puff-short-sleeve-midi-sundress-universal-thread/-/A-94878945?preselect=94820789#lnk=sametab",
+      "search_term": "Target Women's Puff Short Sleeve Midi Sundress - Universal Thread™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Puff Short Sleeve Ankle Sundress - Universal Thread™",
+      "product_link": "https://www.target.com/p/women-s-puff-short-sleeve-ankle-sundress-universal-thread/-/A-94854735?preselect=94806383#lnk=sametab",
+      "search_term": "Target Women's Puff Short Sleeve Ankle Sundress - Universal Thread™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Drop Waist Mini Skirt - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-drop-waist-mini-skirt-wild-fable/-/A-94882699?preselect=94861594#lnk=sametab",
+      "search_term": "Target Women's Drop Waist Mini Skirt - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Puff Sleeve Mini Shirtdress - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-puff-sleeve-mini-shirtdress-a-new-day/-/A-94882426?preselect=94862012#lnk=sametab",
+      "search_term": "Target Women's Puff Sleeve Mini Shirtdress - A New Day™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Mini Denim Skirt - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-mini-denim-skirt-wild-fable/-/A-94862482?preselect=94803952#lnk=sametab",
+      "search_term": "Target Women's Mini Denim Skirt - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Sleeveless Column Slip Maxi Dress - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-column-slip-dress-a-new-day-black/-/A-94501669?preselect=94434601#lnk=sametab",
+      "search_term": "Target Women's Sleeveless Column Slip Maxi Dress - A New Day™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Sleeveless Lace Trim Satin Midi A-Line Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-lace-trim-satin-midi-a-line-dress-wild-fable/-/A-94779726?preselect=1004045899#lnk=sametab",
+      "search_term": "Target Women's Sleeveless Lace Trim Satin Midi A-Line Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Halter Scarf Maxi Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-halter-scarf-maxi-dress-wild-fable/-/A-94886968?preselect=94850292#lnk=sametab",
+      "search_term": "Target Women's Halter Scarf Maxi Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Short Sleeve Backless Knit Maxi Dress - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-backless-knit-maxi-dress-a-new-day/-/A-94741830?preselect=94736643#lnk=sametab",
+      "search_term": "Target Women's Short Sleeve Backless Knit Maxi Dress - A New Day™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Sleeveless Paillette Mini Sheath Dress - Wild Fable™",
+      "product_link": "https://www.target.com/p/women-s-paillette-mini-sheath-dress-wild-fable/-/A-94832603?preselect=94775116#lnk=sametab",
+      "search_term": "Target Women's Sleeveless Paillette Mini Sheath Dress - Wild Fable™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Lace Maxi A-Line Dress - Universal Thread™",
+      "product_link": "https://www.target.com/p/women-s-lace-maxi-a-line-dress-universal-thread/-/A-94891496?preselect=94886107#lnk=sametab",
+      "search_term": "Target Women's Lace Maxi A-Line Dress - Universal Thread™"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Bishop 3/4 Sleeve Seamed Midi A-Line Dress - Ava & Viv™ Cream/Berry Floral",
+      "product_link": "https://www.target.com/p/women-s-bishop-3-4-sleeve-seamed-midi-a-line-dress-ava-viv-cream-berry-floral/-/A-94881706?preselect=94862786#lnk=sametab",
+      "search_term": "Target Women's Bishop 3/4 Sleeve Seamed Midi A-Line Dress - Ava & Viv™ Cream/Berry Floral"
+    },
+    {
+      "brand": "Target",
+      "brand_raw": "site_13",
+      "product_name": "Women's Corset Sundress - A New Day™",
+      "product_link": "https://www.target.com/p/women-s-corset-sundress-a-new-day/-/A-94885826?preselect=94862066#lnk=sametab",
+      "search_term": "Target Women's Corset Sundress - A New Day™"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP-UP VEST IN ROUNDED COTTON | THEORY SALE",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-up-vest-in-rounded-cotton-p0114707_qe1?data_from=index_index&spm=index_index..block_collection_list-7987186.1.",
+      "search_term": "Theory ZIP-UP VEST IN ROUNDED COTTON  THEORY SALE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP-UP VEST IN ROUNDED COTTON | THEORY FASHION SALE",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-up-vest-in-rounded-cotton-p0114707_g0f?data_from=index_index&spm=index_index..block_collection_list-7987186.2.",
+      "search_term": "Theory ZIP-UP VEST IN ROUNDED COTTON  THEORY FASHION SALE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP-UP HOODIE IN SCUBA | THEORY OUTLET ONLINE",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-up-hoodie-in-scuba-o0997502_zn0?data_from=index_index&spm=index_index..block_collection_list-7987186.3.",
+      "search_term": "Theory ZIP-UP HOODIE IN SCUBA  THEORY OUTLET ONLINE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP-UP HOODIE IN ROUNDED COTTON | THEORY CLOTHING OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-up-hoodie-in-rounded-cotton-p0114706_qe1?data_from=index_index&spm=index_index..block_collection_list-7987186.4.",
+      "search_term": "Theory ZIP-UP HOODIE IN ROUNDED COTTON  THEORY CLOTHING OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP-UP HOODIE IN ROUNDED COTTON | THEORY FACTORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-up-hoodie-in-rounded-cotton-p0114706_g0f?data_from=index_index&spm=index_index..block_collection_list-7987186.5.",
+      "search_term": "Theory ZIP-UP HOODIE IN ROUNDED COTTON  THEORY FACTORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIP BOOTIE IN LEATHER | THEORY FACTORY STORE",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zip-bootie-in-leather-o07ac021_001?data_from=index_index&spm=index_index..block_collection_list-7987186.6.",
+      "search_term": "Theory ZIP BOOTIE IN LEATHER  THEORY FACTORY STORE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIG ZAG VEST IN SATIN CREPE | THEORY CLOTHING OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zig-zag-vest-in-satin-crepe-p0509103_y0c?data_from=index_index&spm=index_index..block_collection_list-7987186.7.",
+      "search_term": "Theory ZIG ZAG VEST IN SATIN CREPE  THEORY CLOTHING OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ZIG ZAG VEST IN SATIN CREPE | THEORY OUTLET ONLINE",
+      "product_link": "https://theoryfactorystore.com/collections/bestsellers/products/https-www-theory-com-zig-zag-vest-in-satin-crepe-p0509103_xlv?data_from=index_index&spm=index_index..block_collection_list-7987186.8.",
+      "search_term": "Theory ZIG ZAG VEST IN SATIN CREPE  THEORY OUTLET ONLINE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "29'' FLARED PANT IN GOOD WOOL | THEORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-29-27-27-flared-pant-in-good-wool-p0101209_xlv?data_from=index_index&spm=index_index..block_collection_slides-7987187.1.",
+      "search_term": "Theory 29'' FLARED PANT IN GOOD WOOL  THEORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ACCORDION MAXI SKIRT IN COTTON-BLEND | THEORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-accordion-maxi-skirt-in-cotton-blend-p0504301_100?data_from=index_index&spm=index_index..block_collection_slides-7987187.2.",
+      "search_term": "Theory ACCORDION MAXI SKIRT IN COTTON-BLEND  THEORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BLOUSON ZIP JACKET IN COTTON-BLEND | THEORY FACTORY STORE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-blouson-zip-jacket-in-cotton-blend-p0574401_e3h?data_from=index_index&spm=index_index..block_collection_slides-7987187.3.",
+      "search_term": "Theory BLOUSON ZIP JACKET IN COTTON-BLEND  THEORY FACTORY STORE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BLOUSON ZIP JACKET IN COTTON-BLEND | THEORY FACTORY STORE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-blouson-zip-jacket-in-cotton-blend-p0574401_001?data_from=index_index&spm=index_index..block_collection_slides-7987187.4.",
+      "search_term": "Theory BLOUSON ZIP JACKET IN COTTON-BLEND  THEORY FACTORY STORE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BOXER SHORT IN LINEAR COTTON | THEORY FACTORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-boxer-short-in-linear-cotton-p0404201_100?data_from=index_index&spm=index_index..block_collection_slides-7987187.5.",
+      "search_term": "Theory BOXER SHORT IN LINEAR COTTON  THEORY FACTORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BOXY TEE IN LINEAR COTTON | THEORY CLOTHING OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-boxy-tee-in-linear-cotton-p0404508_100?data_from=index_index&spm=index_index..block_collection_slides-7987187.6.",
+      "search_term": "Theory BOXY TEE IN LINEAR COTTON  THEORY CLOTHING OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BOXY CAMP SHIRT IN CITY POPLIN | THEORY OUTLET ONLINE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-boxy-camp-shirt-in-city-poplin-p0504509_f02?data_from=index_index&spm=index_index..block_collection_slides-7987187.7.",
+      "search_term": "Theory BOXY CAMP SHIRT IN CITY POPLIN  THEORY OUTLET ONLINE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BOXY CAMP SHIRT IN CITY POPLIN | THEORY SALE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-boxy-camp-shirt-in-city-poplin-p0504509_100?data_from=index_index&spm=index_index..block_collection_slides-7987187.8.",
+      "search_term": "Theory BOXY CAMP SHIRT IN CITY POPLIN  THEORY SALE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "29'' FLARED PANT IN GOOD WOOL | THEORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-29-27-27-flared-pant-in-good-wool-p0101209_xlv?data_from=index_index&spm=index_index..block_collection_slides-7987187.1.",
+      "search_term": "Theory 29'' FLARED PANT IN GOOD WOOL  THEORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "ACCORDION MAXI SKIRT IN COTTON-BLEND | THEORY OUTLET",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-accordion-maxi-skirt-in-cotton-blend-p0504301_100?data_from=index_index&spm=index_index..block_collection_slides-7987187.2.",
+      "search_term": "Theory ACCORDION MAXI SKIRT IN COTTON-BLEND  THEORY OUTLET"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BLOUSON ZIP JACKET IN COTTON-BLEND | THEORY FACTORY STORE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-blouson-zip-jacket-in-cotton-blend-p0574401_e3h?data_from=index_index&spm=index_index..block_collection_slides-7987187.3.",
+      "search_term": "Theory BLOUSON ZIP JACKET IN COTTON-BLEND  THEORY FACTORY STORE"
+    },
+    {
+      "brand": "Theory",
+      "brand_raw": "theory",
+      "product_name": "BLOUSON ZIP JACKET IN COTTON-BLEND | THEORY FACTORY STORE",
+      "product_link": "https://theoryfactorystore.com/collections/shop-all-new-arrivals/products/https-www-theory-com-blouson-zip-jacket-in-cotton-blend-p0574401_001?data_from=index_index&spm=index_index..block_collection_slides-7987187.4.",
+      "search_term": "Theory BLOUSON ZIP JACKET IN COTTON-BLEND  THEORY FACTORY STORE"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Crochet Sweater Vest",
+      "product_link": "https://my.tommy.com/en/crochet-sweater-vest/WW46525ACH.html",
+      "search_term": "Tommy Hilfiger Crochet Sweater Vest"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Crochet Sweater Vest",
+      "product_link": "https://my.tommy.com/en/crochet-sweater-vest/WW465250AF.html",
+      "search_term": "Tommy Hilfiger Crochet Sweater Vest"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Cropped Nylon Windbreaker",
+      "product_link": "https://my.tommy.com/en/cropped-nylon-windbreaker/WW46868VK8.html",
+      "search_term": "Tommy Hilfiger Cropped Nylon Windbreaker"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Classic Straight Jeans",
+      "product_link": "https://my.tommy.com/en/classic-straight-jeans/WW456811A4.html",
+      "search_term": "Tommy Hilfiger Classic Straight Jeans"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "1985 Collection Flag Embroidery Regular Polo",
+      "product_link": "https://my.tommy.com/en/1985-collection-flag-embroidery-regular-polo/WW432240CL.html",
+      "search_term": "Tommy Hilfiger 1985 Collection Flag Embroidery Regular Polo"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "70s High Rise Wide Leg Jeans",
+      "product_link": "https://my.tommy.com/en/70s-high-rise-wide-leg-jeans/WW467311A5.html",
+      "search_term": "Tommy Hilfiger 70s High Rise Wide Leg Jeans"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Tommy Girl Cable Knit Cardigan",
+      "product_link": "https://my.tommy.com/en/tommy-girl-cable-knit-cardigan/DW22511YBH.html",
+      "search_term": "Tommy Hilfiger Tommy Girl Cable Knit Cardigan"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Relaxed Denim Shirt",
+      "product_link": "https://my.tommy.com/en/relaxed-denim-shirt/WW464861A4.html",
+      "search_term": "Tommy Hilfiger Relaxed Denim Shirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Mid Rise Relaxed Barrel Leg Jeans",
+      "product_link": "https://my.tommy.com/en/mid-rise-relaxed-barrel-leg-jeans/WW467711BK.html",
+      "search_term": "Tommy Hilfiger Mid Rise Relaxed Barrel Leg Jeans"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Tommy Girl Cropped Long Sleeve Top",
+      "product_link": "https://my.tommy.com/en/tommy-girl-cropped-long-sleeve-top/DW22595BDS.html",
+      "search_term": "Tommy Hilfiger Tommy Girl Cropped Long Sleeve Top"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Asia Fit Nylon Chino Midi Skirt",
+      "product_link": "https://my.tommy.com/en/asia-fit-nylon-chino-midi-skirt/WW47184AEG.html",
+      "search_term": "Tommy Hilfiger Asia Fit Nylon Chino Midi Skirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Logo Embroidery Terry Crew Neck Sweatshirt",
+      "product_link": "https://my.tommy.com/en/logo-embroidery-terry-crew-neck-sweatshirt/WW484310AB.html",
+      "search_term": "Tommy Hilfiger Logo Embroidery Terry Crew Neck Sweatshirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Cropped Rhinestone Logo Hoodie",
+      "product_link": "https://my.tommy.com/en/cropped-rhinestone-logo-hoodie/DW21607BDS.html",
+      "search_term": "Tommy Hilfiger Cropped Rhinestone Logo Hoodie"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Viscose Twill Fit & Flare Mini Dress",
+      "product_link": "https://my.tommy.com/en/viscose-twill-fit-and-flare-mini-dress/WW45819C1G.html",
+      "search_term": "Tommy Hilfiger Viscose Twill Fit & Flare Mini Dress"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Tommy Girl Tartan Pleated Midi Skirt",
+      "product_link": "https://my.tommy.com/en/tommy-girl-tartan-pleated-midi-skirt/DW22488L6K.html",
+      "search_term": "Tommy Hilfiger Tommy Girl Tartan Pleated Midi Skirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Tommy Girl Tartan Bustier Dress",
+      "product_link": "https://my.tommy.com/en/tommy-girl-tartan-bustier-dress/DW22487XLF.html",
+      "search_term": "Tommy Hilfiger Tommy Girl Tartan Bustier Dress"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Twist '70s High Rise Wide Leg Jeans",
+      "product_link": "https://my.tommy.com/en/twist-70s-high-rise-wide-leg-jeans/WW485191AA.html",
+      "search_term": "Tommy Hilfiger Twist '70s High Rise Wide Leg Jeans"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Classic Flock Logo Relaxed T-Shirt",
+      "product_link": "https://my.tommy.com/en/classic-flock-logo-relaxed-t-shirt/WW47884C1G.html",
+      "search_term": "Tommy Hilfiger Classic Flock Logo Relaxed T-Shirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Jersey Gold-Tone Button Jumper",
+      "product_link": "https://my.tommy.com/en/jersey-gold-tone-button-jumper/WW473050FI.html",
+      "search_term": "Tommy Hilfiger Jersey Gold-Tone Button Jumper"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Regular Fit Pique Zip Polo Shirt",
+      "product_link": "https://my.tommy.com/en/regular-fit-pique-zip-polo-shirt/WW47853C1G.html",
+      "search_term": "Tommy Hilfiger Regular Fit Pique Zip Polo Shirt"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Cropped Nylon Windbreaker",
+      "product_link": "https://my.tommy.com/en/cropped-nylon-windbreaker/WW46868C1G.html",
+      "search_term": "Tommy Hilfiger Cropped Nylon Windbreaker"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Asia Fit Tencel Linen Wide Leg Pant",
+      "product_link": "https://my.tommy.com/en/asia-fit-tencel-linen-wide-leg-pant/WW48386BDS.html",
+      "search_term": "Tommy Hilfiger Asia Fit Tencel Linen Wide Leg Pant"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Lana Wide Leg High Rise Jeans",
+      "product_link": "https://my.tommy.com/en/lana-wide-leg-high-rise-jeans/WW464841A5.html",
+      "search_term": "Tommy Hilfiger Lana Wide Leg High Rise Jeans"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Denim Short Jacket",
+      "product_link": "https://my.tommy.com/en/denim-short-jacket/WW467401A4.html",
+      "search_term": "Tommy Hilfiger Denim Short Jacket"
+    },
+    {
+      "brand": "Tommy Hilfiger",
+      "brand_raw": "site_07",
+      "product_name": "Gold-Tone Button Relaxed Rugby Sweatshirt",
+      "product_link": "https://my.tommy.com/en/gold-tone-button-relaxed-rugby-sweatshirt/WW4745704W.html",
+      "search_term": "Tommy Hilfiger Gold-Tone Button Relaxed Rugby Sweatshirt"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Crystal Ballet Flats",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-crystal-ballet-flats-162066001",
+      "search_term": "Tory Burch Crystal Ballet Flats"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Shoulder Bag Eleanor Small",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-shoulder-bag-eleanor-small-1691950650",
+      "search_term": "Tory Burch Shoulder Bag Eleanor Small"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Handbag Ella",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-handbag-ella-1683840300",
+      "search_term": "Tory Burch Handbag Ella"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Shoulder Bag Eleanor",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-shoulder-bag-eleanor-1670250650",
+      "search_term": "Tory Burch Shoulder Bag Eleanor"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Ella Suede Tote Bag Brown",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-toilet-brush-set-170980200",
+      "search_term": "Tory Burch Ella Suede Tote Bag Brown"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Paisley-Print Straight-Leg Trousers",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-paisley-print-straight-leg-trousers-176383476",
+      "search_term": "Tory Burch Paisley-Print Straight-Leg Trousers"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Navy Blue Paisley Print Button Fastening Mandarin Collar Long Sleeves",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-navy-blue-paisley-print-button-fastening-mandarin-collar-long-sleeves-176382476",
+      "search_term": "Tory Burch Navy Blue Paisley Print Button Fastening Mandarin Collar Long Sleeves"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Classic Chestnut Leather Kira Crossbody Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-classic-chestnut-leather-kira-crossbody-bag-158624200",
+      "search_term": "Tory Burch Classic Chestnut Leather Kira Crossbody Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Adjustable Shoulder Strap with Logo",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-adjustable-shoulder-strap-with-logo-167025650",
+      "search_term": "Tory Burch Adjustable Shoulder Strap with Logo"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Crossbody Bags",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-clothing-dresses-shoes-handbags-accessories-169170300",
+      "search_term": "Tory Burch Crossbody Bags"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "women's T-shirt",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-silk-bra-top-172869654",
+      "search_term": "Tory Burch women's T-shirt"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "women's vest",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-top-fuchsia-171029654",
+      "search_term": "Tory Burch women's vest"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Women's Swimwear",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-sea-clothing-fuchsia-167719651",
+      "search_term": "Tory Burch Women's Swimwear"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Sandals Beige",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-sandals-beige-167449250",
+      "search_term": "Tory Burch Sandals Beige"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Shoulder Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-shoulder-bag-164799700",
+      "search_term": "Tory Burch Shoulder Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Crescent Moon Mini Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-crescent-moon-mini-bag-158474200",
+      "search_term": "Tory Burch Crescent Moon Mini Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Studded Miller - Shoe Accessories",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-studded-miller-shoe-accessories-167449006",
+      "search_term": "Tory Burch Studded Miller - Shoe Accessories"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Convertible Crossbody Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-convertible-crossbody-bag-151267250",
+      "search_term": "Tory Burch Convertible Crossbody Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Cotton T-Shirt",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-cotton-t-shirt-163272023",
+      "search_term": "Tory Burch Cotton T-Shirt"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Lee Radziwill Small Handbag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-lee-radziwill-small-handbag-158716250",
+      "search_term": "Tory Burch Lee Radziwill Small Handbag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Small Fleming Shoulder Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-small-fleming-shoulder-bag-164800701",
+      "search_term": "Tory Burch Small Fleming Shoulder Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Fleming Small Shoulder Bag Grey",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-fleming-small-convertible-shoulder-bag-164800021",
+      "search_term": "Tory Burch Fleming Small Shoulder Bag Grey"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Fleming Convertible Shoulder Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-fleming-convertible-shoulder-bag-164799001",
+      "search_term": "Tory Burch Fleming Convertible Shoulder Bag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Stylish Women's Handbag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-stylish-women-s-handbag-168384300",
+      "search_term": "Tory Burch Stylish Women's Handbag"
+    },
+    {
+      "brand": "Tory Burch",
+      "brand_raw": "tory_burch",
+      "product_name": "Fleming Hobo Bag",
+      "product_link": "https://mayfeyr.com/en-us/collections/tory-burch/products/tory-burch-fleming-hobo-bag-167752414",
+      "search_term": "Tory Burch Fleming Hobo Bag"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Casual Dress",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-ivory-casual-dress/215258438?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Casual Dress"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Flats",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-green-flats/212525886?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Flats"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Windbreaker",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-ivory-windbreaker/214549802?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Windbreaker"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Jacket",
+      "product_link": "https://www.thredup.com/product/women-nylon-tory-sport-yellow-jacket/215169101?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Wool Sweater",
+      "product_link": "https://www.thredup.com/product/women-merino-tory-sport-red-wool-sweater/215526549?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Wool Sweater"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Snow Jacket",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-purple-snow-jacket/215224632?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Snow Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Scarf",
+      "product_link": "https://www.thredup.com/product/women-cotton-tory-sport-yellow-scarf/214513170?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Scarf"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Casual Skirt",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-green-casual-skirt/215550649?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Casual Skirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Cardigan",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-blue-cardigan/207631109?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Cardigan"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Pullover Sweater",
+      "product_link": "https://www.thredup.com/product/women-baumwolle-tory-sport-purple-pullover-sweater/215170561?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Pullover Sweater"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Sweatshirt",
+      "product_link": "https://www.thredup.com/product/women-baumwolle-tory-sport-blue-sweatshirt/215632405?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Sweatshirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Sweatshirt",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-blue-sweatshirt/214980468?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Sweatshirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Track Jacket",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-blue-track-jacket/213638120?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Track Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Pullover Sweater",
+      "product_link": "https://www.thredup.com/product/women-cotton-tory-sport-ivory-pullover-sweater/215170126?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Pullover Sweater"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Track Jacket",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-blue-track-jacket/215037845?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Track Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Active Pants",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-black-active-pants/214053350?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Active Pants"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Casual Dress",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-blue-casual-dress/214400750?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Casual Dress"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Track Jacket",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-blue-track-jacket/215424580?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Track Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Track Jacket",
+      "product_link": "https://www.thredup.com/product/women-nylon-tory-sport-ivory-track-jacket/215813036?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Track Jacket"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Tank Top",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-yellow-tank-top/215407242?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Tank Top"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Sweatshirt",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-blue-sweatshirt/215254853?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Sweatshirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Casual Skirt",
+      "product_link": "https://www.thredup.com/product/women-polyester-tory-sport-green-casual-skirt/215584019?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Casual Skirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Short Sleeve Polo",
+      "product_link": "https://www.thredup.com/product/women-cotton-tory-sport-pink-short-sleeve-polo/211874745?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Short Sleeve Polo"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Casual Skirt",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-white-casual-skirt/212563858?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Casual Skirt"
+    },
+    {
+      "brand": "Tory Sport",
+      "brand_raw": "tory_sport",
+      "product_name": "Tory Sport Sleeveless T-Shirt",
+      "product_link": "https://www.thredup.com/product/women-tory-sport-green-sleeveless-t-shirt/212712502?query_id=1135340292406026240&result_id=1135340292636712960",
+      "search_term": "Tory Sport Tory Sport Sleeveless T-Shirt"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Cable Knit Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/cable-knit-mini-dress/47F323G-9EI.html?journey=womens-new-arrivals",
+      "search_term": "Calvin Klein Cable Knit Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Cable Knit Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/cable-knit-mini-dress/47F323G-YAS.html?journey=Tier_0000002",
+      "search_term": "Calvin Klein Cable Knit Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "French Terry Logo Tape Quarter Zip Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/french-terry-logo-tape-quarter-zip-dress/47F282G-UB1.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein French Terry Logo Tape Quarter Zip Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "French Terry Logo Tape Quarter Zip Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/french-terry-logo-tape-quarter-zip-dress/47F282G-P4P.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein French Terry Logo Tape Quarter Zip Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Monologo Rib Polo Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/monologo-rib-polo-mini-dress/47D214G-PEZ.html?journey=Tier_0000002",
+      "search_term": "Calvin Klein Monologo Rib Polo Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Monologo Rib Polo Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/monologo-rib-polo-mini-dress/47D214G-CCI.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Monologo Rib Polo Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Smooth Slim Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/smooth-slim-mini-dress/44D222G-P77.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Smooth Slim Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Long Sleeve Rib Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/long-sleeve-rib-mini-dress/44F336G-UB1.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Long Sleeve Rib Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Smooth Mini Polo Sweatshirt Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/smooth-mini-polo-sweatshirt-dress/44E222G-2IN.html?journey=Tier_0000002",
+      "search_term": "Calvin Klein Smooth Mini Polo Sweatshirt Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Smooth Mini Polo Sweatshirt Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/smooth-mini-polo-sweatshirt-dress/44E222G-UB1.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Smooth Mini Polo Sweatshirt Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Smooth Sleeveless Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/smooth-sleeveless-mini-dress/44D223G-UB1.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Smooth Sleeveless Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Smooth Sleeveless Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/smooth-sleeveless-mini-dress/44D223G-WFX.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Smooth Sleeveless Mini Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Monologo Mini T-Shirt Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/monologo-mini-t-shirt-dress/47F863G-4TX.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Monologo Mini T-Shirt Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Monologo Mini T-Shirt Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/monologo-mini-t-shirt-dress/47F863G-C32.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Monologo Mini T-Shirt Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Monologo Mini T-Shirt Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/monologo-mini-t-shirt-dress/47F863G-UB1.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Monologo Mini T-Shirt Dress"
+    },
+    {
+      "brand": "Calvin Klein",
+      "brand_raw": "calvinklein",
+      "product_name": "Stripe Long Sleeve Rib Mini Dress",
+      "product_link": "https://www.calvinklein.us/en/women/apparel/dresses/stripe-long-sleeve-rib-mini-dress/44F337G-4TX.html?journey=Folder_0000035",
+      "search_term": "Calvin Klein Stripe Long Sleeve Rib Mini Dress"
+    },
+    {
+      "brand": "Coach",
+      "brand_raw": "coach",
+      "product_name": "Liz Watch, 34 Mm",
+      "product_link": "https://www.coachoutlet.com/products/liz-watch-34-mm/CX690-SLV.html?frp=CX690+SLV++WMN",
+      "search_term": "Coach Liz Watch, 34 Mm"
+    },
+    {
+      "brand": "Coach",
+      "brand_raw": "coach",
+      "product_name": "Slim Id Card Case With Lemon Graphic",
+      "product_link": "https://www.coachoutlet.com/products/slim-id-card-case-with-lemon-graphic/CAT71-SV%2FZ3.html?frp=CAT71+SV%2FZ3",
+      "search_term": "Coach Slim Id Card Case With Lemon Graphic"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Nolita Medium Signature Logo Chain Pochette-",
+      "product_link": "https://www.michaelkors.com/nolita-medium-signature-logo-chain-pochette/32R6GY5W6B.html?dwvar_32R6GY5W6B_color=1546",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Nolita Medium Signature Logo Chain Pochette-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Nolita Medium Pebbled Leather Chain Pochette-",
+      "product_link": "https://www.michaelkors.com/nolita-medium-pebbled-leather-chain-pochette/32R6GY5W8L.html?dwvar_32R6GY5W8L_color=0707",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Nolita Medium Pebbled Leather Chain Pochette-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Nolita Medium Nubuck Chain Pochette-",
+      "product_link": "https://www.michaelkors.com/nolita-medium-nubuck-chain-pochette/32R6GY5W6L.html?dwvar_32R6GY5W6L_color=0812",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Nolita Medium Nubuck Chain Pochette-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Nolita Medium Signature Logo Print Denim Chain Pochette-",
+      "product_link": "https://www.michaelkors.com/nolita-medium-signature-logo-print-denim-chain-pochette/32S6GY5W6C.html?dwvar_32S6GY5W6C_color=3765",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Nolita Medium Signature Logo Print Denim Chain Pochette-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Eloise Frayed Denim Cropped Wide-Leg Jeans-",
+      "product_link": "https://www.michaelkors.com/eloise-frayed-denim-cropped-wide-leg-jeans/MS690ABLAA.html?dwvar_MS690ABLAA_color=3706",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Eloise Frayed Denim Cropped Wide-Leg Jeans-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Floral Print Georgette Ruffle Mini Dress-",
+      "product_link": "https://www.michaelkors.com/floral-print-georgette-ruffle-mini-dress/MS683CTKMN.html?dwvar_MS683CTKMN_color=6990",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Floral Print Georgette Ruffle Mini Dress-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Noa Studded Leather Gladiator Sandal-",
+      "product_link": "https://www.michaelkors.com/noa-studded-leather-gladiator-sandal/40S6NOFS3L.html?dwvar_40S6NOFS3L_color=0230",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Noa Studded Leather Gladiator Sandal-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Laser Cut Mirror Scuba Midi Dress-",
+      "product_link": "https://www.michaelkors.com/laser-cut-mirror-scuba-midi-dress/MS683HED6E.html?dwvar_MS683HED6E_color=6990",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Laser Cut Mirror Scuba Midi Dress-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Raven Studded Suede Wedge Sandal-",
+      "product_link": "https://www.michaelkors.com/raven-studded-suede-wedge-sandal/40S6RVMS2S.html?dwvar_40S6RVMS2S_color=0230",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Raven Studded Suede Wedge Sandal-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Hamilton Moderne Small Leather Satchel-",
+      "product_link": "https://www.michaelkors.com/hamilton-moderne-small-leather-satchel/30F5GNXT0L.html?dwvar_30F5GNXT0L_color=0230",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Hamilton Moderne Small Leather Satchel-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Laila Small Studded Leather Satchel-",
+      "product_link": "https://www.michaelkors.com/laila-small-studded-leather-satchel/30S6A9IS1L.html?dwvar_30S6A9IS1L_color=0707",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Laila Small Studded Leather Satchel-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "MICHAEL Michael Kors -Laila Small Signature Logo Satchel-",
+      "product_link": "https://www.michaelkors.com/laila-small-signature-logo-satchel/30S5G9IS1B.html?dwvar_30S5G9IS1B_color=1546",
+      "search_term": "Michael Kors MICHAEL Michael Kors -Laila Small Signature Logo Satchel-"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Chantal Large Pebbled Leather Crossbody Bag",
+      "product_link": "https://www.michaelkors.com/chantal-large-pebbled-leather-crossbody-bag/32R3G7CC3T.html?astc=true&dwvar_32R3G7CC3T_color=1663&priceStatusType=md",
+      "search_term": "Michael Kors Chantal Large Pebbled Leather Crossbody Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Camille Large Satchel",
+      "product_link": "https://www.michaelkors.com/camille-large-satchel/30F5GCAS7L.html?astc=true&dwvar_30F5GCAS7L_color=1663&priceStatusType=md",
+      "search_term": "Michael Kors Camille Large Satchel"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Nolita Large Nubuck Hobo Shoulder Bag",
+      "product_link": "https://www.michaelkors.com/nolita-large-nubuck-hobo-shoulder-bag/30F4GY5H3T.html?astc=true&dwvar_30F4GY5H3T_color=0220&priceStatusType=md",
+      "search_term": "Michael Kors Nolita Large Nubuck Hobo Shoulder Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Camille Small Satchel",
+      "product_link": "https://www.michaelkors.com/camille-small-satchel/30F5GCAS2L.html?astc=true&dwvar_30F5GCAS2L_color=1663&priceStatusType=md",
+      "search_term": "Michael Kors Camille Small Satchel"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Quinn Large Signature Logo and Leather Tote Bag",
+      "product_link": "https://www.michaelkors.com/quinn-large-signature-logo-and-leather-tote-bag/30T5GQNT9V.html?astc=true&dwvar_30T5GQNT9V_color=2192&priceStatusType=md",
+      "search_term": "Michael Kors Quinn Large Signature Logo and Leather Tote Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Taryn Small Signature Logo and Leather Convertible Crossbody Bag",
+      "product_link": "https://www.michaelkors.com/taryn-small-signature-logo-and-leather-convertible-crossbody-bag/32F4GTBC1B.html?astc=true&dwvar_32F4GTBC1B_color=1546&priceStatusType=md",
+      "search_term": "Michael Kors Taryn Small Signature Logo and Leather Convertible Crossbody Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Brooklyn Medium Pebbled Leather Backpack",
+      "product_link": "https://www.michaelkors.com/brooklyn-medium-pebbled-leather-backpack/30H1GBNB2L.html?astc=true&dwvar_30H1GBNB2L_color=1663&priceStatusType=md",
+      "search_term": "Michael Kors Brooklyn Medium Pebbled Leather Backpack"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Taryn Large Leather Tote Bag",
+      "product_link": "https://www.michaelkors.com/taryn-large-leather-tote-bag/30F4GTBT7L.html?astc=true&dwvar_30F4GTBT7L_color=0230&priceStatusType=md",
+      "search_term": "Michael Kors Taryn Large Leather Tote Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Jet Set Large Signature Logo Convertible Crossbody Bag",
+      "product_link": "https://www.michaelkors.com/jet-set-large-signature-logo-convertible-crossbody-bag/32F5GJ6C7B.html?astc=true&dwvar_32F5GJ6C7B_color=1335&priceStatusType=md",
+      "search_term": "Michael Kors Jet Set Large Signature Logo Convertible Crossbody Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Jet Set Large Nylon Crossbody Bag",
+      "product_link": "https://www.michaelkors.com/jet-set-large-nylon-crossbody-bag/32F5SJ6C9C.html?astc=true&dwvar_32F5SJ6C9C_color=0001&priceStatusType=md",
+      "search_term": "Michael Kors Jet Set Large Nylon Crossbody Bag"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Jet Set Medium Pebbled Leather Wristlet",
+      "product_link": "https://www.michaelkors.com/jet-set-medium-pebbled-leather-wristlet/32F5GJ6F6L.html?astc=true&dwvar_32F5GJ6F6L_color=1027&priceStatusType=md",
+      "search_term": "Michael Kors Jet Set Medium Pebbled Leather Wristlet"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Adele Logo Smartphone Wallet",
+      "product_link": "https://www.michaelkors.com/adele-logo-smartphone-wallet/32F1GJ6W4B.html?astc=true&dwvar_32F1GJ6W4B_color=0200&priceStatusType=md",
+      "search_term": "Michael Kors Adele Logo Smartphone Wallet"
+    },
+    {
+      "brand": "Michael Kors",
+      "brand_raw": "michaelkors",
+      "product_name": "Tribeca Large Quilted Leather Shoulder Bag",
+      "product_link": "https://www.michaelkors.com/tribeca-large-quilted-leather-shoulder-bag/30R4G2RL7L.html?astc=true&dwvar_30R4G2RL7L_color=0001&priceStatusType=md",
+      "search_term": "Michael Kors Tribeca Large Quilted Leather Shoulder Bag"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "brand": "Coach",
+  "product_count": 2,
+  "review_count": 6,
+  "products": [
+    {
+      "idx": 333,
+      "brand": "Coach",
+      "product_name": "Liz Watch, 34 Mm",
+      "product_link": "https://www.coachoutlet.com/products/liz-watch-34-mm/CX690-SLV.html?frp=CX690+SLV++WMN",
+      "search_term": "Coach Liz Watch, 34 Mm",
+      "asin": "B0DNL4Q62L",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "Beautiful 🤩 Really loved it.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Beautiful pink color and very functional. I love it.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Beautiful watch",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    },
+    {
+      "idx": 334,
+      "brand": "Coach",
+      "product_name": "Slim Id Card Case With Lemon Graphic",
+      "product_link": "https://www.coachoutlet.com/products/slim-id-card-case-with-lemon-graphic/CAT71-SV%2FZ3.html?frp=CAT71+SV%2FZ3",
+      "search_term": "Coach Slim Id Card Case With Lemon Graphic",
+      "asin": "B0CTW5383P",
+      "amazon_title": "",
+      "reviews": [
+        {
+          "title": "",
+          "body": "So cute & the perfect small bag I was looking for. I love she color, main reason why I purchased it. It’s a beautiful rich brown that’s elegant and chic! I love the quality, very high quality and nice. It first my slim wallet, keys, one lip gloss, and phone— the essentials. Overall, very nice and highly recommend!",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "My favorite Coach wallet. I love this wallet! It’s slim but still holds everything needed. Fits in all my purses and black goes with everything. I highly recommend this wallet if you need to hold more than a few cards. It’s the perfect size. The quality has been great.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        },
+        {
+          "title": "",
+          "body": "Pretty good quality. Loveee the colorrr. Size is perfect.",
+          "rating": "",
+          "date": "",
+          "author": ""
+        }
+      ],
+      "review_count": 3
+    }
+  ]
+}

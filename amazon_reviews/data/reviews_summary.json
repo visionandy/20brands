@@ -1,0 +1,117 @@
+{
+  "total_products": 355,
+  "total_brands": 18,
+  "total_reviews": 852,
+  "brands": {
+    "Adidas": {
+      "product_count": 25,
+      "review_count": 72,
+      "file": "by_brand/Adidas.json"
+    },
+    "Alo Yoga": {
+      "product_count": 25,
+      "review_count": 67,
+      "file": "by_brand/Alo Yoga.json"
+    },
+    "Athleta": {
+      "product_count": 25,
+      "review_count": 73,
+      "file": "by_brand/Athleta.json"
+    },
+    "Calvin Klein": {
+      "product_count": 16,
+      "review_count": 24,
+      "file": "by_brand/Calvin Klein.json"
+    },
+    "Coach": {
+      "product_count": 2,
+      "review_count": 6,
+      "file": "by_brand/Coach.json"
+    },
+    "Columbia": {
+      "product_count": 25,
+      "review_count": 69,
+      "file": "by_brand/Columbia.json"
+    },
+    "Guess": {
+      "product_count": 10,
+      "review_count": 18,
+      "file": "by_brand/Guess.json"
+    },
+    "H&M": {
+      "product_count": 25,
+      "review_count": 60,
+      "file": "by_brand/H_M.json"
+    },
+    "J.Crew": {
+      "product_count": 15,
+      "review_count": 45,
+      "file": "by_brand/J_Crew.json"
+    },
+    "Lululemon": {
+      "product_count": 19,
+      "review_count": 54,
+      "file": "by_brand/Lululemon.json"
+    },
+    "Michael Kors": {
+      "product_count": 24,
+      "review_count": 60,
+      "file": "by_brand/Michael Kors.json"
+    },
+    "Nike": {
+      "product_count": 3,
+      "review_count": 7,
+      "file": "by_brand/Nike.json"
+    },
+    "Old Navy": {
+      "product_count": 25,
+      "review_count": 72,
+      "file": "by_brand/Old Navy.json"
+    },
+    "Target": {
+      "product_count": 24,
+      "review_count": 64,
+      "file": "by_brand/Target.json"
+    },
+    "Theory": {
+      "product_count": 20,
+      "review_count": 11,
+      "file": "by_brand/Theory.json"
+    },
+    "Tommy Hilfiger": {
+      "product_count": 25,
+      "review_count": 56,
+      "file": "by_brand/Tommy Hilfiger.json"
+    },
+    "Tory Burch": {
+      "product_count": 23,
+      "review_count": 40,
+      "file": "by_brand/Tory Burch.json"
+    },
+    "Tory Sport": {
+      "product_count": 24,
+      "review_count": 54,
+      "file": "by_brand/Tory Sport.json"
+    }
+  },
+  "files": [
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Adidas.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Alo Yoga.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Athleta.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Calvin Klein.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Coach.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Columbia.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Guess.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/H_M.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/J_Crew.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Lululemon.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Michael Kors.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Nike.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Old Navy.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Target.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Theory.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Tommy Hilfiger.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Tory Burch.json",
+    "/Users/zbh_1111/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/79308b3fa478e5e02887d2bfafe97e4a/Message/MessageTemp/5b9ec211012e0dce66ef221a4a914ead/File/20brands/amazon_reviews/data/by_brand/Tory Sport.json"
+  ]
+}

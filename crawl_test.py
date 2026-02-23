@@ -32,6 +32,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 
+# 页面过小或 0 deal 时触发重试（无头可能被拦截）
+MIN_PAGE_SIZE = 8000
+
+
+class DealsEmptyError(Exception):
+    """页面过小或 0 deal，需重试（可能 headless 被拦截）。"""
+
 try:
     from bs4 import BeautifulSoup
     HAS_BS4 = True
@@ -611,6 +618,73 @@ def _parse_michaelkors_from_html(html, base_url):
         return {}
 
 
+def _parse_calvinklein_from_html(html, base_url):
+    """calvinklein 专用：DOM 无结果时从 HTML 兜底解析。"""
+    if not HAS_BS4:
+        return {}
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        containers = soup.select("div.product")
+        result = {}
+        for node in containers:
+            link = node.select_one("a.ds-product-name, .product-name-link a.name-link, a.pdpurl")
+            href = (link.get("href", "") or "").strip()
+            url = urljoin(base_url, href) if href else ""
+            if not url:
+                continue
+            title_el = node.select_one("a.ds-product-name span, .product-name-link a.name-link")
+            cp_el = node.select_one(".price .sales .value, .price.ds-product-price .value")
+            op_el = node.select_one(".price .strike-through.list .value")
+            title = (title_el.get_text(strip=True) if title_el else "") or ""
+            cp_display = _normalize_price_text((cp_el.get_text(strip=True) if cp_el else "") or "")
+            op_display = _normalize_price_text((op_el.get_text(strip=True) if op_el else "") or "")
+            result[url] = {
+                "title": _clean_title(title, None),
+                "current_price": _parse_price_to_float(cp_display) if cp_display else None,
+                "current_price_display": cp_display or "",
+                "original_price": _parse_price_to_float(op_display) if op_display else None,
+                "original_price_display": op_display or "",
+            }
+        return result
+    except Exception:
+        return {}
+
+
+def _parse_coach_from_html(html, base_url):
+    """
+    coach 专用：从 HTML 解析（DOM 可能未渲染时兜底）。
+    返回 {url: {"title": str, "current_price": str, "original_price": str}}
+    """
+    if not HAS_BS4:
+        return {}
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        containers = soup.select(".product-tile, [data-qa='product-tile']")
+        result = {}
+        for node in containers:
+            link = node.select_one(".product-name a, a[href*='/products/']")
+            href = (link.get("href", "") or "").strip()
+            url = urljoin(base_url, href) if href else ""
+            if not url:
+                continue
+            title_el = node.select_one("p[data-qa='cm_pdt_link_pt_title'], .product-name p")
+            cp_el = node.select_one("span.salesPrice, [data-qa='m_plp_txt_pt_price_upper_rl']")
+            op_el = node.select_one("[data-qa='cm_txt_pdt_price_strthr'], [data-qa='txt_comparable_value_price']")
+            title = (title_el.get_text(strip=True) if title_el else "") or ""
+            cp_display = _normalize_price_text((cp_el.get_text(strip=True) if cp_el else "") or "")
+            op_display = _normalize_price_text((op_el.get_text(strip=True) if op_el else "") or "")
+            result[url] = {
+                "title": _clean_title(title, None),
+                "current_price": _parse_price_to_float(cp_display) if cp_display else None,
+                "current_price_display": cp_display or "",
+                "original_price": _parse_price_to_float(op_display) if op_display else None,
+                "original_price_display": op_display or "",
+            }
+        return result
+    except Exception:
+        return {}
+
+
 def _enrich_michaelkors_from_html(driver, deals, site, base_url):
     """michaelkors 专用：从 HTML 补全 title、价格。"""
     if site.get("id") != "michaelkors" or not deals:
@@ -894,8 +968,8 @@ def _merge_guess_prices(deals, price_list):
 
 
 def _save_debug_html(driver, site_id):
-    """保存当前页面 HTML：guess 用 _debug.html，cos、michaelkors、lululemon_athletica、tommy_hilfiger 用 .html（供选择器调试）"""
-    if site_id not in ("guess", "cos", "michaelkors", "lululemon_athletica", "tommy_hilfiger", "adidas", "alo_yoga", "athleta", "calvinklein", "coach", "columbia", "h_m", "j_crew", "levis", "nike"):
+    """保存当前页面 HTML 到 config/html_samples/，供 debug_crawl.py 分析"""
+    if site_id not in ("guess", "cos", "michaelkors", "lululemon_athletica", "tommy_hilfiger", "adidas", "alo_yoga", "athleta", "calvinklein", "coach", "columbia", "h_m", "j_crew", "levis", "nike", "target", "old_navy", "theory", "tory_burch", "tory_sport"):
         return
     try:
         debug_dir = os.path.join(os.path.dirname(__file__), "config", "html_samples")
@@ -1118,11 +1192,15 @@ def _safe_print(*args, **kwargs):
 
 
 def _create_driver(site, config, headless=False, timeout_override=None):
-    """创建 Chrome driver，支持 anti_detect、headless 模式。"""
+    """创建 Chrome driver，支持 anti_detect、headless 模式。站点级 headless:false 强制非无头（反爬站点）。"""
     anti = site.get("anti_detect") or {}
     use_uc = anti.get("use_undetected", False) and HAS_UC
     timeout = timeout_override if timeout_override is not None else config.get("global", {}).get("timeout_sec", 40)
-    headless = headless or config.get("global", {}).get("headless", False)
+    # 站点显式 headless:false 时强制非无头（部分站点 headless 被拦截）
+    if site.get("headless") is False:
+        headless = False
+    else:
+        headless = headless or config.get("global", {}).get("headless", False)
     if use_uc:
         options = uc.ChromeOptions()
         options.add_argument("--no-sandbox")
@@ -1211,24 +1289,35 @@ def _crawl_site_worker(site, config, limit=None, headless=False, timeout_overrid
     """
     单站点爬取 worker：交错启动、创建 driver、爬取、退出。
     每个线程独立浏览器实例，互不干扰；人类化行为保留在 _crawl_one_site 内。
-    超时（默认 40 秒）则跳过该站点。
+    超时（默认 40 秒）则跳过。0 deal 且页面<8KB 时自动重试非无头模式。
     """
     site_id = site["id"]
     timeout = timeout_override if timeout_override is not None else config.get("global", {}).get("timeout_sec", 40)
-    # 交错启动：随机延迟 0~3 秒，避免多站点同时发起请求
     stagger = random.uniform(0, 3)
     time.sleep(stagger)
     driver = None
-    try:
-        driver = _create_driver(site, config, headless=headless, timeout_override=timeout_override)
-        _crawl_one_site(driver, site, config, limit=limit, date_dir=date_dir)
-        return (site_id, True, None)
-    except TimeoutException:
-        return (site_id, False, f"超时 {timeout} 秒，跳过")
-    except Exception as e:
-        return (site_id, False, str(e))
-    finally:
-        _kill_driver(driver)
+    for attempt in range(2):
+        driver = None
+        try:
+            use_headless = headless if attempt == 0 else False
+            if attempt == 1:
+                _safe_print(f"  [{site_id}] 0 deal 且页面过小，重试非无头模式")
+            driver = _create_driver(site, config, headless=use_headless, timeout_override=timeout_override)
+            _crawl_one_site(driver, site, config, limit=limit, date_dir=date_dir)
+            _kill_driver(driver)
+            return (site_id, True, None)
+        except DealsEmptyError:
+            _kill_driver(driver)
+            if attempt == 0:
+                continue
+            return (site_id, False, "重试后仍 0 deal")
+        except TimeoutException:
+            _kill_driver(driver)
+            return (site_id, False, f"超时 {timeout} 秒，跳过")
+        except Exception as e:
+            _kill_driver(driver)
+            return (site_id, False, str(e))
+    return (site_id, False, "重试后仍失败")
 
 
 def _crawl_one_site(driver, site, config, limit=None, date_dir=None):
@@ -1271,6 +1360,30 @@ def _crawl_one_site(driver, site, config, limit=None, date_dir=None):
         _human_like_delay(1.2, 2.2)
         dismiss_consent_if_any(driver)
         _human_like_delay(0.6, 1.2)
+        if site.get("id") == "michaelkors":
+            try:
+                WebDriverWait(driver, 18).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "article.product-tile-container, a.product-tile-image-link"))
+                )
+                _human_like_delay(1.5, 2.5)
+            except Exception:
+                pass
+        if site.get("id") == "coach":
+            try:
+                WebDriverWait(driver, 18).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, ".product-tile, [data-qa='cm_pdt_link_pt_title']"))
+                )
+                _human_like_delay(1.5, 2.5)
+            except Exception:
+                pass
+        if site.get("id") == "calvinklein":
+            try:
+                WebDriverWait(driver, 18).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "div.product, .product-name-link"))
+                )
+                _human_like_delay(1.5, 2.5)
+            except Exception:
+                pass
         if site.get("id") == "guess":
             try:
                 WebDriverWait(driver, 15).until(
@@ -1308,7 +1421,64 @@ def _crawl_one_site(driver, site, config, limit=None, date_dir=None):
         deals = _parse_guess_deals_from_jsonld(driver.page_source, base_url, site["id"])
         if deals:
             _safe_print(f"  [guess] DOM 无结果，从 JSON-LD 解析到 {len(deals)} 条")
+    if site.get("id") == "michaelkors" and not deals and HAS_BS4:
+        url_to_data = _parse_michaelkors_from_html(driver.page_source, base_url)
+        if url_to_data:
+            deals = [
+                {
+                    "source_site": site["id"],
+                    "title": d.get("title", ""),
+                    "current_price": d.get("current_price"),
+                    "current_price_display": d.get("current_price_display", ""),
+                    "original_price": d.get("original_price"),
+                    "original_price_display": d.get("original_price_display", ""),
+                    "deal_url": url,
+                    "image_url": "",
+                    "deal_percent": d.get("deal_percent", ""),
+                    "deals_detail": d.get("deals_detail", ""),
+                }
+                for url, d in url_to_data.items()
+            ]
+            _safe_print(f"  [michaelkors] DOM 无结果，从 HTML 解析到 {len(deals)} 条")
+    if site.get("id") == "coach" and not deals and HAS_BS4:
+        url_to_data = _parse_coach_from_html(driver.page_source, base_url)
+        if url_to_data:
+            deals = [
+                {
+                    "source_site": site["id"],
+                    "title": d.get("title", ""),
+                    "current_price": d.get("current_price"),
+                    "current_price_display": d.get("current_price_display", ""),
+                    "original_price": d.get("original_price"),
+                    "original_price_display": d.get("original_price_display", ""),
+                    "deal_url": url,
+                    "image_url": "",
+                }
+                for url, d in url_to_data.items()
+            ]
+            _safe_print(f"  [coach] DOM 无结果，从 HTML 解析到 {len(deals)} 条")
+    if site.get("id") == "calvinklein" and not deals and HAS_BS4:
+        url_to_data = _parse_calvinklein_from_html(driver.page_source, base_url)
+        if url_to_data:
+            deals = [
+                {
+                    "source_site": site["id"],
+                    "title": d.get("title", ""),
+                    "current_price": d.get("current_price"),
+                    "current_price_display": d.get("current_price_display", ""),
+                    "original_price": d.get("original_price"),
+                    "original_price_display": d.get("original_price_display", ""),
+                    "deal_url": url,
+                    "image_url": "",
+                }
+                for url, d in url_to_data.items()
+            ]
+            _safe_print(f"  [calvinklein] DOM 无结果，从 HTML 解析到 {len(deals)} 条")
     _safe_print(f"解析到 {len(deals)} 条 deal")
+
+    page_sz = len(driver.page_source or "")
+    if not deals and page_sz < MIN_PAGE_SIZE:
+        raise DealsEmptyError(f"页面仅 {page_sz} 字符、0 deal，疑似被拦截，将重试非无头模式")
 
     deals = _enrich_guess_titles(driver, deals, site)
     deals = _enrich_calvinklein_promo(driver, deals, site)

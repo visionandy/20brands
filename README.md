@@ -61,6 +61,15 @@ python crawl_test.py --all --workers 4 --headless
 - `--limit N`：每个站点仅爬前 N 条（测试用）
 - 页面 40 秒未加载完成则自动跳过该站点
 
+## 自动调试
+
+分析 output 与 config/html_samples，诊断失败原因并生成报告：
+
+```bash
+python debug_crawl.py                    # 分析现有数据，输出 output/debug_report.md
+python debug_crawl.py --crawl --limit 1  # 分析 + 抓取失败站点获取新 debug HTML
+```
+
 ## 数据处理与上传 mysmartshop.net
 
 将抓取结果转为 mysmartshop Product 格式，并用 GPT 做类别分类：

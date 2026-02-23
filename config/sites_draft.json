@@ -34,6 +34,7 @@
       "notes": "官方网站 michaelkors.com。非美国 IP 会重定向到 michaelkors.global，需配置 proxy（US 代理）才能爬 .com",
       "force_us_locale": true,
       "proxy": "",
+      "headless": false,
       "selectors": {
         "container": "article.product-tile-container",
         "title": "h2.pdp-link a, .pdp-link a",
@@ -57,6 +58,7 @@
       "name": "Calvin Klein",
       "list_url": "https://www.calvinklein.us/en/women/apparel/dresses/",
       "notes": "官方网站calvinklein.com.my",
+      "headless": false,
       "selectors": {
         "container": "div.product",
         "title": "a.ds-product-name span, .product-name-link a.name-link",
@@ -77,6 +79,7 @@
       "name": "Coach",
       "list_url": "https://www.coachoutlet.com/shop/clearance/view-all?page=2&filterByDiscount=70%25%20%2B",
       "notes": "coachoutlet.com 美国站（与 coach.com 同 Chakra DOM）",
+      "headless": false,
       "selectors": {
         "container": ".product-tile",
         "title": "p[data-qa='cm_pdt_link_pt_title'], .product-name p",
@@ -101,6 +104,7 @@
       "name": "Lululemon Athletica",
       "list_url": "https://shop.lululemon.com/c/women-we-made-too-much/n16o10z8mhd?icid=cdp-cdp:we-made-too-much;2;cardcarouselitem;cdp:womens-we-made-too-much;campaigns;markdownqt",
       "notes": "官方网站lululemon.com.us",
+      "headless": false,
       "selectors": {
         "container": "[data-testid='product-tile']",
         "title": "h3.product-tile__product-name a",
@@ -141,6 +145,7 @@
       "name": "J.Crew",
       "list_url": "https://www.jcrew.com/sale/women?sub-categories=Dresses%20%26%20Jumpsuits",
       "notes": "官方网站jcrew.com",
+      "headless": false,
       "selectors": {
         "container": "li[data-testid='product-tile']",
         "title": "h2[data-qaid*='ProductDescription']",
@@ -203,6 +208,7 @@
       "list_url": "https://www.adidas.com/us/women-sale",
       "notes": "官方网站 adidas.com US，需 force_us_locale 避免跳 .my",
       "force_us_locale": true,
+      "headless": false,
       "selectors": {
         "container": "article[data-testid='plp-product-card']",
         "title": "[data-testid='product-card-title']",
@@ -338,6 +344,7 @@
       "name": "Athleta",
       "list_url": "https://athleta.gap.com/browse/sale/last-chance-best-price?cid=1065352",
       "notes": "官方网站athleta.gap.com",
+      "headless": false,
       "selectors": {
         "container": "[data-testid='plp_product-card']",
         "title": "[data-testid='plp_product-name']",
